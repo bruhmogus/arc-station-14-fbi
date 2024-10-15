@@ -23,3 +23,23 @@
     minItems: 3
     maxItems: 8
     salesCategory: UplinkSales
+
+- type: entity
+  id: StorePresetUplinkNTPD
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - UplinkWeaponryntpd
+    - UplinkAmmontpd
+    - UplinkExplosivesntpd
+    - UplinkWearablesntpd
+    - UplinkChemicalsntpd
+    - UplinkDeceptionntpd
+    - UplinkDisruptionntpd
+    - UplinkImplantsntpd
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0
