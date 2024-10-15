@@ -38,6 +38,9 @@ ghost-role-information-slimes-description = An ordinary slime with no special ne
 ghost-role-information-angry-slimes-name = Slime
 ghost-role-information-angry-slimes-description = Everyone around you irritates your instincts, destroy them!
 
+ghost-role-information-Meathunk-name = Meat Hunk
+ghost-role-information-Meathunk-description = You are a meat hunk! Burn everything that is not associated with the great meat!
+
 ghost-role-information-smile-name = Smile the Slime
 ghost-role-information-smile-description = The sweetest creature in the world. Smile Slime!
 ghost-role-information-smile-rules = You are a crew-aligned pet. You can defend yourself and even attack threats to the station, but you generally should not attack the station's crew nor destroy their property.
