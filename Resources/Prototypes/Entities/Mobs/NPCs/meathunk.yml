@@ -77,10 +77,6 @@
     - type: InnateTool
       tools:
         - id: Weapondark
-    - type: UserInterface
-      interfaces:
-        enum.StrippingUiKey.Key:
-          type: StrippableBoundUserInterface
     - type: MobThresholds
       thresholds:
         0: Alive
