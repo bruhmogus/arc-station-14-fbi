@@ -1955,3 +1955,69 @@
       sprite: Objects/Weapons/Melee/Throngler-in-hand.rsi
     - type: DisarmMalus
       malus: 0
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDusty
+  name: captain plushie
+  description: A small stuffed doll of a moth captain. It's a bit dusty.
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    state: plushie_dusty
+  - type: StaticPrice
+    price: 20
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Misc/yippe.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Misc/yippe.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnLand
+    sound:
+      collection: ToyFall
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ToySqueak
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieWyatt
+  name: HoS plushie
+  description: A small stuffed doll of a moth Head Of Security, Wyatt Scorchedwing. Comes with a miniature stun baton!
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    state: plushie_wyatt
+  - type: StaticPrice
+    price: 20
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/egloves.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Weapons/egloves.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Weapons/egloves.ogg
+  - type: EmitSoundOnLand
+    sound:
+      collection: ToyFall
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ToySqueak
+  - type: UseDelay
+    delay: 1.0
+  - type: StaminaDamageOnHit
+    damage: 8
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 8
+    sound: /Audio/Weapons/egloves.ogg
