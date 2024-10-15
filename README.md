@@ -1,8 +1,6 @@
-# Einstein Engines
+# Arcadis Station 14
 
-<p align="center"><img src="https://raw.githubusercontent.com/Simple-Station/Einstein-Engines/master/Resources/Textures/Logo/splashlogo.png" width="512px" /></p>
-
----
+Arcadis Station is a minor fork of Einstein Engines, previously a fork of Wizden, based on admin intervention and less of a pure focus on gameplay.
 
 Einstein Engines is a hard fork of [Space Station 14](https://github.com/space-wizards/space-station-14) built around the ideals and design inspirations of the Baystation family of servers from Space Station 13 with a focus on having modular code that anyone can use to make the RP server of their dreams.
 Our founding organization is based on a democratic system whereby our mutual contributors and downstreams have a say in what code goes into their own upstream.
