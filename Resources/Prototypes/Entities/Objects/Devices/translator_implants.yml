@@ -156,3 +156,16 @@
     - Azaziba
     requires:
     - Draconic
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: UniversalTranslatorImplant
+  name: universal translation implant
+  description: A privately made implant that allows translation to and from all languages that exist. # ADMEMES ONLY!!! I AM LAZY AS FUCK!!!
+  noSpawn: true
+  components:
+  - type: TranslatorImplant
+    understood:
+    - Universal
+    spoken:
+    - Universal
