@@ -164,7 +164,7 @@
 - type: trait
   id: LatentPsychic
   category: Mental
-  points: -4
+  points: -2
   components:
     - type: Psionic
   requirements:
@@ -194,7 +194,7 @@
 - type: trait
   id: PsionicInsulation
   category: Mental
-  points: -10 #Buy a significant disability to get this.
+  points: -5 #Buy a significant disability to get this.
   components:
     - type: PsionicInsulation
     - type: Mindbroken
