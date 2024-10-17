@@ -1,7 +1,7 @@
 - type: trait
   id: CPRTraining
   category: Mental
-  points: -4
+  points: -1
   components:
     - type: CPRTraining
   requirements:
