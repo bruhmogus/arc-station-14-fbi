@@ -754,6 +754,3 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
-
-    maxCharge: 800
-    startingCharge: 800
