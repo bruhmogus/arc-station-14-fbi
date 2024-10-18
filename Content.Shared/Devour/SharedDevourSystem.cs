@@ -41,8 +41,14 @@ public abstract class SharedDevourSystem : EntitySystem
     /// </summary>
     protected void OnDevourAction(EntityUid uid, DevourerComponent component, DevourActionEvent args)
     {
-        if (args.Handled || component.Whitelist?.IsValid(args.Target, EntityManager) != true)
+        if (args.Handled)
             return;
+
+        if (!component.IgnoreWhitelist)
+        {
+            if (component.Whitelist?.IsValid(args.Target, EntityManager) != true)
+                return;
+        }
 
         args.Handled = true;
         var target = args.Target;
