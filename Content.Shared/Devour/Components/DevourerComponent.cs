@@ -18,6 +18,9 @@ public sealed partial class DevourerComponent : Component
     [DataField("devourActionEntity")]
     public EntityUid? DevourActionEntity;
 
+    [ViewVariables(VVAccess.ReadWrite), DataField("ignoreWhitelist")]
+    public bool IgnoreWhitelist = false;
+
     [ViewVariables(VVAccess.ReadWrite), DataField("soundDevour")]
     public SoundSpecifier? SoundDevour = new SoundPathSpecifier("/Audio/Effects/demon_consume.ogg")
     {

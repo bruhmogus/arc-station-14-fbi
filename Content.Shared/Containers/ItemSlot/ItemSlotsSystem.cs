@@ -262,12 +262,16 @@ namespace Content.Shared.Containers.ItemSlots
             if (slot.ContainerSlot == null)
                 return false;
 
-            if ((!slot.Whitelist?.IsValid(usedUid) ?? false) ||
-                (slot.Blacklist?.IsValid(usedUid) ?? false))
-            {
-                if (popup.HasValue && slot.WhitelistFailPopup.HasValue)
-                    _popupSystem.PopupClient(Loc.GetString(slot.WhitelistFailPopup), uid, popup.Value);
-                return false;
+            if (!slot.IgnoreWhitelist) {
+
+                if ((!slot.Whitelist?.IsValid(usedUid) ?? false) ||
+                    (slot.Blacklist?.IsValid(usedUid) ?? false))
+                {
+                    if (popup.HasValue && slot.WhitelistFailPopup.HasValue)
+                        _popupSystem.PopupClient(Loc.GetString(slot.WhitelistFailPopup), uid, popup.Value);
+                    return false;
+                }
+
             }
 
             if (slot.Locked)
