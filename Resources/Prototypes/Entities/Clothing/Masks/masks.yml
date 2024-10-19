@@ -650,3 +650,18 @@
   - type: Tag
     tags:
     - IPCMaskWearable # Estacao Pirata - IPCs
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskflesh
+  name: meat hunk mask
+  description: thankfully this isn't real flesh.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/Coolmask.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/Coolmask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.80

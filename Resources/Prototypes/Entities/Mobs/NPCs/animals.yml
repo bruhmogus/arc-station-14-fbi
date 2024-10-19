@@ -2936,6 +2936,36 @@
         Base: cat2_dead
 
 - type: entity
+  name: Twinks
+  id: MobCatTwinks
+  parent: MobCat
+  description: Jazmine's favorite cat!
+  components:
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cat2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cat2
+      Dead:
+        Base: cat2_dead
+
+- type: entity
+  name: Twinks
+  id: MobCatTwinksDead
+  parent: MobCatTwinks
+  description: He's in a better place now.
+  components:
+  - type: Damageable
+    damage:
+      types:
+        Bloodloss: 20
+        Asphyxiation: 40
+        Genetic: 150
+
+- type: entity
   name: syndicat
   id: MobCatSyndy
   parent: MobCatSpace
