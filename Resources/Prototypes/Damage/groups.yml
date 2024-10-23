@@ -40,3 +40,4 @@
   name: damage-group-genetic
   damageTypes:
     - Cellular
+    - Brain

@@ -1,0 +1,83 @@
+- type: entity
+  id: BaseMagazineJetsam
+  name: "magazine (.42 jetsam)"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineJetsam
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeJetsam
+    proto: CartridgeJetsam
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: BaseMagazinePistolJetsam
+  name: "pistol magazine (.42 jetsam)"
+  parent: BaseMagazineJetsam
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolJetsam
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeJetsam
+    proto: CartridgeJetsam
+    capacity: 10
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazinePistolJetsam
+  name: "pistol magazine (.42 jetsam)"
+  parent: BaseMagazinePistolJetsam
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeJetsam
+    capacity: 10
+  - type: Sprite
+    slayers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance

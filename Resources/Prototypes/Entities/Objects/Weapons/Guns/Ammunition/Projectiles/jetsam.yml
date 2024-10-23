@@ -1,0 +1,11 @@
+- type: entity
+  id: BulletJetsam
+  name: bullet (.42 jetsam)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        Brain: 200
