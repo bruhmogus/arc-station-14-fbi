@@ -2,6 +2,7 @@
 using Content.Shared.Medical.Surgery.Tools;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
+using Content.Shared.FixedPoint;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
@@ -36,6 +37,14 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     [DataField("vital"), AutoNetworkedField]
     public bool IsVital;
 
+    /// <summary>
+    /// Amount of damage to deal when the part gets removed.
+    /// Only works if IsVital is true.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public FixedPoint2 VitalDamage = MaxIntegrity;
+
+
     [DataField, AutoNetworkedField]
     public BodyPartSymmetry Symmetry = BodyPartSymmetry.None;
 
@@ -62,6 +71,12 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     /// </summary>
     [DataField, AutoNetworkedField]
     public float Integrity = 100f;
+
+    /// <summary>
+    /// What's the max health this body part can have?
+    /// </summary>
+    [DataField]
+    public const float MaxIntegrity = 100f;
 
     /// <summary>
     /// Whether this body part is enabled or not.

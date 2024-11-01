@@ -4,8 +4,6 @@ using Content.Shared.Body.Organ;
 using Content.Shared.Body.Part;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Components;
 using Content.Shared.Random;
@@ -31,7 +29,6 @@ public partial class SharedBodySystem
         SubscribeLocalEvent<BodyPartComponent, EntInsertedIntoContainerMessage>(OnBodyPartInserted);
         SubscribeLocalEvent<BodyPartComponent, EntRemovedFromContainerMessage>(OnBodyPartRemoved);
         SubscribeLocalEvent<BodyPartComponent, AmputateAttemptEvent>(OnAmputateAttempt);
-        SubscribeLocalEvent<BodyPartComponent, BodyPartEnableChangedEvent>(OnPartEnableChanged);
     }
 
     private void OnMapInit(Entity<BodyPartComponent> ent, ref MapInitEvent args)
@@ -162,7 +159,7 @@ public partial class SharedBodySystem
         partEnt.Comp.OriginalBody = partEnt.Comp.Body;
         var ev = new BodyPartRemovedEvent(slotId, partEnt);
         RaiseLocalEvent(bodyEnt, ref ev);
-        //RemoveLeg(partEnt, bodyEnt);
+        RemoveLeg(partEnt, bodyEnt);
         RemovePartEffect(partEnt, bodyEnt);
         PartRemoveDamage(bodyEnt, partEnt);
     }
@@ -186,7 +183,6 @@ public partial class SharedBodySystem
     {
         DropPart(partEnt);
     }
-
     private void AddLeg(Entity<BodyPartComponent> legEnt, Entity<BodyComponent?> bodyEnt)
     {
         if (!Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
@@ -217,7 +213,8 @@ public partial class SharedBodySystem
     // TODO: Refactor this crap.
     private void RemovePartEffect(Entity<BodyPartComponent> partEnt, Entity<BodyComponent?> bodyEnt)
     {
-        if (!Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
+        if (TerminatingOrDeleted(bodyEnt)
+            || !Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
             return;
 
         if (partEnt.Comp.Children.Any())
@@ -233,7 +230,7 @@ public partial class SharedBodySystem
                     RaiseLocalEvent(childEntity, ref ev);
                     DropPart((childEntity, childPart));
                 }
-            };
+            }
             Dirty(bodyEnt, bodyEnt.Comp);
         }
 
@@ -249,8 +246,8 @@ public partial class SharedBodySystem
             && !GetBodyChildrenOfType(bodyEnt, partEnt.Comp.PartType, bodyEnt.Comp).Any()
         )
         {
-            var damage = new DamageSpecifier(Prototypes.Index<DamageTypePrototype>("Bloodloss"), 300);
-            Damageable.TryChangeDamage(bodyEnt, damage);
+            var damage = new DamageSpecifier(Prototypes.Index<DamageTypePrototype>("Bloodloss"), partEnt.Comp.VitalDamage);
+            Damageable.TryChangeDamage(bodyEnt, damage, partMultiplier: 0f);
         }
     }
 
