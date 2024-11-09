@@ -4,6 +4,7 @@ using Content.Shared.Body.Organ;
 using Content.Shared.Body.Part;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Components;
 using Content.Shared.Random;
@@ -29,6 +30,7 @@ public partial class SharedBodySystem
         SubscribeLocalEvent<BodyPartComponent, EntInsertedIntoContainerMessage>(OnBodyPartInserted);
         SubscribeLocalEvent<BodyPartComponent, EntRemovedFromContainerMessage>(OnBodyPartRemoved);
         SubscribeLocalEvent<BodyPartComponent, AmputateAttemptEvent>(OnAmputateAttempt);
+        SubscribeLocalEvent<BodyPartComponent, BodyPartEnableChangedEvent>(OnPartEnableChanged);
     }
 
     private void OnMapInit(Entity<BodyPartComponent> ent, ref MapInitEvent args)
@@ -167,14 +169,25 @@ public partial class SharedBodySystem
     protected virtual void DropPart(Entity<BodyPartComponent> partEnt)
     {
         ChangeSlotState(partEnt, true);
-
+        // I don't know if this can cause issues, since any part that's being detached HAS to have a Body.
+        // though I really just want the compiler to shut the fuck up.
+        var body = partEnt.Comp.Body.GetValueOrDefault();
         // We then detach the part, which will kickstart EntRemovedFromContainer events.
         if (TryComp(partEnt, out TransformComponent? transform) && _gameTiming.IsFirstTimePredicted)
         {
-            var ev = new BodyPartEnableChangedEvent(false);
-            RaiseLocalEvent(partEnt, ref ev);
+            var enableEvent = new BodyPartEnableChangedEvent(false);
+            RaiseLocalEvent(partEnt, ref enableEvent);
+
+            if (TryComp(body, out HumanoidAppearanceComponent? bodyAppearance)
+                && !HasComp<BodyPartAppearanceComponent>(partEnt)
+                && !TerminatingOrDeleted(body)
+                && !TerminatingOrDeleted(partEnt))
+                EnsureComp<BodyPartAppearanceComponent>(partEnt);
+
             SharedTransform.AttachToGridOrMap(partEnt, transform);
             _randomHelper.RandomOffset(partEnt, 0.5f);
+            var droppedEvent = new BodyPartDroppedEvent(partEnt);
+            RaiseLocalEvent(body, ref droppedEvent);
         }
 
     }
@@ -601,6 +614,13 @@ public partial class SharedBodySystem
         }
 
         part.ParentSlot = slot;
+
+        if (TryComp(part.Body, out HumanoidAppearanceComponent? bodyAppearance)
+            && !HasComp<BodyPartAppearanceComponent>(partId)
+            && !TerminatingOrDeleted(parentPartId)
+            && !TerminatingOrDeleted(partId)) // Saw some exceptions involving these due to the spawn menu.
+            EnsureComp<BodyPartAppearanceComponent>(partId);
+
         return Containers.Insert(partId, container);
     }
 

@@ -4,7 +4,6 @@ using Content.Shared.Medical.Surgery.Steps;
 using Content.Shared.Medical.Surgery.Tools;
 //using Content.Shared._RMC14.Xenonids.Parasite;
 using Content.Shared.Body.Part;
-using Content.Shared.Body.Systems;
 using Content.Shared.Body.Organ;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Body.Events;
@@ -78,7 +77,6 @@ public abstract partial class SharedSurgerySystem
                 var compType = reg.Component.GetType();
                 if (HasComp(args.Part, compType))
                     continue;
-
                 AddComp(args.Part, _compFactory.GetComponent(compType));
             }
         }
@@ -158,6 +156,19 @@ public abstract partial class SharedSurgerySystem
                 !HasComp<OperatingTableComponent>(buckle.BuckledTo))
             {
                 args.Invalid = StepInvalidReason.NeedsOperatingTable;
+                return;
+            }
+        }
+
+        if (_inventory.TryGetContainerSlotEnumerator(args.Body, out var containerSlotEnumerator, args.TargetSlots))
+        {
+            while (containerSlotEnumerator.MoveNext(out var containerSlot))
+            {
+                if (!containerSlot.ContainedEntity.HasValue)
+                    continue;
+
+                args.Invalid = StepInvalidReason.Armor;
+                args.Popup = Loc.GetString("surgery-ui-window-steps-error-armor");
                 return;
             }
         }
@@ -302,6 +313,8 @@ public abstract partial class SharedSurgerySystem
                 _body.TryCreatePartSlot(args.Part, slotName, partComp.PartType, out var _);
                 _body.AttachPart(args.Part, slotName, tool);
                 _body.ChangeSlotState((tool, partComp), false);
+                var ev = new BodyPartAttachedEvent((tool, partComp));
+                RaiseLocalEvent(args.Body, ref ev);
             }
         }
     }
@@ -414,7 +427,7 @@ public abstract partial class SharedSurgerySystem
         var user = args.Actor;
         if (GetEntity(args.Entity) is not { Valid: true } body ||
             GetEntity(args.Part) is not { Valid: true } targetPart ||
-            !IsSurgeryValid(body, targetPart, args.Surgery, args.Step, out var surgery, out var part, out var step))
+            !IsSurgeryValid(body, targetPart, args.Surgery, args.Step, user, out var surgery, out var part, out var step))
         {
             return;
         }
@@ -571,7 +584,6 @@ public abstract partial class SharedSurgerySystem
 
         var ev = new SurgeryStepCompleteCheckEvent(body, part, surgery);
         RaiseLocalEvent(stepEnt, ref ev);
-
         return !ev.Cancelled;
     }
 
