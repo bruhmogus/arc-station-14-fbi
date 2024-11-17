@@ -162,7 +162,7 @@
   id: UniversalTranslatorImplant
   name: universal translation implant
   description: A privately made implant that allows translation to and from all languages that exist. # ADMEMES ONLY!!! I AM LAZY AS FUCK!!!
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: TranslatorImplant
     understood:
