@@ -42,21 +42,17 @@ public sealed partial class TargetingControl : UIWidget
             TargetDoll.Texture = Theme.ResolveTexture("target_doll");
         }
     }
-    private void SetActiveBodyPart(TargetBodyPart bodyPart)
-    {
-        _controller.CycleTarget(bodyPart);
-    }
+
+    private void SetActiveBodyPart(TargetBodyPart bodyPart) => _controller.CycleTarget(bodyPart);
 
     public void SetBodyPartsVisible(TargetBodyPart bodyPart)
     {
         foreach (var bodyPartButton in _bodyPartControls)
-        {
             bodyPartButton.Value.Children.First().Visible = bodyPartButton.Key == bodyPart;
-        }
     }
 
-    public void SetTargetDollVisible(bool visible)
-    {
-        Visible = visible;
-    }
+    protected override void OnThemeUpdated() => TargetDoll.Texture = Theme.ResolveTexture("target_doll");
+
+    public void SetTargetDollVisible(bool visible) => Visible = visible;
+
 }

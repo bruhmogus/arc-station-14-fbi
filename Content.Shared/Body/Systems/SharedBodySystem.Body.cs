@@ -51,9 +51,7 @@ public partial class SharedBodySystem
         SubscribeLocalEvent<BodyComponent, ComponentInit>(OnBodyInit);
         SubscribeLocalEvent<BodyComponent, MapInitEvent>(OnBodyMapInit);
         SubscribeLocalEvent<BodyComponent, CanDragEvent>(OnBodyCanDrag);
-        SubscribeLocalEvent<BodyComponent, DamageChangedEvent>(OnDamageChanged);
         SubscribeLocalEvent<BodyComponent, StandAttemptEvent>(OnStandAttempt);
-        SubscribeLocalEvent<BodyComponent, RejuvenateEvent>(OnRejuvenate);
         SubscribeLocalEvent<BodyComponent, ProfileLoadFinishedEvent>(OnProfileLoadFinished);
     }
 
@@ -144,40 +142,6 @@ public partial class SharedBodySystem
     {
         if (ent.Comp.LegEntities.Count == 0)
             args.Cancel();
-    }
-
-    private void OnDamageChanged(Entity<BodyComponent> ent, ref DamageChangedEvent args)
-    {
-        if (args.PartMultiplier == 0
-            || ent.Comp is null
-            || args.TargetPart is null
-            || args.DamageDelta is null
-            || !args.DamageIncreased
-            && !args.DamageDecreased)
-            return;
-
-        // Go through every flag and apply damage to them.
-        var targets = SharedTargetingSystem.GetValidParts();
-        foreach (var target in targets)
-        {
-            if (!args.TargetPart.Value.HasFlag(target))
-                continue;
-
-            var (targetType, targetSymmetry) = ConvertTargetBodyPart(target);
-            foreach (var part in GetBodyChildrenOfType(ent, targetType, ent.Comp)
-                         .Where(part => part.Component.Symmetry == targetSymmetry))
-            {
-                ApplyPartDamage(part, args.DamageDelta, targetType, target, args.CanSever, args.Evade, args.PartMultiplier);
-            }
-        }
-    }
-
-    private void OnRejuvenate(Entity<BodyComponent> ent, ref RejuvenateEvent args)
-    {
-        foreach (var part in GetBodyChildren(ent, ent.Comp))
-        {
-            TrySetIntegrity(part, GetHealingSpecifier(part.Component), false, GetTargetBodyPart(part), out _);
-        }
     }
 
     /// <summary>
@@ -403,11 +367,28 @@ public partial class SharedBodySystem
     {
         var gibs = new HashSet<EntityUid>();
 
+        if (!Resolve(partId, ref part, logMissing: false))
+            return gibs;
+
+        if (part.Body is { } bodyEnt)
+        {
+            RemovePartChildren((partId, part), bodyEnt);
+            foreach (var organ in GetPartOrgans(partId, part))
+            {
+                _gibbingSystem.TryGibEntityWithRef(bodyEnt, organ.Id, GibType.Drop, GibContentsOption.Skip,
+                    ref gibs, playAudio: false, launchImpulse: GibletLaunchImpulse * splatModifier,
+                    launchImpulseVariance: GibletLaunchImpulseVariance, launchCone: splatCone);
+            }
+            var ev = new BodyPartDroppedEvent((partId, part));
+            RaiseLocalEvent(bodyEnt, ref ev);
+        }
+
         _gibbingSystem.TryGibEntityWithRef(partId, partId, GibType.Gib, GibContentsOption.Drop, ref gibs,
                 playAudio: true, launchGibs: true, launchDirection: splatDirection, launchImpulse: GibletLaunchImpulse * splatModifier,
                 launchImpulseVariance: GibletLaunchImpulseVariance, launchCone: splatCone);
 
-        if (TryComp<InventoryComponent>(partId, out var inventory))
+
+        if (HasComp<InventoryComponent>(partId))
         {
             foreach (var item in _inventory.GetHandOrInventoryEntities(partId))
             {
@@ -421,13 +402,10 @@ public partial class SharedBodySystem
 
     private void OnProfileLoadFinished(EntityUid uid, BodyComponent component, ProfileLoadFinishedEvent args)
     {
-        if (!TryComp<HumanoidAppearanceComponent>(uid, out var appearance)
+        if (!HasComp<HumanoidAppearanceComponent>(uid)
             || TerminatingOrDeleted(uid))
-            return;
 
         foreach (var part in GetBodyChildren(uid, component))
-        {
             EnsureComp<BodyPartAppearanceComponent>(part.Id);
-        }
     }
 }

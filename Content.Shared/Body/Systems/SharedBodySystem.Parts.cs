@@ -48,9 +48,7 @@ public partial class SharedBodySystem
     private void OnBodyPartRemove(Entity<BodyPartComponent> ent, ref ComponentRemove args)
     {
         if (ent.Comp.PartType == BodyPartType.Torso)
-        {
             _slots.RemoveItemSlot(ent, ent.Comp.ItemInsertionSlot);
-        }
     }
     private void OnBodyPartInserted(Entity<BodyPartComponent> ent, ref EntInsertedIntoContainerMessage args)
     {
@@ -81,6 +79,7 @@ public partial class SharedBodySystem
 
         if (TryComp(removedUid, out BodyPartComponent? part) && part.Body is not null)
         {
+            CheckBodyPart((removedUid, part), GetTargetBodyPart(part), true);
             RemovePart(part.Body.Value, (removedUid, part), slotId);
             RecursiveBodyUpdate((removedUid, part), null);
         }
@@ -176,25 +175,17 @@ public partial class SharedBodySystem
         {
             var enableEvent = new BodyPartEnableChangedEvent(false);
             RaiseLocalEvent(partEnt, ref enableEvent);
-
-            if (TryComp(body, out HumanoidAppearanceComponent? bodyAppearance)
-                && !HasComp<BodyPartAppearanceComponent>(partEnt)
-                && !TerminatingOrDeleted(body)
-                && !TerminatingOrDeleted(partEnt))
-                EnsureComp<BodyPartAppearanceComponent>(partEnt);
-
-            SharedTransform.AttachToGridOrMap(partEnt, transform);
-            _randomHelper.RandomOffset(partEnt, 0.5f);
             var droppedEvent = new BodyPartDroppedEvent(partEnt);
             RaiseLocalEvent(body, ref droppedEvent);
+            SharedTransform.AttachToGridOrMap(partEnt, transform);
+            _randomHelper.RandomOffset(partEnt, 0.5f);
         }
 
     }
 
-    private void OnAmputateAttempt(Entity<BodyPartComponent> partEnt, ref AmputateAttemptEvent args)
-    {
+    private void OnAmputateAttempt(Entity<BodyPartComponent> partEnt, ref AmputateAttemptEvent args) =>
         DropPart(partEnt);
-    }
+
     private void AddLeg(Entity<BodyPartComponent> legEnt, Entity<BodyComponent?> bodyEnt)
     {
         if (!Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
@@ -229,6 +220,14 @@ public partial class SharedBodySystem
             || !Resolve(bodyEnt, ref bodyEnt.Comp, logMissing: false))
             return;
 
+        RemovePartChildren(partEnt, bodyEnt, bodyEnt.Comp);
+    }
+
+    protected void RemovePartChildren(Entity<BodyPartComponent> partEnt, EntityUid bodyEnt, BodyComponent? body = null)
+    {
+        if (!Resolve(bodyEnt, ref body, logMissing: false))
+            return;
+
         if (partEnt.Comp.Children.Any())
         {
             foreach (var slotId in partEnt.Comp.Children.Keys)
@@ -243,9 +242,9 @@ public partial class SharedBodySystem
                     DropPart((childEntity, childPart));
                 }
             }
-            Dirty(bodyEnt, bodyEnt.Comp);
-        }
 
+            Dirty(bodyEnt, body);
+        }
     }
 
     private void PartRemoveDamage(Entity<BodyComponent?> bodyEnt, Entity<BodyPartComponent> partEnt)
@@ -265,6 +264,9 @@ public partial class SharedBodySystem
 
     private void OnPartEnableChanged(Entity<BodyPartComponent> partEnt, ref BodyPartEnableChangedEvent args)
     {
+        if (!partEnt.Comp.CanEnable && args.Enabled)
+            return;
+
         partEnt.Comp.Enabled = args.Enabled;
         Dirty(partEnt, partEnt.Comp);
 
@@ -281,9 +283,7 @@ public partial class SharedBodySystem
 
         // I hate having to hardcode these checks so much.
         if (partEnt.Comp.PartType == BodyPartType.Leg)
-        {
             AddLeg(partEnt, (partEnt.Comp.Body.Value, body));
-        }
 
         if (partEnt.Comp.PartType == BodyPartType.Arm)
         {
@@ -329,9 +329,7 @@ public partial class SharedBodySystem
             return;
 
         if (partEnt.Comp.PartType == BodyPartType.Leg)
-        {
             RemoveLeg(partEnt, (partEnt.Comp.Body.Value, body));
-        }
 
         if (partEnt.Comp.PartType == BodyPartType.Arm)
         {
@@ -614,7 +612,7 @@ public partial class SharedBodySystem
 
         part.ParentSlot = slot;
 
-        if (TryComp(part.Body, out HumanoidAppearanceComponent? bodyAppearance)
+        if (TryComp(parentPart.Body, out HumanoidAppearanceComponent? bodyAppearance)
             && !HasComp<BodyPartAppearanceComponent>(partId)
             && !TerminatingOrDeleted(parentPartId)
             && !TerminatingOrDeleted(partId)) // Saw some exceptions involving these due to the spawn menu.

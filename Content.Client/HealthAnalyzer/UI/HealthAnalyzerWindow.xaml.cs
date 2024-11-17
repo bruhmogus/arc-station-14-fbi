@@ -6,7 +6,7 @@ using Content.Client.UserInterface.Controls;
 using Content.Shared.Alert;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.Targeting;
+using Content.Shared.Targeting; // Shitmed
 using Content.Shared.FixedPoint;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -38,10 +38,15 @@ namespace Content.Client.HealthAnalyzer.UI
         private readonly IResourceCache _cache;
 
         // Start-Shitmed
+        public event Action<TargetBodyPart?, EntityUid>? OnBodyPartSelected;
         private EntityUid _spriteViewEntity;
 
         [ValidatePrototypeId<EntityPrototype>]
         private readonly EntProtoId _bodyView = "AlertSpriteView";
+
+        private readonly Dictionary<TargetBodyPart, TextureButton> _bodyPartControls;
+        private EntityUid? _target;
+
         // End-Shitmed
         public HealthAnalyzerWindow()
         {
@@ -52,18 +57,77 @@ namespace Content.Client.HealthAnalyzer.UI
             _spriteSystem = _entityManager.System<SpriteSystem>();
             _prototypes = dependencies.Resolve<IPrototypeManager>();
             _cache = dependencies.Resolve<IResourceCache>();
+            // Start-Shitmed
+            _bodyPartControls = new Dictionary<TargetBodyPart, TextureButton>
+            {
+                { TargetBodyPart.Head, HeadButton },
+                { TargetBodyPart.Torso, ChestButton },
+                { TargetBodyPart.Groin, GroinButton },
+                { TargetBodyPart.LeftArm, LeftArmButton },
+                { TargetBodyPart.LeftHand, LeftHandButton },
+                { TargetBodyPart.RightArm, RightArmButton },
+                { TargetBodyPart.RightHand, RightHandButton },
+                { TargetBodyPart.LeftLeg, LeftLegButton },
+                { TargetBodyPart.LeftFoot, LeftFootButton },
+                { TargetBodyPart.RightLeg, RightLegButton },
+                { TargetBodyPart.RightFoot, RightFootButton },
+            };
+
+            foreach (var bodyPartButton in _bodyPartControls)
+            {
+                bodyPartButton.Value.MouseFilter = MouseFilterMode.Stop;
+                bodyPartButton.Value.OnPressed += _ => SetActiveBodyPart(bodyPartButton.Key, bodyPartButton.Value);
+            }
+            ReturnButton.OnPressed += _ => ResetBodyPart();
+            // End-Shitmed
+        }
+
+        public void SetActiveBodyPart(TargetBodyPart part, TextureButton button)
+        {
+            if (_target == null)
+                return;
+
+            // Bit of the ole shitcode until we have Groins in the prototypes.
+            OnBodyPartSelected?.Invoke(part == TargetBodyPart.Groin ? TargetBodyPart.Torso : part, _target.Value);
+        }
+
+        public void ResetBodyPart()
+        {
+            if (_target == null)
+                return;
+
+            OnBodyPartSelected?.Invoke(null, _target.Value);
+        }
+
+        public void SetActiveButtons(bool isHumanoid)
+        {
+            foreach (var button in _bodyPartControls)
+                button.Value.Visible = isHumanoid;
         }
 
         public void Populate(HealthAnalyzerScannedUserMessage msg)
         {
-            var target = _entityManager.GetEntity(msg.TargetEntity);
+            // Start-Shitmed
+            _target = _entityManager.GetEntity(msg.TargetEntity);
+            EntityUid? part = msg.Part != null ? _entityManager.GetEntity(msg.Part.Value) : null;
+            var isPart = part != null;
 
-            if (target == null
-                || !_entityManager.TryGetComponent<DamageableComponent>(target, out var damageable))
+            if (_target == null
+                || !_entityManager.TryGetComponent<DamageableComponent>(isPart ? part : _target, out var damageable))
             {
                 NoPatientDataText.Visible = true;
                 return;
             }
+
+            SetActiveButtons(_entityManager.HasComponent<TargetingComponent>(_target.Value));
+
+            ReturnButton.Visible = isPart;
+            PartNameLabel.Visible = isPart;
+
+            if (part != null)
+                PartNameLabel.Text = _entityManager.HasComponent<MetaDataComponent>(part)
+                    ? Identity.Name(part.Value, _entityManager)
+                    : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
 
             NoPatientDataText.Visible = false;
 
@@ -79,19 +143,20 @@ namespace Content.Client.HealthAnalyzer.UI
 
             // Patient Information
 
-            SpriteView.SetEntity(SetupIcon(msg.Body) ?? target.Value); // Shitmed
+            SpriteView.SetEntity(SetupIcon(msg.Body) ?? _target.Value);
             SpriteView.Visible = msg.ScanMode.HasValue && msg.ScanMode.Value;
+            PartView.Visible = SpriteView.Visible;
             NoDataTex.Visible = !SpriteView.Visible;
 
             var name = new FormattedMessage();
             name.PushColor(Color.White);
-            name.AddText(_entityManager.HasComponent<MetaDataComponent>(target.Value)
-                ? Identity.Name(target.Value, _entityManager)
+            name.AddText(_entityManager.HasComponent<MetaDataComponent>(_target.Value)
+                ? Identity.Name(_target.Value, _entityManager)
                 : Loc.GetString("health-analyzer-window-entity-unknown-text"));
             NameLabel.SetMessage(name);
 
             SpeciesLabel.Text =
-                _entityManager.TryGetComponent<HumanoidAppearanceComponent>(target.Value,
+                _entityManager.TryGetComponent<HumanoidAppearanceComponent>(_target.Value,
                     out var humanoidAppearanceComponent)
                     ? Loc.GetString(_prototypes.Index<SpeciesPrototype>(humanoidAppearanceComponent.Species).Name)
                     : Loc.GetString("health-analyzer-window-entity-unknown-species-text");
@@ -107,7 +172,7 @@ namespace Content.Client.HealthAnalyzer.UI
                 : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
 
             StatusLabel.Text =
-                _entityManager.TryGetComponent<MobStateComponent>(target.Value, out var mobStateComponent)
+                _entityManager.TryGetComponent<MobStateComponent>(_target.Value, out var mobStateComponent)
                     ? GetStatus(mobStateComponent.CurrentState)
                     : Loc.GetString("health-analyzer-window-entity-unknown-text");
 
@@ -156,6 +221,7 @@ namespace Content.Client.HealthAnalyzer.UI
             IReadOnlyDictionary<string, FixedPoint2> damagePerType = damageable.Damage.DamageDict;
 
             DrawDiagnosticGroups(damageSortedGroups, damagePerType);
+            // End-Shitmed
         }
 
         private static string GetStatus(MobState mobState)
@@ -265,11 +331,15 @@ namespace Content.Client.HealthAnalyzer.UI
         {
             if (body is null)
                 return null;
+
             if (!_entityManager.Deleted(_spriteViewEntity))
                 _entityManager.QueueDeleteEntity(_spriteViewEntity);
+
             _spriteViewEntity = _entityManager.Spawn(_bodyView);
+
             if (!_entityManager.TryGetComponent<SpriteComponent>(_spriteViewEntity, out var sprite))
                 return null;
+
             int layer = 0;
             foreach (var (bodyPart, integrity) in body)
             {
@@ -282,6 +352,7 @@ namespace Content.Client.HealthAnalyzer.UI
                     sprite.AddLayer(_spriteSystem.Frame0(rsi));
                 else
                     sprite.LayerSetTexture(layer, _spriteSystem.Frame0(rsi));
+                sprite.LayerSetScale(layer, new Vector2(3f, 3f));
                 layer++;
             }
             return _spriteViewEntity;

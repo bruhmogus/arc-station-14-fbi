@@ -69,35 +69,10 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     public Dictionary<string, OrganSlot> Organs = new();
 
     /// <summary>
-    /// How much health the body part has until it pops out.
-    /// </summary>
-    [ViewVariables]
-    public float TotalDamage => Damage.GetTotal().Float();
-
-    /// <summary>
-    /// The DamageSpecifier that contains all types of damage that the BodyPart can take.
-    /// TODO: Rework this with DamageableComponent
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public DamageSpecifier Damage = new()
-    {
-        DamageDict = new Dictionary<string, FixedPoint2>
-        {
-            { "Blunt", 0 },
-            { "Slash", 0 },
-            { "Piercing", 0 },
-            { "Heat", 0 },
-            { "Cold", 0 },
-            { "Shock", 0 },
-            { "Caustic", 0 },
-        }
-    };
-
-    /// <summary>
     /// What's the max health this body part can have?
     /// </summary>
     [DataField]
-    public float MinIntegrity = 0;
+    public float MinIntegrity;
 
     /// <summary>
     /// Whether this body part is enabled or not.
@@ -106,25 +81,37 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     public bool Enabled = true;
 
     /// <summary>
+    /// Whether this body part can be enabled or not. Used for non-functional prosthetics.
+    /// </summary>
+    [DataField]
+    public bool CanEnable = true;
+
+    /// <summary>
     /// How long it takes to run another self heal tick on the body part.
     /// </summary>
-    [DataField("healingTime")]
+    [DataField]
     public float HealingTime = 30;
 
     /// <summary>
     /// How long it has been since the last self heal tick on the body part.
     /// </summary>
-    public float HealingTimer = 0;
+    public float HealingTimer;
 
     /// <summary>
     /// How much health to heal on the body part per tick.
     /// </summary>
-    [DataField("selfHealingAmount")]
+    [DataField]
     public float SelfHealingAmount = 5;
 
+    /// <summary>
+    /// The name of the container for this body part. Used in insertion surgeries.
+    /// </summary>
     [DataField]
     public string ContainerName { get; set; } = "part_slot";
 
+    /// <summary>
+    /// The slot for item insertion.
+    /// </summary>
     [DataField, AutoNetworkedField]
     public ItemSlot ItemInsertionSlot = new();
 
@@ -143,6 +130,12 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     public float SeverIntegrity = 90;
 
     /// <summary>
+    /// The ID of the base layer for this body part.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public string? BaseLayerId;
+
+    /// <summary>
     /// On what TargetIntegrity we should re-enable the part.
     /// </summary>
     [DataField, AutoNetworkedField]
@@ -156,7 +149,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
         { TargetIntegrity.ModeratelyWounded, 60 },
         { TargetIntegrity.SomewhatWounded, 40},
         { TargetIntegrity.LightlyWounded, 20 },
-        { TargetIntegrity.Healthy, 0 },
+        { TargetIntegrity.Healthy, 10 },
     };
 
     /// <summary>
