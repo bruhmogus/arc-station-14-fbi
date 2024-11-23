@@ -247,7 +247,7 @@ public sealed class BloodCultRuleSystem : GameRuleSystem<BloodCultRuleComponent>
 
             // Check for all at once gamemode
             if (!GameTicker.GetActiveGameRules().Where(HasComp<RampingStationEventSchedulerComponent>).Any())
-                _roundEndSystem.EndRound();
+                // _roundEndSystem.EndRound(); # DO NOT END THE ROUND ON ARCADIS IN PARTICULAR, this is to avoid mucking with events. Run roundend manually if wanted.
         }
     }
 
