@@ -52,6 +52,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Nyanotrasen.Kitchen.EntitySystems;
 
@@ -357,7 +358,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
                 _ => 10
             } * component.SolutionSizeCoefficient);
         } else {
-            oilToUse = 10; // Default until I figure out how in the 24 hells to get an entity's mass and just use that
+            oilToUse = TryComp<PhysicsComponent>(item, out var physicsComponent) ? physicsComponent.Mass : 10;
         }
 
         // Determine how much solution to spend on this item.
