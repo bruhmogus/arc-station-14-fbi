@@ -40,7 +40,7 @@
     damageContainers:
     - Biological
   - type: Tag
-    tags:
+    tags: 
     - HudMedical
 
 - type: entity
@@ -71,6 +71,8 @@
   - type: StealTarget
     stealGroup: ClothingEyesHudBeer
   - type: SolutionScanner
+  - type: FlashImmunity
+  - type: EyeProtection
 
 - type: entity
   parent: ClothingEyesBase
