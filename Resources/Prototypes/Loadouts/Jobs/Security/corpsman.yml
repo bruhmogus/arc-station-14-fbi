@@ -58,7 +58,33 @@
     - ClothingBeltCorpsmanWebbingFilled
 
 # Ears
+- type: loadout
+  id: LoadoutClothingEyesGlassesMedSec
+  category: JobsSecurityCorpsman
+  cost: 3
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesGlassesMedSec
 
+- type: loadout
+  id: LoadoutClothingEyesHUDMedSec
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesHudMedSec
 # Equipment
 
 # Eyes
