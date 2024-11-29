@@ -1554,7 +1554,7 @@
   description: An illegal machine that counterfeits spesos that act exactly like real ones. Security will look down on this.
   components:
     - type: Sprite
-      sprite: Structures/Machines/ore_processor_industrial.rsi
+      sprite: Structures/Machines/moneyprinter.rsi
       layers:
         - state: icon
           map: ["enum.LatheVisualLayers.IsRunning"]
