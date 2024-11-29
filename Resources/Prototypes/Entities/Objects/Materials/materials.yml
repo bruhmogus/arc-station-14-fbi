@@ -193,6 +193,7 @@
     tags:
       - ClothMade
       - RawMaterial
+      - Durathread
 
 - type: entity
   parent: MaterialDurathread

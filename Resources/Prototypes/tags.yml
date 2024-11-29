@@ -555,6 +555,9 @@
   id: Duck
 
 - type: Tag
+  id: Durathread
+
+- type: Tag
   id: Ectoplasm
 
 - type: Tag

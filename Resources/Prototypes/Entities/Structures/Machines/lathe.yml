@@ -1546,3 +1546,37 @@
     emagStaticRecipes:
       - PizzaLeftArm
       - PizzaRightArm
+
+- type: entity
+  parent: BaseLathe
+  id: MoneyPrinter
+  name: counterfeiting station
+  description: An illegal machine that counterfeits spesos that act exactly like real ones. Security will look down on this.
+  components:
+    - type: Sprite
+      sprite: Structures/Machines/ore_processor_industrial.rsi
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: MoneyPrinterMachineCircuitboard
+    - type: MaterialStorage
+      ignoreColor: true
+      whitelist:
+        tags:
+          - Durathread
+    - type: Lathe
+      idleState: icon
+      runningState: building
+      staticRecipes:
+        - SpesoOne
+        - SpesoTen
+        - SpesoOneHundred
+        - SpesoThousand

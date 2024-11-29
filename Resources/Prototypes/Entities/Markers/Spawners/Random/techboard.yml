@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: RandomBoard
   name: random board spawner
   parent: MarkerBase
@@ -41,4 +41,5 @@
     - ResearchAndDevelopmentServerMachineCircuitboard # Delta V - Add additional boards
     - UniformPrinterMachineCircuitboard # Delta V - Add additional boards
     - ArtifactAnalyzerMachineCircuitboard # Delta V - Add additional boards
+    - MoneyPrinterMachineCircuitboard # Arcadis - Money printer
     rareChance: 0.05
