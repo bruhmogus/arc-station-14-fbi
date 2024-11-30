@@ -71,8 +71,6 @@
   - type: StealTarget
     stealGroup: ClothingEyesHudBeer
   - type: SolutionScanner
-  - type: FlashImmunity
-  - type: EyeProtection
 
 - type: entity
   parent: ClothingEyesBase
