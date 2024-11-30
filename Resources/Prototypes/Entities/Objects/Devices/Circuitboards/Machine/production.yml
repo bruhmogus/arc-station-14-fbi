@@ -1671,7 +1671,6 @@
       requirements:
         MatterBin: 3
         Manipulator: 2
-        Pen: 4
       materialRequirements:
         Glass: 1
         Steel: 1
