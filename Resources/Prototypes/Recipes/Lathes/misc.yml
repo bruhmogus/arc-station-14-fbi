@@ -229,26 +229,26 @@
   result: SpaceCash
   completetime: 1
   materials:
-    Durathread: 0.05
+    Durathread: 5
 
 - type: latheRecipe
   id: SpesoTen
   result: SpaceCash10
   completetime: 5
   materials:
-    Durathread: 0.5
+    Durathread: 50
     
 - type: latheRecipe
   id: SpesoOneHundred
   result: SpaceCash100
   completetime: 25
   materials:
-    Durathread: 5
+    Durathread: 500
     
 - type: latheRecipe
   id: SpesoThousand
   result: SpaceCash1000
   completetime: 60
   materials:
-    Durathread: 50
+    Durathread: 5000
 
