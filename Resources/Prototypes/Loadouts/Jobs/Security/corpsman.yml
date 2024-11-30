@@ -75,7 +75,7 @@
 - type: loadout
   id: LoadoutClothingEyesHUDMedSec
   category: JobsSecurityCorpsman
-  cost: 0
+  cost: 1
   exclusive: true
   requirements:
     - !type:CharacterItemGroupRequirement
