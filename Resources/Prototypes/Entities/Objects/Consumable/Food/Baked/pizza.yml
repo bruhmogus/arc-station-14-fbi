@@ -539,7 +539,7 @@
   name: Bo Bo pizza
   parent: FoodPizzaBase
   id: FoodPizzaBoBo
-  description: PIZZA WITH OVER 137 CHEMICALS IN IT!
+  description: PIZZA WITH OVER 137 CHEMICALS IN IT! OVER 1000 TOTAL CHEMICAL VOLUME!
   components:
   - type: FlavorProfile
     flavors:
