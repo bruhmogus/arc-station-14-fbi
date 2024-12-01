@@ -551,7 +551,6 @@
   - type: SliceableFood
     slice: FoodPizzaBoBoSlice
   - type: SolutionContainerManager
-    canReact: false
     solutions:
       food:
         maxVol: 15320
@@ -1337,10 +1336,10 @@
     layers:
     - state: arnold-slice
   - type: SolutionContainerManager
-    canreact: false
     solutions:
       food:
         maxVol: 1915
+        canReact: false
         reagents:
         - ReagentId: Blood
           Quantity: 5
