@@ -1024,7 +1024,7 @@
 - type: entity
   name: slice of BoBo's pizza
   parent: FoodPizzaSliceBase
-  id: FoodPizzaBoBo
+  id: FoodPizzaBoBoSlice
   description: YOU WILL BURST INTO FLAMES EATING THIS!
   components:
   - type: FlavorProfile
