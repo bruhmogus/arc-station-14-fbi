@@ -1551,7 +1551,7 @@
   parent: BaseLathe
   id: MoneyPrinter
   name: counterfeiting station
-  description: An illegal machine that counterfeits spesos that act exactly like real ones. Security will want to know about this.
+  description: An illegal machine that counterfeits spesos that act exactly like real ones. Security will definitely want to know about this.
   components:
     - type: Sprite
       sprite: Structures/Machines/moneyprinter.rsi
