@@ -551,6 +551,7 @@
   - type: SliceableFood
     slice: FoodPizzaBoBoSlice
   - type: SolutionContainerManager
+    canReact: false
     solutions:
       food:
         maxVol: 15320
@@ -706,7 +707,7 @@
           Quantity: 40
         - ReagentId: Dylovene
           Quantity: 40
-        - ReagentId: Dyphenhydramine
+        - ReagentId: Diphenhydramine
           Quantity: 40
         - ReagentId: Ethylredoxrazine
           Quantity: 40
@@ -1002,12 +1003,6 @@
           Quantity: 40
         - ReagentId: Sake
           Quantity: 40
-        - ReagentId: OrangeCreamIce
-          Quantity: 40
-        - ReagentId: SilverJack
-          Quantity: 40
-        - ReagentId: BrainBomb
-          Quantity: 40
         - ReagentId: ClownBlood
           Quantity: 40
         - ReagentId: CircusJuice
@@ -1206,7 +1201,7 @@
           Quantity: 40
         - ReagentId: RoyRogers
           Quantity: 40
-        - ReagentId: ChanglingSting
+        - ReagentId: ChangelingSting
           Quantity: 40
         - ReagentId: DrGibb
           Quantity: 40
@@ -1304,7 +1299,7 @@
           Quantity: 40
         - ReagentId: EggCooked
           Quantity: 40
-        - ReagentId: BlackPepper
+        - ReagentId: Blackpepper
           Quantity: 40
         - ReagentId: Vinegar
           Quantity: 40
@@ -1342,7 +1337,7 @@
     layers:
     - state: arnold-slice
   - type: SolutionContainerManager
-    canReact: false
+    canreact: false
     solutions:
       food:
         maxVol: 1915
@@ -1497,7 +1492,7 @@
           Quantity: 5
         - ReagentId: Dylovene
           Quantity: 5
-        - ReagentId: Dyphenhydramine
+        - ReagentId: Diphenhydramine
           Quantity: 5
         - ReagentId: Ethylredoxrazine
           Quantity: 5
@@ -1797,12 +1792,6 @@
           Quantity: 5
         - ReagentId: Sake
           Quantity: 5
-        - ReagentId: OrangeCreamIce
-          Quantity: 5
-        - ReagentId: SilverJack
-          Quantity: 5
-        - ReagentId: BrainBomb
-          Quantity: 5
         - ReagentId: ClownBlood
           Quantity: 5
         - ReagentId: CircusJuice
@@ -2001,7 +1990,7 @@
           Quantity: 5
         - ReagentId: RoyRogers
           Quantity: 5
-        - ReagentId: ChanglingSting
+        - ReagentId: ChangelingSting
           Quantity: 5
         - ReagentId: DrGibb
           Quantity: 5
@@ -2099,7 +2088,7 @@
           Quantity: 5
         - ReagentId: EggCooked
           Quantity: 5
-        - ReagentId: BlackPepper
+        - ReagentId: Blackpepper
           Quantity: 5
         - ReagentId: Vinegar
           Quantity: 5
