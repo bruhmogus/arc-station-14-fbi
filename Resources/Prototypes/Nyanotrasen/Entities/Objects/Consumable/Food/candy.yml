@@ -22,6 +22,9 @@
   - type: Sprite
     sprite: Nyanotrasen/Objects/Consumable/Food/candy.rsi
     state: lollipop
+  - type: Clothing
+    slots: [mask]
+    sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
 
 - type: entity
   parent: FoodBase
