@@ -1664,10 +1664,10 @@
   id: MoneyPrinterMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: counterfeiting station machine board
-  description: A strange circuitboard for an illegal machine. You should probably turn this into Security... but let's be honest. You won't.
+  description: A strange circuit board for an illegal machine. You should probably turn this in to Security... but let's be honest. You won't.
   components:
     - type: MachineBoard
-      prototype: Autolathe
+      prototype: MoneyPrinter
       requirements:
         MatterBin: 3
         Manipulator: 2
