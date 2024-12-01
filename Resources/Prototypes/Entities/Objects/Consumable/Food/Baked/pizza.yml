@@ -553,7 +553,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 9240
+        maxVol: 15320
         canReact: false
         reagents:
         - ReagentId: Blood
@@ -702,7 +702,7 @@
           Quantity: 40
         - ReagentId: Frezon
           Quantity: 40
-        - ReagentId: CryptoBiolin
+        - ReagentId: Cryptobiolin
           Quantity: 40
         - ReagentId: Dylovene
           Quantity: 40
@@ -1016,6 +1016,313 @@
           Quantity: 40
         - ReagentId: Graveyard # 231
           Quantity: 40
+        - ReagentId: Absinthe
+          Quantity: 40
+        - ReagentId: Ale
+          Quantity: 40
+        - ReagentId: Beer
+          Quantity: 40
+        - ReagentId: BlueCuracao
+          Quantity: 40
+        - ReagentId: BlueHawaiian
+          Quantity: 40
+        - ReagentId: Cognac
+          Quantity: 40
+        - ReagentId: DeadRum
+          Quantity: 40
+        - ReagentId: Ethanol
+          Quantity: 40
+        - ReagentId: Gin
+          Quantity: 40
+        - ReagentId: CoffeeLiqueur
+          Quantity: 40
+        - ReagentId: MelonLiquor
+          Quantity: 40
+        - ReagentId: NTCahors
+          Quantity: 40
+        - ReagentId: PoisonWine
+          Quantity: 40
+        - ReagentId: Rum
+          Quantity: 40
+        - ReagentId: Tequila
+          Quantity: 40
+        - ReagentId: Vermouth
+          Quantity: 40
+        - ReagentId: Vodka
+          Quantity: 40
+        - ReagentId: Whiskey
+          Quantity: 40
+        - ReagentId: Wine
+          Quantity: 40
+        - ReagentId: Champagne
+          Quantity: 40
+        - ReagentId: AcidSpit
+          Quantity: 40
+        - ReagentId: AlliesCocktail
+          Quantity: 40
+        - ReagentId: Aloe
+          Quantity: 40
+        - ReagentId: Amasec
+          Quantity: 40
+        - ReagentId: Andalusia
+          Quantity: 40
+        - ReagentId: Antifreeze
+          Quantity: 40
+        - ReagentId: AtomicBomb
+          Quantity: 40
+        - ReagentId: B52
+          Quantity: 40
+        - ReagentId: BahamaMama
+          Quantity: 40
+        - ReagentId: BananaHonk
+          Quantity: 40
+        - ReagentId: Barefoot
+          Quantity: 40
+        - ReagentId: BeepskySmash
+          Quantity: 40
+        - ReagentId: BlackRussian
+          Quantity: 40
+        - ReagentId: BloodyMary
+          Quantity: 40
+        - ReagentId: Booger
+          Quantity: 40
+        - ReagentId: BraveBull
+          Quantity: 40
+        - ReagentId: CoconutRum
+          Quantity: 40
+        - ReagentId: Cosmopolitan
+          Quantity: 40
+        - ReagentId: CubaLibre
+          Quantity: 40
+        - ReagentId: DemonsBlood
+          Quantity: 40
+        - ReagentId: DevilsKiss
+          Quantity: 40
+        - ReagentId: DoctorsDelight
+          Quantity: 40
+        - ReagentId: DriestMartini
+          Quantity: 40
+        - ReagentId: ErikaSurprise
+          Quantity: 40
+        - ReagentId: GargleBlaster
+          Quantity: 40
+        - ReagentId: GinFizz
+          Quantity: 40
+        - ReagentId: GinTonic
+          Quantity: 40
+        - ReagentId: Gildlager
+          Quantity: 40
+        - ReagentId: Grog
+          Quantity: 40
+        - ReagentId: HippiesDelight
+          Quantity: 40
+        - ReagentId: Hooch
+          Quantity: 40
+        - ReagentId: IcedBeer
+          Quantity: 40
+        - ReagentId: IrishCarBomb
+          Quantity: 40
+        - ReagentId: IrishCream
+          Quantity: 40
+        - ReagentId: IrishCoffee
+          Quantity: 40
+        - ReagentId: LongIslandIcedTea
+          Quantity: 40
+        - ReagentId: Manhattan
+          Quantity: 40
+        - ReagentId: ManhattanProject
+          Quantity: 40
+        - ReagentId: ManlyDorf
+          Quantity: 40
+        - ReagentId: Margarita
+          Quantity: 40
+        - ReagentId: Martini
+          Quantity: 40
+        - ReagentId: Mead
+          Quantity: 40
+        - ReagentId: Mojito
+          Quantity: 40
+        - ReagentId: Moonshine
+          Quantity: 40
+        - ReagentId: Neurotoxin
+          Quantity: 40
+        - ReagentId: Painkiller
+          Quantity: 40
+        - ReagentId: Patron
+          Quantity: 40
+        - ReagentId: RedMead
+          Quantity: 40
+        - ReagentId: PinaColada
+          Quantity: 40
+        - ReagentId: Sbiten
+          Quantity: 40
+        - ReagentId: ScrewdriverCocktail
+          Quantity: 40
+        - ReagentId: CogChamp
+          Quantity: 40
+        - ReagentId: Silencer
+          Quantity: 40
+        - ReagentId: Singulo
+          Quantity: 40
+        - ReagentId: SnowWhite
+          Quantity: 40
+        - ReagentId: SuiDream
+          Quantity: 40
+        - ReagentId: SyndicateBomb
+          Quantity: 40
+        - ReagentId: TequilaSunrise
+          Quantity: 40
+        - ReagentId: TheMartinez
+          Quantity: 40
+        - ReagentId: ThreeMileIsland
+          Quantity: 40
+        - ReagentId: ToxinsSpecial
+          Quantity: 40
+        - ReagentId: VodkaMartini
+          Quantity: 40
+        - ReagentId: VodkaTonic
+          Quantity: 40
+        - ReagentId: WhiskeyCola
+          Quantity: 40
+        - ReagentId: WhiskeySoda
+          Quantity: 40
+        - ReagentId: WhiteGilgamesh
+          Quantity: 40
+        - ReagentId: WhiteRussian
+          Quantity: 40
+        - ReagentId: VodkaRedBool
+          Quantity: 40
+        - ReagentId: XenoBasher
+          Quantity: 40
+        - ReagentId: IrishBool
+          Quantity: 40
+        - ReagentId: BudgetInsulsDrink
+          Quantity: 40
+        - ReagentId: WatermelonWakeup
+          Quantity: 40
+        - ReagentId: Rubberneck
+          Quantity: 40
+        - ReagentId: Cola
+          Quantity: 40
+        - ReagentId: RoyRogers
+          Quantity: 40
+        - ReagentId: ChanglingSting
+          Quantity: 40
+        - ReagentId: DrGibb
+          Quantity: 40
+        - ReagentId: EnergyDrink
+          Quantity: 40
+        - ReagentId: GrapeSoda
+          Quantity: 40
+        - ReagentId: IceCream
+          Quantity: 40
+        - ReagentId: LemonLime
+          Quantity: 40
+        - ReagentId: PwrGame
+          Quantity: 40
+        - ReagentId: RootBeer
+          Quantity: 40
+        - ReagentId: RootBeerFloat
+          Quantity: 40
+        - ReagentId: SolDry
+          Quantity: 40
+        - ReagentId: ShirleyTemple
+          Quantity: 40
+        - ReagentId: SpaceMountainWind
+          Quantity: 40
+        - ReagentId: SpaceUp
+          Quantity: 40
+        - ReagentId: Starkist
+          Quantity: 40
+        - ReagentId: FourteenLoko
+          Quantity: 40
+        - ReagentId: ShamblersJuice
+          Quantity: 40
+        - ReagentId: JuiceApple
+          Quantity: 40
+        - ReagentId: JuiceBanana
+          Quantity: 40
+        - ReagentId: JuiceBerry
+          Quantity: 40
+        - ReagentId: JuiceCarrot
+          Quantity: 40
+        - ReagentId: JuiceGrape
+          Quantity: 40
+        - ReagentId: JuiceLemon
+          Quantity: 40
+        - ReagentId: JuiceLime
+          Quantity: 40
+        - ReagentId: JuiceOrange
+          Quantity: 40
+        - ReagentId: JuicePineapple
+          Quantity: 40
+        - ReagentId: JuicePotato
+          Quantity: 40
+        - ReagentId: JuiceTomato
+          Quantity: 40
+        - ReagentId: JuiceWatermelon
+          Quantity: 40
+        - ReagentId: Astrotame
+          Quantity: 40
+        - ReagentId: BbqSauce
+          Quantity: 40
+        - ReagentId: Cornoil
+          Quantity: 40
+        - ReagentId: Frostoil
+          Quantity: 40
+        - ReagentId: HorseradishSauce
+          Quantity: 40
+        - ReagentId: Hotsauce
+          Quantity: 40
+        - ReagentId: Ketchup
+          Quantity: 40
+        - ReagentId: Ketchunaise
+          Quantity: 40
+        - ReagentId: LaughinSyrup
+          Quantity: 40
+        - ReagentId: Mayo
+          Quantity: 40
+        - ReagentId: Mustard
+          Quantity: 40
+        - ReagentId: Vinaigrette
+          Quantity: 40
+        - ReagentId: Soysauce
+          Quantity: 40
+        - ReagentId: TableSalt
+          Quantity: 40
+        - ReagentId: Syrup
+          Quantity: 40
+        - ReagentId: Flour
+          Quantity: 40
+        - ReagentId: Cornmeal
+          Quantity: 40
+        - ReagentId: Oats
+          Quantity: 40
+        - ReagentId: Enzyme
+          Quantity: 40
+        - ReagentId: Egg
+          Quantity: 40
+        - ReagentId: EggCooked
+          Quantity: 40
+        - ReagentId: BlackPepper
+          Quantity: 40
+        - ReagentId: Vinegar
+          Quantity: 40
+        - ReagentId: Rice
+          Quantity: 40
+        - ReagentId: OilOlive
+          Quantity: 40
+        - ReagentId: Oil
+          Quantity: 40
+        - ReagentId: CapsaicinOil
+          Quantity: 40
+        - ReagentId: CocoaPowder
+          Quantity: 40
+        - ReagentId: Butter
+          Quantity: 40
+        - ReagentId: Nausium
+          Quantity: 40 # theres actually 383. whoops.
+
   - type: Tag
     tags:
     - Meat
@@ -1038,7 +1345,7 @@
     canReact: false
     solutions:
       food:
-        maxVol: 1155
+        maxVol: 1915
         reagents:
         - ReagentId: Blood
           Quantity: 5
@@ -1186,7 +1493,7 @@
           Quantity: 5
         - ReagentId: Frezon
           Quantity: 5
-        - ReagentId: CryptoBiolin
+        - ReagentId: Cryptobiolin
           Quantity: 5
         - ReagentId: Dylovene
           Quantity: 5
@@ -1446,9 +1753,13 @@
           Quantity: 5
         - ReagentId: MilkSpoiled
           Quantity: 5
+        - ReagentId: MilkChoco
+          Quantity: 5
         - ReagentId: Nothing
           Quantity: 5
         - ReagentId: NuclearCola
+          Quantity: 5
+        - ReagentId: Nausium
           Quantity: 5
         - ReagentId: SodaWater
           Quantity: 5
@@ -1499,6 +1810,310 @@
         - ReagentId: SapoPicante
           Quantity: 5
         - ReagentId: Graveyard # 231
+          Quantity: 5
+        - ReagentId: Absinthe
+          Quantity: 5
+        - ReagentId: Ale
+          Quantity: 5
+        - ReagentId: Beer
+          Quantity: 5
+        - ReagentId: BlueCuracao
+          Quantity: 5
+        - ReagentId: BlueHawaiian
+          Quantity: 5
+        - ReagentId: Cognac
+          Quantity: 5
+        - ReagentId: DeadRum
+          Quantity: 5
+        - ReagentId: Ethanol
+          Quantity: 5
+        - ReagentId: Gin
+          Quantity: 5
+        - ReagentId: CoffeeLiqueur
+          Quantity: 5
+        - ReagentId: MelonLiquor
+          Quantity: 5
+        - ReagentId: NTCahors
+          Quantity: 5
+        - ReagentId: PoisonWine
+          Quantity: 5
+        - ReagentId: Rum
+          Quantity: 5
+        - ReagentId: Tequila
+          Quantity: 5
+        - ReagentId: Vermouth
+          Quantity: 5
+        - ReagentId: Vodka
+          Quantity: 5
+        - ReagentId: Whiskey
+          Quantity: 5
+        - ReagentId: Wine
+          Quantity: 5
+        - ReagentId: Champagne
+          Quantity: 5
+        - ReagentId: AcidSpit
+          Quantity: 5
+        - ReagentId: AlliesCocktail
+          Quantity: 5
+        - ReagentId: Aloe
+          Quantity: 5
+        - ReagentId: Amasec
+          Quantity: 5
+        - ReagentId: Andalusia
+          Quantity: 5
+        - ReagentId: Antifreeze
+          Quantity: 5
+        - ReagentId: AtomicBomb
+          Quantity: 5
+        - ReagentId: B52
+          Quantity: 5
+        - ReagentId: BahamaMama
+          Quantity: 5
+        - ReagentId: BananaHonk
+          Quantity: 5
+        - ReagentId: Barefoot
+          Quantity: 5
+        - ReagentId: BeepskySmash
+          Quantity: 5
+        - ReagentId: BlackRussian
+          Quantity: 5
+        - ReagentId: BloodyMary
+          Quantity: 5
+        - ReagentId: Booger
+          Quantity: 5
+        - ReagentId: BraveBull
+          Quantity: 5
+        - ReagentId: CoconutRum
+          Quantity: 5
+        - ReagentId: Cosmopolitan
+          Quantity: 5
+        - ReagentId: CubaLibre
+          Quantity: 5
+        - ReagentId: DemonsBlood
+          Quantity: 5
+        - ReagentId: DevilsKiss
+          Quantity: 5
+        - ReagentId: DoctorsDelight
+          Quantity: 5
+        - ReagentId: DriestMartini
+          Quantity: 5
+        - ReagentId: ErikaSurprise
+          Quantity: 5
+        - ReagentId: GargleBlaster
+          Quantity: 5
+        - ReagentId: GinFizz
+          Quantity: 5
+        - ReagentId: GinTonic
+          Quantity: 5
+        - ReagentId: Gildlager
+          Quantity: 5
+        - ReagentId: Grog
+          Quantity: 5
+        - ReagentId: HippiesDelight
+          Quantity: 5
+        - ReagentId: Hooch
+          Quantity: 5
+        - ReagentId: IcedBeer
+          Quantity: 5
+        - ReagentId: IrishCarBomb
+          Quantity: 5
+        - ReagentId: IrishCream
+          Quantity: 5
+        - ReagentId: IrishCoffee
+          Quantity: 5
+        - ReagentId: LongIslandIcedTea
+          Quantity: 5
+        - ReagentId: Manhattan
+          Quantity: 5
+        - ReagentId: ManhattanProject
+          Quantity: 5
+        - ReagentId: ManlyDorf
+          Quantity: 5
+        - ReagentId: Margarita
+          Quantity: 5
+        - ReagentId: Martini
+          Quantity: 5
+        - ReagentId: Mead
+          Quantity: 5
+        - ReagentId: Mojito
+          Quantity: 5
+        - ReagentId: Moonshine
+          Quantity: 5
+        - ReagentId: Neurotoxin
+          Quantity: 5
+        - ReagentId: Painkiller
+          Quantity: 5
+        - ReagentId: Patron
+          Quantity: 5
+        - ReagentId: RedMead
+          Quantity: 5
+        - ReagentId: PinaColada
+          Quantity: 5
+        - ReagentId: Sbiten
+          Quantity: 5
+        - ReagentId: ScrewdriverCocktail
+          Quantity: 5
+        - ReagentId: CogChamp
+          Quantity: 5
+        - ReagentId: Silencer
+          Quantity: 5
+        - ReagentId: Singulo
+          Quantity: 5
+        - ReagentId: SnowWhite
+          Quantity: 5
+        - ReagentId: SuiDream
+          Quantity: 5
+        - ReagentId: SyndicateBomb
+          Quantity: 5
+        - ReagentId: TequilaSunrise
+          Quantity: 5
+        - ReagentId: TheMartinez
+          Quantity: 5
+        - ReagentId: ThreeMileIsland
+          Quantity: 5
+        - ReagentId: ToxinsSpecial
+          Quantity: 5
+        - ReagentId: VodkaMartini
+          Quantity: 5
+        - ReagentId: VodkaTonic
+          Quantity: 5
+        - ReagentId: WhiskeyCola
+          Quantity: 5
+        - ReagentId: WhiskeySoda
+          Quantity: 5
+        - ReagentId: WhiteGilgamesh
+          Quantity: 5
+        - ReagentId: WhiteRussian
+          Quantity: 5
+        - ReagentId: VodkaRedBool
+          Quantity: 5
+        - ReagentId: XenoBasher
+          Quantity: 5
+        - ReagentId: IrishBool
+          Quantity: 5
+        - ReagentId: BudgetInsulsDrink
+          Quantity: 5
+        - ReagentId: WatermelonWakeup
+          Quantity: 5
+        - ReagentId: Rubberneck
+          Quantity: 5
+        - ReagentId: Cola
+          Quantity: 5
+        - ReagentId: RoyRogers
+          Quantity: 5
+        - ReagentId: ChanglingSting
+          Quantity: 5
+        - ReagentId: DrGibb
+          Quantity: 5
+        - ReagentId: EnergyDrink
+          Quantity: 5
+        - ReagentId: GrapeSoda
+          Quantity: 5
+        - ReagentId: IceCream
+          Quantity: 5
+        - ReagentId: LemonLime
+          Quantity: 5
+        - ReagentId: PwrGame
+          Quantity: 5
+        - ReagentId: RootBeer
+          Quantity: 5
+        - ReagentId: RootBeerFloat
+          Quantity: 5
+        - ReagentId: SolDry
+          Quantity: 5
+        - ReagentId: ShirleyTemple
+          Quantity: 5
+        - ReagentId: SpaceMountainWind
+          Quantity: 5
+        - ReagentId: SpaceUp
+          Quantity: 5
+        - ReagentId: Starkist
+          Quantity: 5
+        - ReagentId: FourteenLoko
+          Quantity: 5
+        - ReagentId: ShamblersJuice
+          Quantity: 5
+        - ReagentId: JuiceApple
+          Quantity: 5
+        - ReagentId: JuiceBanana
+          Quantity: 5
+        - ReagentId: JuiceBerry
+          Quantity: 5
+        - ReagentId: JuiceCarrot
+          Quantity: 5
+        - ReagentId: JuiceGrape
+          Quantity: 5
+        - ReagentId: JuiceLemon
+          Quantity: 5
+        - ReagentId: JuiceLime
+          Quantity: 5
+        - ReagentId: JuiceOrange
+          Quantity: 5
+        - ReagentId: JuicePineapple
+          Quantity: 5
+        - ReagentId: JuicePotato
+          Quantity: 5
+        - ReagentId: JuiceTomato
+          Quantity: 5
+        - ReagentId: JuiceWatermelon
+          Quantity: 5
+        - ReagentId: Astrotame
+          Quantity: 5
+        - ReagentId: BbqSauce
+          Quantity: 5
+        - ReagentId: Cornoil
+          Quantity: 5
+        - ReagentId: Frostoil
+          Quantity: 5
+        - ReagentId: HorseradishSauce
+          Quantity: 5
+        - ReagentId: Hotsauce # 380 i think... ah well.
+          Quantity: 5
+        - ReagentId: Ketchup
+          Quantity: 5
+        - ReagentId: Ketchunaise
+          Quantity: 5
+        - ReagentId: LaughinSyrup
+          Quantity: 5
+        - ReagentId: Mayo
+          Quantity: 5
+        - ReagentId: Mustard
+          Quantity: 5
+        - ReagentId: Vinaigrette
+          Quantity: 5
+        - ReagentId: Soysauce
+          Quantity: 5
+        - ReagentId: TableSalt
+          Quantity: 5
+        - ReagentId: Syrup
+          Quantity: 5
+        - ReagentId: Flour
+          Quantity: 5
+        - ReagentId: Cornmeal
+          Quantity: 5
+        - ReagentId: Oats
+          Quantity: 5
+        - ReagentId: Enzyme
+          Quantity: 5
+        - ReagentId: Egg
+          Quantity: 5
+        - ReagentId: EggCooked
+          Quantity: 5
+        - ReagentId: BlackPepper
+          Quantity: 5
+        - ReagentId: Vinegar
+          Quantity: 5
+        - ReagentId: Rice
+          Quantity: 5
+        - ReagentId: OilOlive
+          Quantity: 5
+        - ReagentId: Oil
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 5
+        - ReagentId: CocoaPowder
+          Quantity: 5
+        - ReagentId: Butter
           Quantity: 5
   - type: Tag
     tags:

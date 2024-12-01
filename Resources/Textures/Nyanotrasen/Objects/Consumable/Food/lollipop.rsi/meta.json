@@ -8,7 +8,7 @@
   },
   "states": [
     {
-      "name": "unlit-equipped-MASK",
+      "name": "equipped-MASK",
       "directions": 4
     }
   ]
