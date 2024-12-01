@@ -1321,6 +1321,7 @@
     tags:
     - Meat
     - Pizza
+    - HighRiskItem
 
 - type: entity
   name: slice of BoBo's pizza
@@ -2107,3 +2108,4 @@
     tags:
     - Meat
     - Pizza
+    - HighRiskItem
