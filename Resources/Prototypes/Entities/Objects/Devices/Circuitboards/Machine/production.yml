@@ -1667,7 +1667,7 @@
   description: A strange circuit board for an illegal machine. You should probably turn this in to Security... but let's be honest. You won't.
   components:
     - type: MachineBoard
-      prototype: Autolathe
+      prototype: MoneyPrinter
       requirements:
         MatterBin: 3
         Manipulator: 2
