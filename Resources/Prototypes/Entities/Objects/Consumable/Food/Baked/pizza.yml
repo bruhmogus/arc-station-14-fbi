@@ -534,3 +534,973 @@
         - ReagentId: Vitamin
           Quantity: 1
 # Tastes like stale crust, rancid cheese, mushroom.
+
+- type: entity
+  name: Bo Bo pizza
+  parent: FoodPizzaBase
+  id: FoodPizzaBoBo
+  description: PIZZA WITH OVER 137 CHEMICALS IN IT!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - shocking
+      - horrible
+  - type: Sprite
+    layers:
+    - state: arnold
+  - type: SliceableFood
+    slice: FoodPizzaBoBoSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 9240
+        canReact: false
+        reagents:
+        - ReagentId: Blood
+          Quantity: 40
+        - ReagentId: InsectBlood
+          Quantity: 40
+        - ReagentId: Slime
+          Quantity: 40
+        - ReagentId: Sap
+          Quantity: 40
+        - ReagentId: CopperBlood
+          Quantity: 40
+        - ReagentId: AmmoniaBlood
+          Quantity: 40
+        - ReagentId: ZombieBlood
+          Quantity: 40
+        - ReagentId: Ichor
+          Quantity: 40
+        - ReagentId: Fat
+          Quantity: 40
+        - ReagentId: Vomit
+          Quantity: 40
+        - ReagentId: GreyMatter
+          Quantity: 40
+        - ReagentId: EZNutrient
+          Quantity: 40
+        - ReagentId: Left4Zed
+          Quantity: 40
+        - ReagentId: PestKiller
+          Quantity: 40
+        - ReagentId: PlantBGone
+          Quantity: 40
+        - ReagentId: RobustHarvest
+          Quantity: 40
+        - ReagentId: WeedKiller
+          Quantity: 40
+        - ReagentId: Ammonia
+          Quantity: 40
+        - ReagentId: Diethylamine
+          Quantity: 40
+        - ReagentId: Acetone
+          Quantity: 40
+        - ReagentId: Phenol
+          Quantity: 40
+        - ReagentId: Charcoal
+          Quantity: 40
+        - ReagentId: Ash
+          Quantity: 40
+        - ReagentId: SodiumCarbonate
+          Quantity: 40
+        - ReagentId: Artifexium
+          Quantity: 40
+        - ReagentId: Benzene
+          Quantity: 40
+        - ReagentId: Hydroxide
+          Quantity: 40
+        - ReagentId: SodiumHydroxide
+          Quantity: 40
+        - ReagentId: Fersilicite
+          Quantity: 40
+        - ReagentId: SodiumPolyacrylate
+          Quantity: 40
+        - ReagentId: Cellulose
+          Quantity: 40
+        - ReagentId: Bleach
+          Quantity: 40
+        - ReagentId: SpaceCleaner
+          Quantity: 40
+        - ReagentId: SoapReagent
+          Quantity: 40
+        - ReagentId: SpaceLube
+          Quantity: 40
+        - ReagentId: SpaceGlue
+          Quantity: 40
+        - ReagentId: Aluminium
+          Quantity: 40
+        - ReagentId: Carbon
+          Quantity: 40
+        - ReagentId: Chlorine
+          Quantity: 40
+        - ReagentId: Copper
+          Quantity: 40
+        - ReagentId: Fluorine
+          Quantity: 40
+        - ReagentId: Gold
+          Quantity: 40
+        - ReagentId: Hydrogen
+          Quantity: 40
+        - ReagentId: Iodine
+          Quantity: 40
+        - ReagentId: Iron
+          Quantity: 40
+        - ReagentId: Lithium
+          Quantity: 40
+        - ReagentId: Mercury
+          Quantity: 40
+        - ReagentId: Potassium
+          Quantity: 40
+        - ReagentId: Phosphorus
+          Quantity: 40
+        - ReagentId: Radium
+          Quantity: 40
+        - ReagentId: Silicon
+          Quantity: 40
+        - ReagentId: Silver
+          Quantity: 40
+        - ReagentId: Sulfur
+          Quantity: 40
+        - ReagentId: Sodium
+          Quantity: 40
+        - ReagentId: Uranium
+          Quantity: 40
+        - ReagentId: Zinc
+          Quantity: 40
+        - ReagentId: Carpetium
+          Quantity: 40
+        - ReagentId: Fiber
+          Quantity: 40
+        - ReagentId: BuzzochloricBees
+          Quantity: 40
+        - ReagentId: GroundBee
+          Quantity: 40
+        - ReagentId: Saxoite
+          Quantity: 40
+        - ReagentId: Licoxide
+          Quantity: 40
+        - ReagentId: Razorium
+          Quantity: 40
+        - ReagentId: Fresium
+          Quantity: 40
+        - ReagentId: Laughter
+          Quantity: 40
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 40
+        - ReagentId: Oxygen
+          Quantity: 40
+        - ReagentId: Plasma
+          Quantity: 40
+        - ReagentId: Tritium
+          Quantity: 40
+        - ReagentId: CarbonDioxide
+          Quantity: 40
+        - ReagentId: Nitrogen
+          Quantity: 40
+        - ReagentId: NitrousOxide
+          Quantity: 40
+        - ReagentId: Frezon
+          Quantity: 40
+        - ReagentId: CryptoBiolin
+          Quantity: 40
+        - ReagentId: Dylovene
+          Quantity: 40
+        - ReagentId: Dyphenhydramine
+          Quantity: 40
+        - ReagentId: Ethylredoxrazine
+          Quantity: 40
+        - ReagentId: Arithrazine
+          Quantity: 40
+        - ReagentId: Bicaridine
+          Quantity: 40
+        - ReagentId: Cryoxadone
+          Quantity: 40
+        - ReagentId: Doxarubixadone
+          Quantity: 40
+        - ReagentId: Dermaline
+          Quantity: 40
+        - ReagentId: Dexalin
+          Quantity: 40
+        - ReagentId: DexalinPlus
+          Quantity: 40
+        - ReagentId: Epinephrine
+          Quantity: 40
+        - ReagentId: Hyronalin
+          Quantity: 40
+        - ReagentId: Ipecac
+          Quantity: 40
+        - ReagentId: Inaprovaline
+          Quantity: 40
+        - ReagentId: Kelotane
+          Quantity: 40
+        - ReagentId: Leporazine
+          Quantity: 40
+        - ReagentId: Barozine
+          Quantity: 40
+        - ReagentId: Phalanximine
+          Quantity: 40
+        - ReagentId: PolypyryliumOligomers
+          Quantity: 40
+        - ReagentId: Ambuzol
+          Quantity: 40
+        - ReagentId: AmbuzolPlus
+          Quantity: 40
+        - ReagentId: PulpedBananaPeel
+          Quantity: 40
+        - ReagentId: Saline
+          Quantity: 40
+        - ReagentId: Siderlac
+          Quantity: 40
+        - ReagentId: Stellibinin
+          Quantity: 40
+        - ReagentId: Synaptizine
+          Quantity: 40
+        - ReagentId: TranexamicAcid
+          Quantity: 40
+        - ReagentId: Tricordrazine
+          Quantity: 40
+        - ReagentId: Lipozine
+          Quantity: 40
+        - ReagentId: Omnizine
+          Quantity: 40
+        - ReagentId: Ultravasculine
+          Quantity: 40
+        - ReagentId: Oculine
+          Quantity: 40
+        - ReagentId: Cognizine
+          Quantity: 40
+        - ReagentId: Ethyloxyephedrine
+          Quantity: 40
+        - ReagentId: Diphenylmethylamine
+          Quantity: 40
+        - ReagentId: Sigynate
+          Quantity: 40
+        - ReagentId: Lacerinol
+          Quantity: 40
+        - ReagentId: Puncturase
+          Quantity: 40
+        - ReagentId: Bruizine
+          Quantity: 40
+        - ReagentId: Pyrazine
+          Quantity: 40
+        - ReagentId: Insuzine
+          Quantity: 40
+        - ReagentId: Opporozidone
+          Quantity: 40
+        - ReagentId: Necrosol
+          Quantity: 40
+        - ReagentId: Aloxadone
+          Quantity: 40
+        - ReagentId: Mannitol
+          Quantity: 40
+        - ReagentId: Psicodine
+          Quantity: 40
+        - ReagentId: HolyWater
+          Quantity: 40
+        - ReagentId: Desoxyephedrine
+          Quantity: 40
+        - ReagentId: Ephedrine
+          Quantity: 40
+        - ReagentId: Stimulants
+          Quantity: 40
+        - ReagentId: THC
+          Quantity: 40
+        - ReagentId: Nicotine
+          Quantity: 40
+        - ReagentId: Impedrezene
+          Quantity: 40
+        - ReagentId: SpaceDrugs
+          Quantity: 40
+        - ReagentId: Bananadine
+          Quantity: 40
+        - ReagentId: Nocturine
+          Quantity: 40
+        - ReagentId: MuteToxin
+          Quantity: 40
+        - ReagentId: NorepinephricAcid
+          Quantity: 40
+        - ReagentId: TearGas
+          Quantity: 40
+        - ReagentId: Happiness
+          Quantity: 40
+        - ReagentId: PsionicRegenerationEssence
+          Quantity: 40
+        - ReagentId: SoulbreakerToxin
+          Quantity: 40
+        - ReagentId: LotophagoiOil
+          Quantity: 40
+        - ReagentId: Ectoplasm
+          Quantity: 40
+        - ReagentId: Thermite
+          Quantity: 40
+        - ReagentId: Napalm
+          Quantity: 40
+        - ReagentId: Phlogiston
+          Quantity: 40
+        - ReagentId: ChlorineTrifluoride
+          Quantity: 40
+        - ReagentId: FoamingAgent
+          Quantity: 40
+        - ReagentId: WeldingFuel
+          Quantity: 40
+        - ReagentId: Fluorosurfactant
+          Quantity: 40
+        - ReagentId: Toxin
+          Quantity: 40
+        - ReagentId: CarpoToxin
+          Quantity: 40
+        - ReagentId: ChloralHydrate
+          Quantity: 40
+        - ReagentId: GastroToxin
+          Quantity: 40
+        - ReagentId: Mold
+          Quantity: 40
+        - ReagentId: PolytrinicAcid
+          Quantity: 40
+        - ReagentId: FerrochromicAcid
+          Quantity: 40
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 40
+        - ReagentId: SulfuricAcid
+          Quantity: 40
+        - ReagentId: UnstableMutagen
+          Quantity: 40
+        - ReagentId: HeartbreakerToxin
+          Quantity: 40
+        - ReagentId: Lexorin
+          Quantity: 40
+        - ReagentId: MindbreakerToxin
+          Quantity: 40
+        - ReagentId: Histamine
+          Quantity: 40
+        - ReagentId: Theobromine
+          Quantity: 40
+        - ReagentId: Amatoxin
+          Quantity: 40
+        - ReagentId: VentCrud
+          Quantity: 40
+        - ReagentId: Romerol
+          Quantity: 40
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 40
+        - ReagentId: Allicin
+          Quantity: 40
+        - ReagentId: Pax
+          Quantity: 40
+        - ReagentId: Honk
+          Quantity: 40
+        - ReagentId: Lead
+          Quantity: 40
+        - ReagentId: Bungotoxin
+          Quantity: 40
+        - ReagentId: Vestine
+          Quantity: 40
+        - ReagentId: Tazinide
+          Quantity: 40
+        - ReagentId: Lipolicide # this is the 173rd chem, next is food and drink chems
+          Quantity: 40
+        - ReagentId: Nutriment
+          Quantity: 40
+        - ReagentId: Vitamin
+          Quantity: 40
+        - ReagentId: Protein
+          Quantity: 40
+        - ReagentId: Sugar
+          Quantity: 40
+        - ReagentId: PumpkinFlesh
+          Quantity: 40
+        - ReagentId: HealthViolation
+          Quantity: 40
+        - ReagentId: Gunmetal
+          Quantity: 40
+        - ReagentId: LemonDrop
+          Quantity: 40
+        - ReagentId: GreenGrass
+          Quantity: 40
+        - ReagentId: Daiquiri
+          Quantity: 40
+        - ReagentId: ArsonistsBrew
+          Quantity: 40
+        - ReagentId: Kvass
+          Quantity: 40
+        - ReagentId: Mothamphetamine
+          Quantity: 40
+        - ReagentId: Coffee
+          Quantity: 40
+        - ReagentId: HotCocoa
+          Quantity: 40
+        - ReagentId: Cream
+          Quantity: 40
+        - ReagentId: CoconutWater
+          Quantity: 40
+        - ReagentId: CreamOfCoconut
+          Quantity: 40
+        - ReagentId: CafeLatte
+          Quantity: 40
+        - ReagentId: GreenTea
+          Quantity: 40
+        - ReagentId: Grenadine
+          Quantity: 40
+        - ReagentId: IcedCoffee
+          Quantity: 40
+        - ReagentId: IcedGreenTea
+          Quantity: 40
+        - ReagentId: IcedTea
+          Quantity: 40
+        - ReagentId: JuiceBerryPoison
+          Quantity: 40
+        - ReagentId: Lemonade
+          Quantity: 40
+        - ReagentId: Milk
+          Quantity: 40
+        - ReagentId: MilkGoat
+          Quantity: 40
+        - ReagentId: MilkOat
+          Quantity: 40
+        - ReagentId: MilkSoy
+          Quantity: 40
+        - ReagentId: MilkSpoiled
+          Quantity: 40
+        - ReagentId: Nothing
+          Quantity: 40
+        - ReagentId: NuclearCola
+          Quantity: 40
+        - ReagentId: SodaWater
+          Quantity: 40
+        - ReagentId: SoyLatte
+          Quantity: 40
+        - ReagentId: Tea
+          Quantity: 40
+        - ReagentId: TonicWater
+          Quantity: 40
+        - ReagentId: Water
+          Quantity: 40
+        - ReagentId: Ice
+          Quantity: 40
+        - ReagentId: DryRamen
+          Quantity: 40
+        - ReagentId: HotRamen
+          Quantity: 40
+        - ReagentId: ArnoldPalmer
+          Quantity: 40
+        - ReagentId: Pilk
+          Quantity: 40
+        - ReagentId: Posca
+          Quantity: 40
+        - ReagentId: KiraSpecial
+          Quantity: 40
+        - ReagentId: Rewriter
+          Quantity: 40
+        - ReagentId: Mopwata
+          Quantity: 40
+        - ReagentId: AtomicPunch
+          Quantity: 40
+        - ReagentId: PinkDrink
+          Quantity: 40
+        - ReagentId: BubbleTea
+          Quantity: 40
+        - ReagentId: Sake
+          Quantity: 40
+        - ReagentId: OrangeCreamIce
+          Quantity: 40
+        - ReagentId: SilverJack
+          Quantity: 40
+        - ReagentId: BrainBomb
+          Quantity: 40
+        - ReagentId: ClownBlood
+          Quantity: 40
+        - ReagentId: CircusJuice
+          Quantity: 40
+        - ReagentId: SapoPicante
+          Quantity: 40
+        - ReagentId: Graveyard # 231
+          Quantity: 40
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+
+- type: entity
+  name: slice of BoBo's pizza
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaBoBo
+  description: YOU WILL BURST INTO FLAMES EATING THIS!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - shocking
+      - horrible
+  - type: Sprite
+    layers:
+    - state: arnold-slice
+  - type: SolutionContainerManager
+    canReact: false
+    solutions:
+      food:
+        maxVol: 1155
+        reagents:
+        - ReagentId: Blood
+          Quantity: 5
+        - ReagentId: InsectBlood
+          Quantity: 5
+        - ReagentId: Slime
+          Quantity: 5
+        - ReagentId: Sap
+          Quantity: 5
+        - ReagentId: CopperBlood
+          Quantity: 5
+        - ReagentId: AmmoniaBlood
+          Quantity: 5
+        - ReagentId: ZombieBlood
+          Quantity: 5
+        - ReagentId: Ichor
+          Quantity: 5
+        - ReagentId: Fat
+          Quantity: 5
+        - ReagentId: Vomit
+          Quantity: 5
+        - ReagentId: GreyMatter
+          Quantity: 5
+        - ReagentId: EZNutrient
+          Quantity: 5
+        - ReagentId: Left4Zed
+          Quantity: 5
+        - ReagentId: PestKiller
+          Quantity: 5
+        - ReagentId: PlantBGone
+          Quantity: 5
+        - ReagentId: RobustHarvest
+          Quantity: 5
+        - ReagentId: WeedKiller
+          Quantity: 5
+        - ReagentId: Ammonia
+          Quantity: 5
+        - ReagentId: Diethylamine
+          Quantity: 5
+        - ReagentId: Acetone
+          Quantity: 5
+        - ReagentId: Phenol
+          Quantity: 5
+        - ReagentId: Charcoal
+          Quantity: 5
+        - ReagentId: Ash
+          Quantity: 5
+        - ReagentId: SodiumCarbonate
+          Quantity: 5
+        - ReagentId: Artifexium
+          Quantity: 5
+        - ReagentId: Benzene
+          Quantity: 5
+        - ReagentId: Hydroxide
+          Quantity: 5
+        - ReagentId: SodiumHydroxide
+          Quantity: 5
+        - ReagentId: Fersilicite
+          Quantity: 5
+        - ReagentId: SodiumPolyacrylate
+          Quantity: 5
+        - ReagentId: Cellulose
+          Quantity: 5
+        - ReagentId: Bleach
+          Quantity: 5
+        - ReagentId: SpaceCleaner
+          Quantity: 5
+        - ReagentId: SoapReagent
+          Quantity: 5
+        - ReagentId: SpaceLube
+          Quantity: 5
+        - ReagentId: SpaceGlue
+          Quantity: 5
+        - ReagentId: Aluminium
+          Quantity: 5
+        - ReagentId: Carbon
+          Quantity: 5
+        - ReagentId: Chlorine
+          Quantity: 5
+        - ReagentId: Copper
+          Quantity: 5
+        - ReagentId: Fluorine
+          Quantity: 5
+        - ReagentId: Gold
+          Quantity: 5
+        - ReagentId: Hydrogen
+          Quantity: 5
+        - ReagentId: Iodine
+          Quantity: 5
+        - ReagentId: Iron
+          Quantity: 5
+        - ReagentId: Lithium
+          Quantity: 5
+        - ReagentId: Mercury
+          Quantity: 5
+        - ReagentId: Potassium
+          Quantity: 5
+        - ReagentId: Phosphorus
+          Quantity: 5
+        - ReagentId: Radium
+          Quantity: 5
+        - ReagentId: Silicon
+          Quantity: 5
+        - ReagentId: Silver
+          Quantity: 5
+        - ReagentId: Sulfur
+          Quantity: 5
+        - ReagentId: Sodium
+          Quantity: 5
+        - ReagentId: Uranium
+          Quantity: 5
+        - ReagentId: Zinc
+          Quantity: 5
+        - ReagentId: Carpetium
+          Quantity: 5
+        - ReagentId: Fiber
+          Quantity: 5
+        - ReagentId: BuzzochloricBees
+          Quantity: 5
+        - ReagentId: GroundBee
+          Quantity: 5
+        - ReagentId: Saxoite
+          Quantity: 5
+        - ReagentId: Licoxide
+          Quantity: 5
+        - ReagentId: Razorium
+          Quantity: 5
+        - ReagentId: Fresium
+          Quantity: 5
+        - ReagentId: Laughter
+          Quantity: 5
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 5
+        - ReagentId: Oxygen
+          Quantity: 5
+        - ReagentId: Plasma
+          Quantity: 5
+        - ReagentId: Tritium
+          Quantity: 5
+        - ReagentId: CarbonDioxide
+          Quantity: 5
+        - ReagentId: Nitrogen
+          Quantity: 5
+        - ReagentId: NitrousOxide
+          Quantity: 5
+        - ReagentId: Frezon
+          Quantity: 5
+        - ReagentId: CryptoBiolin
+          Quantity: 5
+        - ReagentId: Dylovene
+          Quantity: 5
+        - ReagentId: Dyphenhydramine
+          Quantity: 5
+        - ReagentId: Ethylredoxrazine
+          Quantity: 5
+        - ReagentId: Arithrazine
+          Quantity: 5
+        - ReagentId: Bicaridine
+          Quantity: 5
+        - ReagentId: Cryoxadone
+          Quantity: 5
+        - ReagentId: Doxarubixadone
+          Quantity: 5
+        - ReagentId: Dermaline
+          Quantity: 5
+        - ReagentId: Dexalin
+          Quantity: 5
+        - ReagentId: DexalinPlus
+          Quantity: 5
+        - ReagentId: Epinephrine
+          Quantity: 5
+        - ReagentId: Hyronalin
+          Quantity: 5
+        - ReagentId: Ipecac
+          Quantity: 5
+        - ReagentId: Inaprovaline
+          Quantity: 5
+        - ReagentId: Kelotane
+          Quantity: 5
+        - ReagentId: Leporazine
+          Quantity: 5
+        - ReagentId: Barozine
+          Quantity: 5
+        - ReagentId: Phalanximine
+          Quantity: 5
+        - ReagentId: PolypyryliumOligomers
+          Quantity: 5
+        - ReagentId: Ambuzol
+          Quantity: 5
+        - ReagentId: AmbuzolPlus
+          Quantity: 5
+        - ReagentId: PulpedBananaPeel
+          Quantity: 5
+        - ReagentId: Saline
+          Quantity: 5
+        - ReagentId: Siderlac
+          Quantity: 5
+        - ReagentId: Stellibinin
+          Quantity: 5
+        - ReagentId: Synaptizine
+          Quantity: 5
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+        - ReagentId: Tricordrazine
+          Quantity: 5
+        - ReagentId: Lipozine
+          Quantity: 5
+        - ReagentId: Omnizine
+          Quantity: 5
+        - ReagentId: Ultravasculine
+          Quantity: 5
+        - ReagentId: Oculine
+          Quantity: 5
+        - ReagentId: Cognizine
+          Quantity: 5
+        - ReagentId: Ethyloxyephedrine
+          Quantity: 5
+        - ReagentId: Diphenylmethylamine
+          Quantity: 5
+        - ReagentId: Sigynate
+          Quantity: 5
+        - ReagentId: Lacerinol
+          Quantity: 5
+        - ReagentId: Puncturase
+          Quantity: 5
+        - ReagentId: Bruizine
+          Quantity: 5
+        - ReagentId: Pyrazine
+          Quantity: 5
+        - ReagentId: Insuzine
+          Quantity: 5
+        - ReagentId: Opporozidone
+          Quantity: 5
+        - ReagentId: Necrosol
+          Quantity: 5
+        - ReagentId: Aloxadone
+          Quantity: 5
+        - ReagentId: Mannitol
+          Quantity: 5
+        - ReagentId: Psicodine
+          Quantity: 5
+        - ReagentId: HolyWater
+          Quantity: 5
+        - ReagentId: Desoxyephedrine
+          Quantity: 5
+        - ReagentId: Ephedrine
+          Quantity: 5
+        - ReagentId: Stimulants
+          Quantity: 5
+        - ReagentId: THC
+          Quantity: 5
+        - ReagentId: Nicotine
+          Quantity: 5
+        - ReagentId: Impedrezene
+          Quantity: 5
+        - ReagentId: SpaceDrugs
+          Quantity: 5
+        - ReagentId: Bananadine
+          Quantity: 5
+        - ReagentId: Nocturine
+          Quantity: 5
+        - ReagentId: MuteToxin
+          Quantity: 5
+        - ReagentId: NorepinephricAcid
+          Quantity: 5
+        - ReagentId: TearGas
+          Quantity: 5
+        - ReagentId: Happiness
+          Quantity: 5
+        - ReagentId: PsionicRegenerationEssence
+          Quantity: 5
+        - ReagentId: SoulbreakerToxin
+          Quantity: 5
+        - ReagentId: LotophagoiOil
+          Quantity: 5
+        - ReagentId: Ectoplasm
+          Quantity: 5
+        - ReagentId: Thermite
+          Quantity: 5
+        - ReagentId: Napalm
+          Quantity: 5
+        - ReagentId: Phlogiston
+          Quantity: 5
+        - ReagentId: ChlorineTrifluoride
+          Quantity: 5
+        - ReagentId: FoamingAgent
+          Quantity: 5
+        - ReagentId: WeldingFuel
+          Quantity: 5
+        - ReagentId: Fluorosurfactant
+          Quantity: 5
+        - ReagentId: Toxin
+          Quantity: 5
+        - ReagentId: CarpoToxin
+          Quantity: 5
+        - ReagentId: ChloralHydrate
+          Quantity: 5
+        - ReagentId: GastroToxin
+          Quantity: 5
+        - ReagentId: Mold
+          Quantity: 5
+        - ReagentId: PolytrinicAcid
+          Quantity: 5
+        - ReagentId: FerrochromicAcid
+          Quantity: 5
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 5
+        - ReagentId: SulfuricAcid
+          Quantity: 5
+        - ReagentId: UnstableMutagen
+          Quantity: 5
+        - ReagentId: HeartbreakerToxin
+          Quantity: 5
+        - ReagentId: Lexorin
+          Quantity: 5
+        - ReagentId: MindbreakerToxin
+          Quantity: 5
+        - ReagentId: Histamine
+          Quantity: 5
+        - ReagentId: Theobromine
+          Quantity: 5
+        - ReagentId: Amatoxin
+          Quantity: 5
+        - ReagentId: VentCrud
+          Quantity: 5
+        - ReagentId: Romerol
+          Quantity: 5
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+        - ReagentId: Allicin
+          Quantity: 5
+        - ReagentId: Pax
+          Quantity: 5
+        - ReagentId: Honk
+          Quantity: 5
+        - ReagentId: Lead
+          Quantity: 5
+        - ReagentId: Bungotoxin
+          Quantity: 5
+        - ReagentId: Vestine
+          Quantity: 5
+        - ReagentId: Tazinide
+          Quantity: 5
+        - ReagentId: Lipolicide # this is the 173rd chem, next is food and drink chems
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Protein
+          Quantity: 5
+        - ReagentId: Sugar
+          Quantity: 5
+        - ReagentId: PumpkinFlesh
+          Quantity: 5
+        - ReagentId: HealthViolation
+          Quantity: 5
+        - ReagentId: Gunmetal
+          Quantity: 5
+        - ReagentId: LemonDrop
+          Quantity: 5
+        - ReagentId: GreenGrass
+          Quantity: 5
+        - ReagentId: Daiquiri
+          Quantity: 5
+        - ReagentId: ArsonistsBrew
+          Quantity: 5
+        - ReagentId: Kvass
+          Quantity: 5
+        - ReagentId: Mothamphetamine
+          Quantity: 5
+        - ReagentId: Coffee
+          Quantity: 5
+        - ReagentId: HotCocoa
+          Quantity: 5
+        - ReagentId: Cream
+          Quantity: 5
+        - ReagentId: CoconutWater
+          Quantity: 5
+        - ReagentId: CreamOfCoconut
+          Quantity: 5
+        - ReagentId: CafeLatte
+          Quantity: 5
+        - ReagentId: GreenTea
+          Quantity: 5
+        - ReagentId: Grenadine
+          Quantity: 5
+        - ReagentId: IcedCoffee
+          Quantity: 5
+        - ReagentId: IcedGreenTea
+          Quantity: 5
+        - ReagentId: IcedTea
+          Quantity: 5
+        - ReagentId: JuiceBerryPoison
+          Quantity: 5
+        - ReagentId: Lemonade
+          Quantity: 5
+        - ReagentId: Milk
+          Quantity: 5
+        - ReagentId: MilkGoat
+          Quantity: 5
+        - ReagentId: MilkOat
+          Quantity: 5
+        - ReagentId: MilkSoy
+          Quantity: 5
+        - ReagentId: MilkSpoiled
+          Quantity: 5
+        - ReagentId: Nothing
+          Quantity: 5
+        - ReagentId: NuclearCola
+          Quantity: 5
+        - ReagentId: SodaWater
+          Quantity: 5
+        - ReagentId: SoyLatte
+          Quantity: 5
+        - ReagentId: Tea
+          Quantity: 5
+        - ReagentId: TonicWater
+          Quantity: 5
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: Ice
+          Quantity: 5
+        - ReagentId: DryRamen
+          Quantity: 5
+        - ReagentId: HotRamen
+          Quantity: 5
+        - ReagentId: ArnoldPalmer
+          Quantity: 5
+        - ReagentId: Pilk
+          Quantity: 5
+        - ReagentId: Posca
+          Quantity: 5
+        - ReagentId: KiraSpecial
+          Quantity: 5
+        - ReagentId: Rewriter
+          Quantity: 5
+        - ReagentId: Mopwata
+          Quantity: 5
+        - ReagentId: AtomicPunch
+          Quantity: 5
+        - ReagentId: PinkDrink
+          Quantity: 5
+        - ReagentId: BubbleTea
+          Quantity: 5
+        - ReagentId: Sake
+          Quantity: 5
+        - ReagentId: OrangeCreamIce
+          Quantity: 5
+        - ReagentId: SilverJack
+          Quantity: 5
+        - ReagentId: BrainBomb
+          Quantity: 5
+        - ReagentId: ClownBlood
+          Quantity: 5
+        - ReagentId: CircusJuice
+          Quantity: 5
+        - ReagentId: SapoPicante
+          Quantity: 5
+        - ReagentId: Graveyard # 231
+          Quantity: 5
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
