@@ -223,3 +223,32 @@
   materials:
     Glass: 100
     Plastic: 100
+
+- type: latheRecipe
+  id: SpesoOne
+  result: SpaceCash
+  completetime: 1
+  materials:
+    Durathread: 5
+
+- type: latheRecipe
+  id: SpesoTen
+  result: SpaceCash10
+  completetime: 5
+  materials:
+    Durathread: 50
+    
+- type: latheRecipe
+  id: SpesoOneHundred
+  result: SpaceCash100
+  completetime: 25
+  materials:
+    Durathread: 500
+    
+- type: latheRecipe
+  id: SpesoThousand
+  result: SpaceCash1000
+  completetime: 60
+  materials:
+    Durathread: 5000
+
