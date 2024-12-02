@@ -32,7 +32,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesMedSec
   name: medsec glasses
-  description: Upgraded sunglasses that provide flash immunity and a medical HUD and security HUD.
+  description: Upgraded sunglasses that provide flash immunity and a medsec HUD.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/eyes/medsecglasses.rsi
