@@ -62,7 +62,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesCR
   name: agent glasses
-  description: Highly advanced glasses that provide flash immunity and eye protection and all three HUD types.
+  description: Highly advanced glasses that provide flash immunity, eye protection, and all three HUD types.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/eyes/crglasses.rsi
