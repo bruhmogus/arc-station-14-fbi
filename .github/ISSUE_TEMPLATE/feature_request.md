@@ -17,8 +17,6 @@ Remove these comments before submitting
 Explain your request in as much detail as you can
 -->
 
-I want Goldfish crackers
-
 # Media
 <!--
 If applicable, add images or even a video to help explain your suggestion

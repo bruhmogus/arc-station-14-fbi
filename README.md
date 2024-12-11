@@ -8,7 +8,7 @@ If you are a representative of a former downstream of Delta-V, we would like to 
 
 Space Station 14 is inspired heavily by Space Station 13 and runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), a homegrown engine written in C#.
 
-As a hard fork, any code sourced from a different upstream cannot ever be merged directly here, and must instead be ported.
+As a hard fork, any code sourced from a different upstream cannot be merged directly, and must instead be adapted and ported.
 All code present in this repository is subject to change as desired by the council of maintainers.
 
 ## Links
@@ -38,7 +38,7 @@ We provide some scripts shown below to make the job easier.
 > 2. Run `git submodule update --init --recursive` in a terminal to download the engine
 > 3. Run `Scripts/bat/buildAllDebug.bat` after making any changes to the source
 > 4. Run `Scripts/bat/runQuickAll.bat` to launch the client and the server
-> 5. Connect to localhost in the client and play
+> 5. Direct connect to localhost in the client and play
 
 ### Linux
 
@@ -46,7 +46,7 @@ We provide some scripts shown below to make the job easier.
 > 2. Run `git submodule update --init --recursive` in a terminal to download the engine
 > 3. Run `Scripts/sh/buildAllDebug.sh` after making any changes to the source
 > 4. Run `Scripts/sh/runQuickAll.sh` to launch the client and the server
-> 5. Connect to localhost in the client and play
+> 5. Direct connect to localhost in the client and play
 
 ### MacOS
 
