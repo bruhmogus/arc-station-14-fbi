@@ -192,6 +192,20 @@
   items:
     - ClothingEyesPrescriptionMedHud
 
+- type: loadout
+  id: LoadoutMedicalEyesGlassesMedical
+  category: JobsMedicalAUncategorized
+  cost: 3
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMedicalEyes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Medical
+  items:
+    - ClothingEyesGlassesMedical
+
 # Gloves
 - type: loadout
   id: LoadoutMedicalGlovesNitrile
