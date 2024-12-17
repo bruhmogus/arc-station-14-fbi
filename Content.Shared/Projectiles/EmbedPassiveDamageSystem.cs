@@ -42,7 +42,7 @@ public sealed class EmbedPassiveDamageSystem : EntitySystem
     {
         if (!TryComp<EmbedPassiveDamageComponent>(uid, out var embedPassiveDamage) ||
             component.ActivatedDamage != null ||
-            !(args.Weapon.Comp.ActivatedDamage is {} activatedDamage))
+            !(args.Weapon.Comp.ActivatedDamage is { } activatedDamage))
             return;
 
         component.ActivatedDamage = activatedDamage * embedPassiveDamage.ThrowingDamageMultiplier;
@@ -83,12 +83,12 @@ public sealed class EmbedPassiveDamageSystem : EntitySystem
         if (!TryComp<ItemToggleEmbedPassiveDamageComponent>(uid, out var itemTogglePassiveDamage))
             return;
 
-        if (args.Activated && itemTogglePassiveDamage.ActivatedDamage is {} activatedDamage)
+        if (args.Activated && itemTogglePassiveDamage.ActivatedDamage is { } activatedDamage)
         {
             itemTogglePassiveDamage.DeactivatedDamage ??= component.Damage;
             component.Damage = activatedDamage;
         }
-        else if (itemTogglePassiveDamage.DeactivatedDamage is {} deactivatedDamage)
+        else if (itemTogglePassiveDamage.DeactivatedDamage is { } deactivatedDamage)
             component.Damage = deactivatedDamage;
     }
 
