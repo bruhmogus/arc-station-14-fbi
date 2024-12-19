@@ -1943,7 +1943,7 @@
       damage: 0.8
     - type: MeleeWeapon
       wideAnimationRotation: -135
-      attackRate: .1
+      attackRate: .05
       damage:
         types:
           Blunt: 0
