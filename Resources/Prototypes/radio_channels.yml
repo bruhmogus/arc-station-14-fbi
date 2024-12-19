@@ -95,11 +95,3 @@
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
-
-- type: radioChannel
-  id: NTPDradio
-  name: chat-radio-NTPD
-  keycode: 'd'
-  frequency: 1337
-  color: "#0606c4"
-  longRange: true

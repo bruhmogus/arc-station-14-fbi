@@ -15,8 +15,6 @@ chat-radio-service = Service
 chat-radio-supply = Logistics
 chat-radio-syndicate = Syndicate
 chat-radio-freelance = Freelance
-chat-radio-NTPD = NTPD
-chat-radio-merc = UrbSol
 
 # not headset but whatever
 chat-radio-handheld = Handheld
