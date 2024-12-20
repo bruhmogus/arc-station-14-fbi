@@ -12,3 +12,13 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "Monument by Six Umbrellas."
   source: "https://sixumbrellas.bandcamp.com/album/the-psychedelic-and"
+
+- files: ["singularity.ogg", "synth_pop_beat.ogg", "phororemix.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Musamli on Youtube."
+  source: "https://www.youtube.com/@musamli"
+
+- files: ["cool_alien_music.ogg"]
+  license: "Creative Commons Attribution license (reuse allowed)"
+  copyright: "Wee Free Music on Youtube."
+  source: "https://www.youtube.com/watch?v=i65dRdZOhKU"
