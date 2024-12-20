@@ -1429,8 +1429,6 @@
     - state: subdepartment
       color: "#0d2d50"
     - state: idcentcom
-  - type: PresetIdCard
-    job: NTPDoperative
   - type: Access
     tags:
     - EmergencyShuttleRepealAll

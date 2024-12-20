@@ -1,28 +1,28 @@
 #Gamer
 #PDA
 
-- type: entity
-  parent: BasePDA
-  id: gamerPDA
-  name: game enjoyer PDA
-  description: Its a cool PDA used by me, The one whom enjoys games :)
-  components:
-  - type: Pda
-    id: IDCardtoweg
-    state: pda-game
-  - type: PdaBorderColor
-    borderColor: "#800813" # Its fun to mess around in the code of existence :)
-  - type: Icon
-    state: pda-game
-  - type: UnpoweredFlashlight
-  - type: PointLight
-    enabled: false
-    color: "#00FFFF"
-    radius: 2
-    energy: 1.5
-    mask: /Textures/Effects/LightMasks/cone.png
-    autoRot: true
-    netsync: false
+#- type: entity
+#  parent: BasePDA
+#  id: gamerPDA
+#  name: game enjoyer PDA
+#  description: Its a cool PDA used by me, The one whom enjoys games :)
+#  components:
+#  - type: Pda
+#    id: IDCardtoweg
+#    state: pda-game
+#  - type: PdaBorderColor
+#    borderColor: "#800813" # Its fun to mess around in the code of existence :)
+#  - type: Icon
+#    state: pda-game
+#  - type: UnpoweredFlashlight
+#  - type: PointLight
+#    enabled: false
+#    color: "#00FFFF"
+#    radius: 2
+#    energy: 1.5
+#    mask: /Textures/Effects/LightMasks/cone.png
+#    autoRot: true
+#    netsync: false
 
 #ID card
 
@@ -48,50 +48,50 @@
 
 #cloak
 
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckCloakToweg
-  name: The one whom enjoys game's ruined cloak
-  description: It's nothingness.
-  components:
-  - type: Sprite
-    sprite: Clothing/Neck/Cloaks/Toweg.rsi
-  - type: Unremoveable
-    deleteOnDrop: true
+#- type: entity
+#  parent: ClothingNeckBase
+#  id: ClothingNeckCloakToweg
+#  name: The one whom enjoys game's ruined cloak
+#  description: It's nothingness.
+#  components:
+#  - type: Sprite
+#    sprite: Clothing/Neck/Cloaks/Toweg.rsi
+#  - type: Unremoveable
+#    deleteOnDrop: true
 
 #Det
 #PDA
 
-- type: entity
-  parent: BasePDA
-  id: theDetectivePDA
-  name: The detective's PDA
-  description: Smells like rain... pouring down the rooftops...
-  components:
-  - type: Pda
-    id: theDetectiveIDCard
-    state: pda-detective
-  - type: PdaBorderColor
-    borderColor: "#774705"
-  - type: Icon
-    state: pda-detective
+#- type: entity
+#  parent: BasePDA
+#  id: theDetectivePDA
+#  name: The detective's PDA
+#  description: Smells like rain... pouring down the rooftops...
+#  components:
+#  - type: Pda
+#    id: theDetectiveIDCard
+#    state: pda-detective
+#  - type: PdaBorderColor
+#    borderColor: "#774705"
+#  - type: Icon
+#    state: pda-detective
 
 #ID card
 
-- type: entity
-  parent: IDCardStandard
-  id: theDetectiveIDCard
-  name: the detectives ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: roboticist
-  - type: IdCard
-    jobTitle: The detecivte
-  - type: Access
-    groups:
-    - TrueAllAccess
+#- type: entity
+#  parent: IDCardStandard
+#  id: theDetectiveIDCard
+#  name: the detectives ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: default
+#    - state: roboticist
+#  - type: IdCard
+#    jobTitle: The detecivte
+#  - type: Access
+#    groups:
+#    - TrueAllAccess
 
 #Robo arm
 
