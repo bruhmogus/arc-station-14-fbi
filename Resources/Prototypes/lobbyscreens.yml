@@ -41,3 +41,15 @@
 - type: lobbyBackground
   id: JustAWeekAway
   background: /Textures/LobbyScreens/justaweekaway.webp
+
+- type: lobbyBackground
+  id: Piratecaptainlobby
+  background: /Textures/LobbyScreens/Piratecaptain.webp
+
+- type: lobbyBackground
+  id: huntedart
+  background: /Textures/LobbyScreens/Hunted.webp
+
+- type: lobbyBackground
+  id: methart
+  background: /Textures/LobbyScreens/meth.webp
