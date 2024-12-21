@@ -821,12 +821,12 @@
   components:
   - type: Pda
     id: RoboticsIDCard
-    state: pda-robotics
+    state: pda-roboticist
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#952004"
   - type: Icon
-    state: pda-robotics
+    state: pda-roboticist
 
 - type: entity
   parent: BasePDA
@@ -1258,10 +1258,6 @@
   - type: Pda
     id: CluwneIDCard
     state: pda-cluwne
-  - type: PdaBorderColor
-    borderColor: "#1c8f4d"
-  - type: Icon
-    state: pda-cluwne
     penSlot:
       startingItem: CrayonGreen
       ejectSound: /Audio/Items/bikehorn.ogg
@@ -1269,6 +1265,10 @@
       whitelist:
         tags:
         - Write
+  - type: PdaBorderColor
+    borderColor: "#1c8f4d"
+  - type: Icon
+    state: pda-cluwne
   - type: Unremoveable
 
 - type: entity
@@ -1429,8 +1429,6 @@
     - state: subdepartment
       color: "#0d2d50"
     - state: idcentcom
-  - type: PresetIdCard
-    job: NTPDoperative
   - type: Access
     tags:
     - EmergencyShuttleRepealAll
