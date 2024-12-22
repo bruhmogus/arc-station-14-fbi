@@ -37,7 +37,7 @@
     prototype: Aghost
   - type: Access
     groups:
-    - AllAccess
+    - TrueAllAccess
     tags:
     - NuclearOperative
     - SyndicateAgent

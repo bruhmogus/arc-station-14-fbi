@@ -166,3 +166,5 @@
     slots:
     - Snout
     hideOnToggle: true
+  - type: Unremoveable
+    deleteOnDrop: true
