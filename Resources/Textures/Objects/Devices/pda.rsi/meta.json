@@ -142,6 +142,15 @@
       "name": "pda-qm"
     },
     {
+      "name": "pda-r",
+      "delays": [
+        [
+          0.8,
+          0.8
+        ]
+      ]
+    },
+    {
       "name": "pda-r-library",
       "delays": [
         [
@@ -243,9 +252,6 @@
     },
     {
       "name": "pda-ntpd"
-    },
-    {
-      "name": "pda-merc"
     },
     {
       "name": "equipped-IDCARD",
