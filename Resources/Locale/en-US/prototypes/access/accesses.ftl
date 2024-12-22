@@ -57,3 +57,6 @@ id-card-access-level-NTPD = NTPD
 
 id-card-access-level-ICA = ICA
 
+id-card-access-level-MERC = MERC
+
+id-card-access-level-META = META

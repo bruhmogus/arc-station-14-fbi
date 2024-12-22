@@ -9,7 +9,18 @@
     containers:
       board: [ DoorElectronicsNTPD ]
   - type: Wires
-    layoutId: AirlockService
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockNTPDGlass
+  id: AirlockNTPDLockedglass
+  suffix: NTPD, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNTPD ]
+  - type: Wires
+    layoutId: AirlockCommand
 
 - type: entity
   parent: DoorElectronics
@@ -18,3 +29,35 @@
   components:
   - type: AccessReader
     access: [["NTPD"]]
+
+# MERC
+
+- type: entity
+  parent: AirlockMERC
+  id: AirlockMERCDLocked
+  suffix: merc, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMERC ]
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockMERCGlass
+  id: AirlockMERCDLockedglass
+  suffix: merc, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMERC ]
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsMERC
+  suffix: merc, Locked
+  components:
+  - type: AccessReader
+    access: [["merc"]]

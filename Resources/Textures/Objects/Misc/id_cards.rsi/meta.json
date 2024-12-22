@@ -167,6 +167,12 @@
             "name": "idcentcom"
         },
         {
+            "name": "merc"
+        },
+        {
+            "name": "rusty"
+        },
+        {
             "name": "gold-inhand-left",
             "directions": 4
         },

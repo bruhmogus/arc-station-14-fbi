@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Made by gulo for Arcadis Station",
+  "states": [
+    {
+      "name": "NTPD"
+    },
+    {
+      "name": "NTPD_door"
+    },
+    {
+      "name": "NTPD_open"
+    }
+  ]
+}
