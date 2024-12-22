@@ -254,6 +254,9 @@
       "name": "pda-ntpd"
     },
     {
+      "name": "pda-merc"
+    },
+    {
       "name": "equipped-IDCARD",
       "directions": 4
     }

@@ -1,3 +1,50 @@
 - type: accessLevel
   id: merc
-  name: id-card-access-level-merc
+  name: id-card-access-level-MERC
+
+- type: accessLevel
+  id: meta
+  name: id-card-access-level-META
+
+- type: accessGroup
+  id: Mercaccess
+  tags:
+  - merc
+  - Maintenance
+  - External
+
+- type: accessGroup
+  id: metaaccess
+  tags:
+  - meta
+  - EmergencyShuttleRepealAll
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Command
+  - Cryogenics
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - merc
+  - Lawyer
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics

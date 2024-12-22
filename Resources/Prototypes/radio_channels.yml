@@ -103,3 +103,11 @@
   frequency: 1337
   color: "#0606c4"
   longRange: true
+
+- type: radioChannel
+  id: MERCradio
+  name: chat-radio-merc
+  keycode: 'o'
+  frequency: 8008
+  color: "#2a6900"
+  longRange: true

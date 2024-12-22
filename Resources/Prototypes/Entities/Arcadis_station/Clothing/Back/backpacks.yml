@@ -11,3 +11,20 @@
   - type: Storage
     grid:
     - 0,0,8,3
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackNTPD
+  id: ClothingBackpackNTPDfilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxHandcuff
+      - id: WeaponEnergyGunMultiphase
+      - id: trayScanner
+      - id: WeaponPistolCHIMP
+      - id: AnomalyScanner
+      - id: ExGrenade
+        amount: 2
+      - id: GlowstickBlue
+        amount: 4

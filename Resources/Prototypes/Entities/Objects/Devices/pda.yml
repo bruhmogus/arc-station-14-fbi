@@ -1397,7 +1397,7 @@
 - type: entity
   parent: BasePDA
   id: NTPDPDA
-  name: NTPD PDA
+  name: NTPD, PDA
   description: an NTPD PDA, now say that five times fast.
   components:
   - type: Pda
@@ -1429,6 +1429,9 @@
     - state: subdepartment
       color: "#0d2d50"
     - state: idcentcom
+  - type: IdCard
+    jobTitle: NTPD operative
+    jobIcon: JobIconNanotrasen
   - type: Access
     tags:
     - EmergencyShuttleRepealAll
@@ -1462,3 +1465,42 @@
     - Atmospherics
     - NTPD
     - CentralCommand
+
+# Merc
+
+- type: entity
+  parent: BasePDA
+  id: MERCPDA
+  name: merc, PDA
+  description: a merc PDA. Urban Solutions standerd.
+  components:
+  - type: Pda
+    id: MERCIDCard
+    state: pda-merc
+  - type: PdaBorderColor
+    borderColor: "#484848"
+    accentVColor: "#484848"
+  - type: Icon
+    state: pda-merc
+  - type: CartridgeLoader
+    preinstalled:
+      - NotekeeperCartridge
+
+- type: entity
+  parent: IDCardStandard
+  id: MERCIDCard
+  name: Mercenary ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: rusty
+    - state: department
+      color: "#484848"
+    - state: subdepartment
+      color: "#484848"
+    - state: merc
+  - type: Access
+    tags:
+    - merc
+    - Maintenance
+    - External
