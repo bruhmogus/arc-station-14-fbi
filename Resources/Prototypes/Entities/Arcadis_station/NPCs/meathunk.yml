@@ -63,7 +63,7 @@
       baseSprintSpeed: 2.5
       weightlessModifier: 1.5
     - type: Sprite
-      sprite: Mobs/Demons/Meathunk.rsi
+      sprite: Arcadis_station/NPC/Meathunk.rsi
       layers:
         - map: [ "enum.DamageStateVisualLayers.Base" ]
           state: alive

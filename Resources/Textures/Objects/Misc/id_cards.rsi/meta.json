@@ -173,6 +173,12 @@
             "name": "rusty"
         },
         {
+            "name": "Toweg-id"
+        },
+        {
+            "name": "Toweg-id-2"
+        },
+        {
             "name": "gold-inhand-left",
             "directions": 4
         },
