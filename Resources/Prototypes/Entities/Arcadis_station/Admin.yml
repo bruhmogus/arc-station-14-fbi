@@ -858,7 +858,7 @@
     proto: BulletCannonBallseth
     deleteOnSpawn: true
   - type: Sprite
-    sprite: Arcadis_station/Admin/Deadagaingun.rsi/ammo.rsi
+    sprite: Arcadis_station/Admin/deadagainammo.rsi
     state: ball
 
 - type: entity
