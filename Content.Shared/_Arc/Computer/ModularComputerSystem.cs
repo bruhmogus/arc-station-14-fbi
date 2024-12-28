@@ -112,6 +112,9 @@ public sealed class ModularComputerSystem : EntitySystem
 
         if (diskComp.ProgramPrototypeEntity == null || diskComp.PersistState != true)
         {
+            if (diskComp.ProgramPrototypeEntity != null)
+                QueueDel(diskComp.ProgramPrototypeEntity.Value);
+
             magicComputerEntity = Spawn(diskComp.ProgramPrototype, computer.Owner.ToCoordinates());
             diskComp.ProgramPrototypeEntity = magicComputerEntity;
         }
