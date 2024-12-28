@@ -80,7 +80,7 @@
 - type: startingGear
   id: TowegGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNanotrasen
+    jumpsuit: ClothingUniformJumpsuitSuitBlackAlt
     shoes: ClothingShoesBootsCowboyBrown
     id: gamerPDA
     neck: ClothingNeckCloakToweg
