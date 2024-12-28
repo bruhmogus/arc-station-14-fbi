@@ -1,0 +1,17 @@
+- type: entity
+  parent: BaseComputer
+  id: BaseLaptop
+  name: laptop
+  components:
+    - type: ModularComputer
+    - type: ItemSlots
+      slots:
+        diskSlot:
+          name: Disk
+          insertSound:
+            path: /Audio/Machines/terminal_insert_disc.ogg
+          ejectSound:
+            path: /Audio/Machines/terminal_insert_disc.ogg
+
+
+# Note: ModularComputer expects an item slot diskSlot
