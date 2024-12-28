@@ -9,9 +9,6 @@
       state: icon
     - type: ComputerDisk
       saveData: false
-    - type: ContainerContainer
-      containers:
-        ComputerEnt: !type:ContainerSlot
 
 - type: entity
   parent: BaseProgramDisk

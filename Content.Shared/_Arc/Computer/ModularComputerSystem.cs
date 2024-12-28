@@ -38,8 +38,7 @@ public sealed class ModularComputerSystem : EntitySystem
 
     private void OnActivate(EntityUid uid, ModularComputerComponent component, ActivateInWorldEvent args)
     {
-        // Get the ActivateableUI component on the entity contained in the disk, and atempt to open it. But first, check if it even exists.
-        // If the entity doesnt exist, spawn a popup saying no program is loaded.
+        // go figure it out yourself
         if (!TryComp(uid, out ItemSlotsComponent? slots))
             return;
 
