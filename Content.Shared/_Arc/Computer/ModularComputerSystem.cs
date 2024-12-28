@@ -52,16 +52,14 @@ public sealed class ModularComputerSystem : EntitySystem
             return;
         }
 
-        if (diskComp.ProgramPrototypeEntity == null)
-        {
-            if (_netMan.IsServer)
-                _popupSystem.PopupEntity("ERROR: No program on disk!", uid, args.User);
-
-            return;
-        }
-
         if (_netMan.IsServer)
         {
+            if (diskComp.ProgramPrototypeEntity == null)
+            {
+                _popupSystem.PopupEntity("ERROR: No program on disk!", uid, args.User);
+                return;
+            }
+
             var activateMsg = new ActivateInWorldEvent(args.User, diskComp.ProgramPrototypeEntity.Value, true);
             RaiseLocalEvent(diskComp.ProgramPrototypeEntity.Value, activateMsg);
         }
