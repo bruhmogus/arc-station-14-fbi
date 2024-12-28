@@ -104,13 +104,13 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 400
+        damage: 2500
       behaviors:
       - !type:GibBehavior { }
     - trigger:
         !type:DamageTypeTrigger
         damageType: Heat
-        damage: 1500
+        damage: 3000
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true

@@ -1,4 +1,4 @@
-# NTPD
+# NTPD operator
 
 - type: entity
   id: RandomHumanoidSpawnerNTPD
@@ -51,6 +51,54 @@
   innerClothingSkirt: ClothingUniformJumpsuitNTPDofficial
   inhand:
     - EnergySword
+
+# NTPD Agent
+
+- type: entity
+  id: RandomHumanoidSpawnerNTPDagent
+  name: NTPD Agent
+  suffix: NTPD, Agent
+  components:
+    - type: Sprite
+      sprite: Arcadis_station/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+      state: icon
+    - type: RandomHumanoidSpawner
+      settings: NTPDagent
+    - type: InitialInfectedExempt
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+
+- type: randomHumanoidSettings
+  id: NTPDagent
+  randomizeName: false
+  speciesBlacklist:
+    - Shadowkin
+  components:
+    - type: MindShield
+    - type: Loadout
+      prototypes: [ NTPDGearAgent ]
+    - type: InitialInfectedExempt
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+
+# NTPD Agent Gear
+
+- type: startingGear
+  id: NTPDGearAgent
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChameleon
+    back: ClothingBackpackChameleon
+    mask: ClothingMaskGasVoiceChameleon
+    ears: ClothingHeadsetChameleon
+    gloves: ClothingHandsChameleon
+    shoes: ClothingShoesChameleon
+    id: PassengerPDA
+    pocket1: AgentIDCard
+    pocket2: BarberScissors
 
 # Merc
 

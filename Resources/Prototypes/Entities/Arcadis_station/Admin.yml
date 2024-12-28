@@ -804,6 +804,8 @@
   - type: RgbLightController
     layers: [ 0 ]
 
+#FBI
+
 - type: entity
   parent: BasePlushie
   id: PlushieadminFBI
@@ -812,3 +814,141 @@
   components:
   - type: Sprite
     state: FBI
+
+#seths gun
+
+- type: entity
+  name: Dead Again Hand Cannon
+  parent: BaseWeaponLauncher
+  id: WeaponLaunchersethCannon
+  description: so strong it kills your enemies twice!
+  components:
+    - type: Sprite
+      sprite: Arcadis_station/Admin/Deadagaingun.rsi
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+    - containers:
+        balistic-ammo: !type:Container
+          ents: []
+        ballistic-ammo: !type:Container
+          ents: []
+      type: ContainerContainer
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
+    - type: Gun
+      fireRate: 5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+          - CannonBall
+      capacity: 1
+      proto: cannonballseth
+      soundInsert:
+        path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+
+- type: entity
+  id: cannonballseth
+  name: Dead Again Round
+  parent: BaseCannonBall
+  components:
+  - type: CartridgeAmmo
+    proto: BulletCannonBallseth
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Arcadis_station/Admin/deadagainammo.rsi
+    state: ball
+
+- type: entity
+  id: BulletCannonBallseth
+  name: cannonball
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: ball
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DemolitionCharge
+    maxIntensity: 1
+    intensitySlope: 2
+    totalIntensity: 1
+    maxTileBreak: 0
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.5
+  - type: Projectile
+    deleteOnCollide: true
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Slash: 15
+        Piercing: 10
+        Blunt: 30
+
+#Gulo
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUndergulo
+  name: Stupid coder socks
+  description: Coder socks used to remake a fork 4 times.
+  components:
+  - type: Sprite
+    sprite: Arcadis_station/Admin/Gulo.rsi
+  - type: Clothing
+    sprite: Arcadis_station/Admin/Gulo.rsi
+
+#Moose #o7
+
+- type: entity
+  id: Statuemoose
+  parent: BaseStructure
+  name: statue of the missing administrator
+  description: An ancient wood statue. The subject is depicted with a floor-length braid and is wielding a pfp of an ancient administrator that worked for Nanotrasen, before they left the team. o7
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Arcadis_station/Admin/Moose.rsi
+    state: Moose
+    drawdepth: Mobs
+    offset: "0.0,0.5"
+
+#Eris
+
+
+
+#Egg
+
+- type: entity
+  parent: FoodEggBase
+  id: FoodEggcool
+  name: egg doctor
+  components:
+  - type: Sprite
+    sprite: Arcadis_station/Admin/Egg.rsi
+    layers:
+      - state: icon
+        map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Item
+    sprite: Arcadis_station/Admin/Egg.rsi
+    size: Tiny
+  - type: Construction
+    graph: Egg
+    node: start
+
+#CreatorBot
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieadminCreatorBot
+  name: Hacker plushie
+  description: An epic hecker.
+  components:
+  - type: Sprite
+    state: lizard_hacker

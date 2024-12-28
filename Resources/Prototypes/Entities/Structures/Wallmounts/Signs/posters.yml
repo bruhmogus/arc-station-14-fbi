@@ -590,7 +590,7 @@
   components:
     - type: Sprite
       state: poster62_contraband
-      
+
 - type: entity
   parent: PosterBase
   id: PosterContrabandMissingSpacepen
@@ -1059,6 +1059,15 @@
   components:
     - type: Sprite
       state: poster51_legit
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitNTPDWanted
+  name: "The one whom enjoys games wanted poster"
+  description: A wanted poster for the now long missing Game enjoyer, It has text that reads "WANTED, The criminal known as the one whome enjoys games has gone missing. The terror he can bring to the Arcadis sector is unmatched by most living beings. The NTPD will pay $1,000,000 for information related to the game enjoyer. WANTED"
+  components:
+    - type: Sprite
+      state: poster52_legit
 
 #maps
 
