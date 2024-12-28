@@ -6,7 +6,7 @@
     - type: ModularComputer
     - type: ItemSlots
       slots:
-        diskSlot:
+        MCC_diskSlot:
           name: Disk
           insertSound:
             path: /Audio/Machines/terminal_insert_disc.ogg

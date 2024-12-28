@@ -13,7 +13,7 @@ namespace Content.Shared._Arc.Computer;
 public sealed partial class ModularComputerComponent : Component
 {
     [DataField]
-    public string DiskSlot = "diskSlot";
+    public string DiskSlot = "MCC_diskSlot";
 
     [DataField]
 

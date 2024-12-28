@@ -38,8 +38,7 @@ public sealed class ModularComputerSystem : EntitySystem
 
     private void OnActivate(EntityUid uid, ModularComputerComponent component, ActivateInWorldEvent args)
     {
-        // Get the ActivateableUI component on the entity contained in the disk, and atempt to open it. But first, check if it even exists.
-        // If the entity doesnt exist, spawn a popup saying no program is loaded.
+        // go figure it out yourself
         if (!TryComp(uid, out ItemSlotsComponent? slots))
             return;
 
@@ -53,16 +52,14 @@ public sealed class ModularComputerSystem : EntitySystem
             return;
         }
 
-        if (diskComp.ProgramPrototypeEntity == null)
-        {
-            if (_netMan.IsServer)
-                _popupSystem.PopupEntity("ERROR: No program on disk!", uid, args.User);
-
-            return;
-        }
-
         if (_netMan.IsServer)
         {
+            if (diskComp.ProgramPrototypeEntity == null)
+            {
+                _popupSystem.PopupEntity("ERROR: No program on disk!", uid, args.User);
+                return;
+            }
+
             var activateMsg = new ActivateInWorldEvent(args.User, diskComp.ProgramPrototypeEntity.Value, true);
             RaiseLocalEvent(diskComp.ProgramPrototypeEntity.Value, activateMsg);
         }
@@ -112,6 +109,9 @@ public sealed class ModularComputerSystem : EntitySystem
 
         if (diskComp.ProgramPrototypeEntity == null || diskComp.PersistState != true)
         {
+            if (diskComp.ProgramPrototypeEntity != null)
+                QueueDel(diskComp.ProgramPrototypeEntity.Value);
+
             magicComputerEntity = Spawn(diskComp.ProgramPrototype, computer.Owner.ToCoordinates());
             diskComp.ProgramPrototypeEntity = magicComputerEntity;
         }
