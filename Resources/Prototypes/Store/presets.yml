@@ -42,7 +42,6 @@
     balance:
       Telecrystal: 0
 
-- type: storePreset
 - type: entity
   id: StorePresetSpellbook
   abstract: true
