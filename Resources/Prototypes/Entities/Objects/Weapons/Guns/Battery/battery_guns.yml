@@ -860,7 +860,6 @@
     price: 750
 
 - type: entity
-<<<<<<< HEAD
   name: Pure darkness
   parent: BaseWeaponBatterySmall
   id: Weapondark
@@ -888,7 +887,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
-=======
+
 - type: entity
   name: energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
@@ -940,4 +939,3 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 10
->>>>>>> 93ed70acfeda357133a701f637d3faeec02749bb
