@@ -773,3 +773,76 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
+
+- type: entity
+  name: railgun
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponFakeAssRailgunFBI
+  description: A weapon that fires projectiles so high-speed that they're actually lasers.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+  - type: Gun
+    fireRate: 0.7
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 100
+  - type: Battery
+    maxCharge: 400
+    startingCharge: 400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 5
+
+- type: entity
+  name: disabler magnum
+  parent: BaseWeaponBatterySmall
+  id: WeaponDisablerMagnum
+  description: A respectable tool for any captain when security won't do their jobs.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+        - Sidearm
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+      quickEquip: false
+      slots:
+        - suitStorage
+        - Belt
+    - type: Gun
+      fireRate: 2
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: Battery
+      maxCharge: 600
+      startingCharge: 600
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerMagnum
+      fireCost: 100
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: Appearance
+    - type: GuideHelp
+      guides:
+      - Security
