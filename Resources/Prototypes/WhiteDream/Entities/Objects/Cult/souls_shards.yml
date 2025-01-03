@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: soul shard
   description: Mysterious glowing shard.
   parent: BaseItem
@@ -35,6 +35,13 @@
   - type: Speech
   - type: IsDeadIC
   - type: SoulShard
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Eldritch
+    understands:
+    - TauCetiBasic
+    - Eldritch
 
 - type: entity
   parent: SoulShard
@@ -46,4 +53,22 @@
     name: ghost-role-information-soul-shard-name
     description: ghost-role-information-soul-shard-description
     rules: ghost-role-information-soul-shard-rules
+  - type: GhostTakeoverAvailable
+
+- type: entity
+  parent: SoulShard
+  id: SoulShardHoly
+  components:
+  - type: SoulShard
+    isBlessed: true
+
+- type: entity
+  parent: SoulShardHoly
+  id: SoulShardHolyGhost
+  components:
+  - type: GhostRole
+    allowMovement: true
+    name: ghost-role-information-soul-shard-holy-name
+    description: ghost-role-information-soul-shard-holy-description
+    rules: ghost-role-information-soul-shard-holy-rules
   - type: GhostTakeoverAvailable
