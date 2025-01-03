@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+    using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Audio;
@@ -28,6 +28,7 @@ using Content.Shared.Database;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
 using Content.Shared.DragDrop;
+using Content.Shared.EntityEffects;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
@@ -38,12 +39,15 @@ using Content.Shared.Item;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Events;
+using Content.Shared.Nutrition;
 using Content.Shared.Nyanotrasen.Kitchen;
 using Content.Shared.Nyanotrasen.Kitchen.Components;
 using Content.Shared.Nyanotrasen.Kitchen.UI;
 using Content.Shared.Popups;
+using Content.Shared.Power;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
+using Content.Shared.Whitelist;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -78,6 +82,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly AmbientSoundSystem _ambientSoundSystem = default!;
     [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
+    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
 
     private static readonly string CookingDamageType = "Heat";
     private static readonly float CookingDamageAmount = 10.0f;
@@ -121,7 +126,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
         SubscribeLocalEvent<DeepFriedComponent, ComponentInit>(OnInitDeepFried);
         SubscribeLocalEvent<DeepFriedComponent, ExaminedEvent>(OnExamineFried);
         SubscribeLocalEvent<DeepFriedComponent, PriceCalculationEvent>(OnPriceCalculation);
-        SubscribeLocalEvent<DeepFriedComponent, SliceFoodEvent>(OnSliceDeepFried);
+        SubscribeLocalEvent<DeepFriedComponent, FoodSlicedEvent>(OnSliceDeepFried);
     }
 
     private void UpdateUserInterface(EntityUid uid, DeepFryerComponent component)
@@ -316,7 +321,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
         // just in case the attempt is relevant to any system in the future.
         //
         // The blacklist overrides all.
-        if (component.Blacklist != null && component.Blacklist.IsValid(item, EntityManager))
+        if (component.Blacklist != null && _whitelistSystem.IsWhitelistPass(component.Blacklist, item))
         {
             _popupSystem.PopupEntity(
                 Loc.GetString("deep-fryer-blacklist-item-failed",
@@ -367,7 +372,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
             oilToUse
         );
 
-        if (component.Whitelist != null && component.Whitelist.IsValid(item, EntityManager) ||
+        if (component.Whitelist != null && _whitelistSystem.IsWhitelistPass(component.Whitelist, item) ||
             beingEvent.TurnIntoFood)
             MakeEdible(uid, component, item, solutionQuantity);
         else
@@ -395,12 +400,12 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
         {
             //JJ Comment - not sure this works. Need to check if Reagent.ToString is correct.
             _prototypeManager.TryIndex<ReagentPrototype>(reagent.Reagent.ToString(), out var proto);
-            var effectsArgs = new ReagentEffectArgs(uid,
+            var effectsArgs = new EntityEffectReagentArgs(uid,
+                EntityManager,
                 null,
                 component.Solution,
-                proto!,
                 reagent.Quantity,
-                EntityManager,
+                proto!,
                 null,
                 1f);
             foreach (var effect in component.UnsafeOilVolumeEffects)
@@ -642,8 +647,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
         var doAfterArgs = new DoAfterArgs(EntityManager, user, delay, ev, uid, uid, heldItem)
         {
             BreakOnDamage = true,
-            BreakOnTargetMove = true,
-            BreakOnUserMove = true,
+            BreakOnMove = true,
             MovementThreshold = 0.25f,
             NeedHand = true
         };
@@ -721,7 +725,7 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
         args.Price *= component.PriceCoefficient;
     }
 
-    private void OnSliceDeepFried(EntityUid uid, DeepFriedComponent component, SliceFoodEvent args)
+    private void OnSliceDeepFried(EntityUid uid, DeepFriedComponent component, FoodSlicedEvent args)
     {
         MakeCrispy(args.Slice);
 

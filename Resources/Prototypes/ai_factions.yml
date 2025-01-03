@@ -7,6 +7,9 @@
     - PetsNT
     - Zombie
     - Revolutionary
+    - Mercenary
+    - NTPDbase
+    - Hatesall
 
 - type: npcFaction
   id: NanoTrasen
@@ -16,6 +19,8 @@
   - Xeno
   - Zombie
   - Revolutionary
+  - Mercenary
+  - Hatesall
 
 - type: npcFaction
   id: Mouse
@@ -32,6 +37,7 @@
   - SimpleHostile
   - Zombie
   - Xeno
+  - Hatesall
 
 - type: npcFaction
   id: SimpleHostile
@@ -45,6 +51,9 @@
   - Zombie
   - Revolutionary
   - GeometerOfBlood
+  - Mercenary
+  - NTPDbase
+  - Hatesall
 
 - type: npcFaction
   id: SimpleNeutral
@@ -57,6 +66,7 @@
   - Xeno
   - PetsNT
   - Zombie
+  - Hatesall
 
 - type: npcFaction
   id: Xeno
@@ -67,6 +77,9 @@
   - PetsNT
   - Zombie
   - Revolutionary
+  - Mercenary
+  - NTPDbase
+  - Hatesall
 
 - type: npcFaction
   id: Zombie
@@ -78,6 +91,9 @@
   - Passive
   - PetsNT
   - Revolutionary
+  - Mercenary
+  - NTPDbase
+  - Hatesall
 
 - type: npcFaction
   id: Revolutionary
@@ -86,6 +102,8 @@
   - Zombie
   - SimpleHostile
   - Dragon
+  - Mercenary
+  - Hatesall
 
 - type: npcFaction
   id: Pibble
@@ -95,6 +113,7 @@
   - Cat
   - Birb
   - Mailman
+  - Hatesall
 
 - type: npcFaction
   id: Mailman
@@ -107,3 +126,47 @@
 
 - type: npcFaction
   id: AnimalFriend
+
+- type: npcFaction
+  id: Mercenary
+  friendly:
+  - AnimalFriend
+  - PetsNT
+  hostile:
+  - SimpleHostile
+  - Xeno
+  - Zombie
+  - Revolutionary
+  - NanoTrasen
+  - Dragon
+  - NTPDbase
+  - Hatesall
+
+- type: npcFaction
+  id: NTPDbase
+  hostile:
+  - SimpleHostile
+  - Xeno
+  - Zombie
+  - Dragon
+  - Mercenary
+  - Hatesall
+
+- type: npcFaction
+  id: Hatesall
+  hostile:
+  - SimpleHostile
+  - Xeno
+  - Zombie
+  - Dragon
+  - AnimalFriend
+  - PetsNT
+  - Revolutionary
+  - NanoTrasen
+  - Syndicate
+  - SimpleNeutral
+  - Mercenary
+
+
+
+

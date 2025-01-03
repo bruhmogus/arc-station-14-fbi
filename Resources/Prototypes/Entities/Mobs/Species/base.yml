@@ -41,6 +41,7 @@
     - map: [ "id" ]
     - map: [ "neck" ]
     - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.Face" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -141,17 +142,19 @@
     - TemporaryBlindness
     - Pacified
     - StaminaModifier
+    - Flashed
+    - RadiationProtection
+    - Drowsiness
     - PsionicsDisabled
     - PsionicallyInsulated
-  - type: Reflect
-    enabled: false
-    reflectProb: 0
   - type: Body
     prototype: Human
     requiredLegs: 2
   - type: Identity
   - type: IdExaminable
   - type: Hands
+  - type: ComplexInteraction
+  - type: Internals
   - type: Inventory
   - type: InventorySlots
   - type: FloatingVisuals
@@ -280,6 +283,8 @@
     - StaminaModifier
     - PsionicsDisabled
     - PsionicallyInsulated
+    - RadiationProtection
+    - Drowsiness
   - type: Blindable
   # Other
   - type: Temperature
@@ -328,6 +333,7 @@
   abstract: true
   components:
   - type: Hands
+  - type: ComplexInteraction
   - type: Inventory
   - type: InventorySlots
   - type: ContainerContainer
@@ -374,6 +380,7 @@
     - map: [ "id" ]
     - map: [ "neck" ]
     - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.Face" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]

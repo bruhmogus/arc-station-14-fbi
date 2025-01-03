@@ -40,7 +40,7 @@
     damageContainers:
     - Biological
   - type: Tag
-    tags:
+    tags: 
     - HudMedical
 
 - type: entity
