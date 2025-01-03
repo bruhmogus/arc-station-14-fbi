@@ -961,7 +961,7 @@
       guides:
       - Security
       
-  name: energy shotgun
+- name: energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
@@ -1011,4 +1011,5 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 10
+
 
