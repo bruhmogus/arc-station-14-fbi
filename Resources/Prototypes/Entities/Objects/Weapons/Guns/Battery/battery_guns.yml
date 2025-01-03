@@ -778,7 +778,7 @@
   name: railgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponFakeAssRailgunFBI
-  description: A weapon that fires projectiles so high-speed that they're actually lasers.
+  description: A weapon that fires projectiles at speeds high enough to turn them into lasers.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/railgun_fbi.rsi
