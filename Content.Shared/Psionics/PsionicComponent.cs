@@ -64,7 +64,7 @@ namespace Content.Shared.Abilities.Psionics
         ///     The baseline chance of obtaining a psionic power when rolling for one.
         /// </summary>
         [DataField]
-        public float Chance = 0.0004f;
+        public float Chance = 0.04f;
 
         /// <summary>
         ///     Whether or not a Psion has an available "Reroll" to spend on attempting to gain powers.
