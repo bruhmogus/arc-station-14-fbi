@@ -40,7 +40,7 @@
     damageContainers:
     - Biological
   - type: Tag
-    tags: 
+    tags:
     - HudMedical
 
 - type: entity
@@ -163,7 +163,7 @@
     damageContainers:
     - Biological
   - type: ShowHealthIcons
-    damageContainers: 
+    damageContainers:
     - Biological
 
 - type: entity

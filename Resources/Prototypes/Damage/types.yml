@@ -7,6 +7,7 @@
   armorCoefficientPrice: 5
   armorFlatPrice: 50
 
+
 # Damage representing not having enough blood.
 # Represents there not enough blood to supply oxygen (or equivalent).
 - type: damageType
@@ -14,13 +15,6 @@
   name: damage-type-bloodloss
   armorCoefficientPrice: 5
   armorFlatPrice: 50
-
-# this mf was shot in the brain :skull:
-- type: damageType
-  id: Brain
-  name: damage-type-brain
-  armorCoefficientPrice: 5
-  armorFlatPrice: 30
 
 - type: damageType
   id: Blunt
