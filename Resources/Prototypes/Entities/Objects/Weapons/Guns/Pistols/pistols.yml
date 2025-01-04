@@ -220,55 +220,6 @@
       gun_chamber: !type:ContainerSlot
 
 - type: entity
-  name: rattlesnake
-  parent: BaseWeaponPistol
-  id: WeaponPistolRattlesnake
-  description: A modified Cobra used by a certain elite agent. The firing mechanism is all out of wack, seemingly intentionally.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Pistols/cobra.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/Pistols/cobra.rsi
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
-  - type: Gun
-    fireRate: 4
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
-      params:
-        volume: -14
-    availableModes:
-    - SemiAuto
-    fireOnDropChance: 0.1
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolJetsam
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazinePistolJetsam
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgeJetsam
-        priority: 1
-        whitelist:
-          tags:
-            - CartridgeJetsam
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-
-- type: entity
   name: mk 58
   parent: BaseWeaponPistol
   id: WeaponPistolMk58
