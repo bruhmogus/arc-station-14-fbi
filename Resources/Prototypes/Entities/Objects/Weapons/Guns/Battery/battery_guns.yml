@@ -960,7 +960,8 @@
     - type: GuideHelp
       guides:
       - Security
-      
+
+- type: entity      
 - name: energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergyShotgun
