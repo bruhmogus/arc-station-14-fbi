@@ -941,7 +941,7 @@
     autoRechargePauseTime: 10
 
 - type: entity
-  name: Overclocked Railgun
+  name: overclocked railgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponRailgun
   description: A railgun that fires projectiles at such high speeds that they become lasers!
