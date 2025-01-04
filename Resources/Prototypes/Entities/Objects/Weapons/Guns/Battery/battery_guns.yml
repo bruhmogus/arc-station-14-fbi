@@ -939,3 +939,88 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 10
+
+- type: entity
+  name: Overclocked Railgun
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponRailgun
+  description: A railgun that fires projectiles at such high speeds that they become lasers!
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 3
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 1000
+  - type: Battery
+    maxCharge: 3000
+    startingCharge: 3000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+    autoRechargePause: true
+    autoRechargePauseTime: 10
+
+- type: entity
+  name: magnum disabler
+  parent: BaseWeaponBatterySmall
+  id: WeaponDisablerMagnum
+  description: For any self-respecting captain when Security won't get off their asses.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+        - Sidearm
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      quickEquip: false
+      slots:
+        - suitStorage
+        - Belt
+    - type: Gun
+      fireRate: 1.5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerMagnum
+      fireCost: 100
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: Appearance
+    - type: Battery
+      maxCharge: 600
+      startingCharge: 600
+    - type: GuideHelp
+      guides:
+      - Security
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 5.0
+      bluntStaminaDamageFactor: 2.5
+      wideAnimationRotation: 135
