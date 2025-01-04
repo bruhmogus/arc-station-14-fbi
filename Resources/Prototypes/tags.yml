@@ -362,9 +362,6 @@
   id: CartridgeMagnum
 
 - type: Tag
-  id: CartridgeJetsam
-
-- type: Tag
   id: CartridgePistol
 
 - type: Tag
@@ -578,9 +575,6 @@
 
 - type: Tag
   id: Duck
-
-- type: Tag
-  id: Durathread
 
 - type: Tag
   id: Ectoplasm
@@ -876,9 +870,6 @@
   id: MagazineCaselessRifle
 
 - type: Tag
-  id: MagazineJetsam
-
-- type: Tag
   id: MagazineHeavyRifle
 
 - type: Tag
@@ -901,9 +892,6 @@
 
 - type: Tag
   id: MagazinePistolCaselessRifle
-
-- type: Tag
-  id: MagazinePistolJetsam
 
 - type: Tag
   id: MagazinePistolHighCapacity
