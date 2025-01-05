@@ -5,7 +5,7 @@
   description: A ceremonial rifle given to the best of the best paperpushers. Uses .30 rifle ammo.
   components:
   - type: Sprite
-    sprite: /_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi
   - type: Gun
     fireRate: 1
     selectedMode: SemiAuto
@@ -20,4 +20,4 @@
       tags:
       - CartridgeLightRifle
   - type: Clothing
-    sprite: /_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi

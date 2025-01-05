@@ -1,12 +1,12 @@
 
 - type: entity
-  name: Overclocked Railgun
+  name: overclocked railgun
   parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponRailgun
   description: A railgun that fires projectiles at such high speeds that they become lasers!
   components:
   - type: Sprite
-    sprite: /_Arc/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -14,7 +14,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: /_Arc/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
   - type: Gun
     selectedMode: SemiAuto
     fireRate: 3
@@ -46,7 +46,7 @@
         - Taser
         - Sidearm
     - type: Sprite
-      sprite: /_Arc/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      sprite: /Textures/_Arc/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
       layers:
         - state: base
           map: ["enum.GunVisualLayers.Base"]
@@ -54,7 +54,7 @@
           map: ["enum.GunVisualLayers.MagUnshaded"]
           shader: unshaded
     - type: Clothing
-      sprite: /_Arc/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      sprite: /Textures/_Arc/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
       quickEquip: false
       slots:
         - suitStorage
