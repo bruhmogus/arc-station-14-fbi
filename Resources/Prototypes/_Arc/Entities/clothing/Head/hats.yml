@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatkid
-  name: finders hat
-  description: A fancy little hat to wear when looking for time
+  name: finder's hat
+  description: A fancy little hat to wear when looking for time.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/Head/Hats/hatkid.rsi
