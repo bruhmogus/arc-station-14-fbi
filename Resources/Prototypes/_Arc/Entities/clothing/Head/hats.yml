@@ -23,7 +23,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatkid
-  name: finder's hat
+  name: finders hat
   description: A fancy little hat to wear when looking for time
   components:
   - type: Sprite
