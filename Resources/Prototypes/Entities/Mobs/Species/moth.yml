@@ -132,13 +132,4 @@
   components:
   - type: HumanoidAppearance
     species: Moth
-
-- type: entity
-  id: ActionToggleFlight
-  name: Fly
-  description: Make use of your wings to fly. Beat the flightless moth allegations.
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: InstantAction
-    checkCanInteract: false
-    event: !type:ToggleFlightEvent
+    
