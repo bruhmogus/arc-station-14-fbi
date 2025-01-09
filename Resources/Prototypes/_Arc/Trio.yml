@@ -306,9 +306,6 @@
       methods: [Touch]
       effects:
       - !type:WashCreamPieReaction
-  - type: Reflect
-    enabled: false
-    reflectProb: 0
   - type: Body
     prototype: Human
     requiredLegs: 2
