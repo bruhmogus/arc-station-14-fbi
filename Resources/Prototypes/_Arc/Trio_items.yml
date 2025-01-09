@@ -38,7 +38,7 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Game enjoyer
+    jobTitle: job-name-game-enjoyer
     jobIcon: JobIconNanotrasen
   - type: Access
     groups:
@@ -116,7 +116,7 @@
     - state: default
     - state: roboticist
   - type: IdCard
-    jobTitle: The detecivte
+    jobTitle: job-name-the-detective
   - type: Access
     groups:
     - TrueAllAccess
