@@ -74,10 +74,6 @@ namespace Content.Shared.Containers.ItemSlots
         [DataField]
         public EntityWhitelist? Blacklist;
 
-        [ViewVariables(VVAccess.ReadWrite), DataField("ignoreWhitelist")]
-        public bool IgnoreWhitelist = false;
-
-
         [DataField]
         public SoundSpecifier InsertSound = new SoundPathSpecifier("/Audio/Weapons/Guns/MagIn/revolver_magin.ogg");
 

@@ -14,7 +14,6 @@
         - NamesLastMilitary
     - type: RandomHumanoidSpawner
       settings: NTPDop
-    - type: InitialInfectedExempt
 
 - type: randomHumanoidSettings
   id: NTPDop
@@ -29,7 +28,6 @@
       nameSegments:
         - NamesFirstMilitaryLeader
         - NamesLastMilitary
-    - type: InitialInfectedExempt
 
 # NTPD Gear
 
@@ -64,7 +62,6 @@
       state: icon
     - type: RandomHumanoidSpawner
       settings: NTPDagent
-    - type: InitialInfectedExempt
     - type: RandomMetadata
       nameSegments:
       - names_first
@@ -79,7 +76,6 @@
     - type: MindShield
     - type: Loadout
       prototypes: [ NTPDGearAgent ]
-    - type: InitialInfectedExempt
     - type: RandomMetadata
       nameSegments:
       - names_first
@@ -116,7 +112,6 @@
         - NamesLastmerc
     - type: RandomHumanoidSpawner
       settings: MERCSettings
-    - type: InitialInfectedExempt
 
 - type: randomHumanoidSettings
   id: MERCSettings
@@ -131,7 +126,6 @@
       nameSegments:
         - NamesFirstmerc
         - NamesLastmerc
-    - type: InitialInfectedExempt
 
 # Merc Gear
 

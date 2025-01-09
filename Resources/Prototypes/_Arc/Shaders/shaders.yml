@@ -1,0 +1,4 @@
+- type: shader
+  id: Gilded
+  kind: source
+  path: "/Textures/Shaders/gilded.swsl"
