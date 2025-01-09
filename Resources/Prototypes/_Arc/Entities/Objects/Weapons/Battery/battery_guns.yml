@@ -88,7 +88,7 @@
   name: CRT-2 Energy Pistol
   parent: BaseWeaponBatterySmall
   id: CRWeaponPistolEnergy
-  description: Highly advanced energy pistol that is custom-made for each user. It comes with 3 firing modes and a self-recharging battery. The only drawback is that all lethal firing modes consume more energy than typical energy pistol models.
+  description: Highly advanced energy pistol that is custom-made for each user. It comes with 3 firing modes and a self-recharging battery. The only drawback is that all non-lethal firing modes consume more energy than typical energy pistol models.
   components:
   - type: Sprite
     sprite: /Textures/_Arc/Objects/Weapons/Guns/Battery/crweaponenergypistol.rsi
@@ -117,11 +117,11 @@
   - type: EnergyGun
     fireModes:
     - proto: BulletDisabler
-      fireCost: 50
+      fireCost: 100
       name: disable
       state: disabler
     - proto: BulletEnergyGunLaser
-      fireCost: 150
+      fireCost: 100
       name: lethal
       state: lethal
     - proto: BulletLaserSpreadNarrow
@@ -134,7 +134,7 @@
     zeroVisible: true
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 25
+    autoRechargeRate: 50
   - type: Appearance
   - type: GenericVisualizer
     visuals:
