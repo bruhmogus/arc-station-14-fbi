@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitNTPD
+  name: NTPD hardsuit
+  description: An advanced hardsuit used by the NTPD.
+  components:
+  - type: Sprite
+    sprite: Arcadis_station/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: Clothing
+    sprite: Arcadis_station/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor # Like captains suit
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.6
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNTPD
+  - type: StaminaDamageResistance
+    coefficient: 0.7
