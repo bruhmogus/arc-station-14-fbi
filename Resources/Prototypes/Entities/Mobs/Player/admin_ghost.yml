@@ -38,7 +38,7 @@
     thermalVisibility: false
   - type: Access
     groups:
-    - TrueAllAccess
+    - AllAccess
     tags:
     - NuclearOperative
     - SyndicateAgent
