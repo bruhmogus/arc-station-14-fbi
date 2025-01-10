@@ -1,3 +1,24 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNTPD
+  name: NTPD hat
+  description: Tip a hat to universal stability.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNTPDberet
+  name: NTPD hat
+  description: Tip a beret to universal stability.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
 
 - type: entity
   parent: ClothingHeadBase
