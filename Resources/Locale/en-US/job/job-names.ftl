@@ -51,7 +51,6 @@ job-name-ertjanitor = ERT Janitor
 job-name-boxer = Boxer
 job-name-zookeeper = Zookeeper
 job-name-visitor = Visitor
-job-name-NTPDop = NTPD operative
 
 # unused jobs
 # these are required for the agent ID job icon tooltips
