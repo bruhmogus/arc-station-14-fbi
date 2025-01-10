@@ -23,9 +23,9 @@
   - type: HeldSpeedModifier
   - type: StaminaDamageResistance
     coefficient: 0.7
-  # - type: ToggleableClothing
-  #   slot: head
-  #   clothingPrototype: ClothingHeadHelmetFlesh
+  - type: ToggleableClothing
+    slot: head
+    clothingPrototype: ClothingHeadHelmetFlesh
   - type: Tag
     tags:
     - Hardsuit
