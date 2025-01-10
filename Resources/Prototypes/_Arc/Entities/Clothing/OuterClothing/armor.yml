@@ -1,0 +1,69 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingArmorFleshCult
+  name: Flesh cultist armor
+  description: A boon from the one true god... or so the cultists believe.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.90
+        Piercing: 0.80
+        Caustic: 0.60
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: StaminaDamageResistance
+    coefficient: 0.7
+  # - type: ToggleableClothing
+  #   slot: head
+  #   clothingPrototype: ClothingHeadHelmetFlesh
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - HidesHarpyWings
+    - FullBodyOuter
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterHardsuitNTPD
+  name: NTPD hardsuit
+  description: It looks like it was copied from somewhere. A note from the developer reads "The server was crashing without this, so emergency patch until Guloveos wakes up."
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.90
+        Piercing: 0.80
+        Caustic: 0.60
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: StaminaDamageResistance
+    coefficient: 0.7
+  - type: ToggleableClothing
+    slot: head
+    clothingPrototype: ClothingHeadHelmetHardsuitNTPD
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - HidesHarpyWings
+    - FullBodyOuter

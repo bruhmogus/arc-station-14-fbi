@@ -35,9 +35,10 @@
     bodyType: Kinematic
   - type: Body
     prototype: Aghost
+    thermalVisibility: false
   - type: Access
     groups:
-    - TrueAllAccess
+    - AllAccess
     tags:
     - NuclearOperative
     - SyndicateAgent
