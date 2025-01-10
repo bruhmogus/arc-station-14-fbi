@@ -5,9 +5,9 @@
   description: Tip a hat to universal stability.
   components:
   - type: Sprite
-    sprite: _Arc/Clothing/Head/hats/NTPDcap.rsi
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
   - type: Clothing
-    sprite: _Arc/Clothing/Head/hats/NTPDcap.rsi
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -16,9 +16,9 @@
   description: Tip a beret to universal stability.
   components:
   - type: Sprite
-    sprite: _Arc/Clothing/Head/hats/NTPDberet.rsi
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
   - type: Clothing
-    sprite: _Arc/Clothing/Head/hats/NTPDberet.rsi
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
 
 - type: entity
   parent: ClothingHeadBase
