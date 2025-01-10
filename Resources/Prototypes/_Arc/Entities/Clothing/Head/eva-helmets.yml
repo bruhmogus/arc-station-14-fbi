@@ -6,9 +6,9 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Head/Hardsuits/ntpd.rsi
+    sprite: _Arc/Clothing/Head/Hardsuits/ntpd.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Head/Hardsuits/ntpd.rsi
+    sprite: _Arc/Clothing/Head/Hardsuits/ntpd.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000

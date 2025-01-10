@@ -6,7 +6,7 @@
   suffix: NTPD
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Standard/NTPD.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/NTPD.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
   - type: PaintableAirlock
@@ -20,7 +20,7 @@
   suffix: NTPD
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Glass/NTPD.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Glass/NTPD.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
   - type: PaintableAirlock
@@ -36,7 +36,7 @@
   suffix: merc
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Standard/Merc.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/Merc.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
   - type: PaintableAirlock
@@ -50,7 +50,7 @@
   suffix: merc
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Glass/Merc.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Glass/Merc.rsi
   - type: WiresPanelSecurity
     securityLevel: medSecurity
   - type: PaintableAirlock

@@ -7,14 +7,14 @@
   description: A tactical pistol. Custom slide. Low rate of fire with high damage.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Alternate_Universe_references/ICA20.rsi
+    sprite: _Arc/Alternate_Universe_references/ICA20.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Arcadis_station/Alternate_Universe_references/ICA20.rsi
+    sprite: _Arc/Alternate_Universe_references/ICA20.rsi
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
@@ -36,11 +36,11 @@
   parent: BaseItem
   components:
     - type: Sprite
-      sprite: Arcadis_station/Alternate_Universe_references/Blue_skull.rsi
+      sprite: _Arc/Alternate_Universe_references/Blue_skull.rsi
       state: "icon"
       scale: 0.5, 0.5
     - type: Icon
-      sprite: Arcadis_station/Alternate_Universe_references/Blue_skull.rsi
+      sprite: _Arc/Alternate_Universe_references/Blue_skull.rsi
       state: "icon"
 
 # catastrophe
@@ -52,11 +52,11 @@
   description: An extremely scary helmet, makes you feel an impending doom when looking at it.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Alternate_Universe_references/legend.rsi
+    sprite: _Arc/Alternate_Universe_references/legend.rsi
     layers:
     - state: icon
   - type: Clothing
-    sprite: Arcadis_station/Alternate_Universe_references/legend.rsi
+    sprite: _Arc/Alternate_Universe_references/legend.rsi
     clothingVisuals:
       head:
       - state: equipped-HELMET
@@ -95,7 +95,7 @@
     - FireAxe
   - type: Sharp
   - type: Sprite
-    sprite: Arcadis_station/Alternate_Universe_references/legendaxe.rsi
+    sprite: _Arc/Alternate_Universe_references/legendaxe.rsi
     state: icon
   - type: MeleeWeapon
     wideAnimationRotation: 135
@@ -126,7 +126,7 @@
   - type: Item
     size: Ginormous
   - type: Clothing
-    sprite: Arcadis_station/Alternate_Universe_references/legendaxe.rsi
+    sprite: _Arc/Alternate_Universe_references/legendaxe.rsi
     quickEquip: false
     slots:
     - back
@@ -157,12 +157,12 @@
   description: A Pristine Blade... You know what must be done, eliminate a monarch. do other wise and they will destroy the world.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Alternate_Universe_references/Pristine_blade.rsi
+    sprite: _Arc/Alternate_Universe_references/Pristine_blade.rsi
     state: icon
   - type: ThrowingAngle
     angle: 225
   - type: Item
-    sprite: Arcadis_station/Alternate_Universe_references/Pristine_blade.rsi
+    sprite: _Arc/Alternate_Universe_references/Pristine_blade.rsi
     size: Small
   - type: Tag
     tags:
@@ -212,5 +212,5 @@
   description: Remember! if a future you tries to warn you about this test, DON'T LISTEN.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Alternate_Universe_references/Sign.rsi
+    sprite: _Arc/Alternate_Universe_references/Sign.rsi
     state: icon

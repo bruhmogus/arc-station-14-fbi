@@ -12,9 +12,9 @@
       - EncryptionKeyNTPD
       - EncryptionKeyStationMaster
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Ears/Headsets/NTPD.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/NTPD.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Ears/Headsets/NTPD.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/NTPD.rsi
 
 - type: entity
   parent: EncryptionKey
@@ -45,9 +45,9 @@
       - EncryptionKeyMERC
       - EncryptionKeyCommon
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Ears/Headsets/MERC.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/MERC.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Ears/Headsets/MERC.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/MERC.rsi
 
 - type: entity
   parent: EncryptionKey

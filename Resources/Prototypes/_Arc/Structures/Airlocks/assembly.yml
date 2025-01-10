@@ -4,7 +4,7 @@
   suffix: NTPD
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Standard/NTPD.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/NTPD.rsi
     state: "assembly"
 
 - type: entity
@@ -13,5 +13,5 @@
   suffix: Merc
   components:
   - type: Sprite
-    sprite: Arcadis_station/Structures/Doors/Airlocks/Standard/Merc.rsi
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/Merc.rsi
     state: "assembly"

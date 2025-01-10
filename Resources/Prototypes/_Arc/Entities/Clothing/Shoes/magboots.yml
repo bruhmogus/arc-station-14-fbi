@@ -5,16 +5,13 @@
   description: State-of-the-art magnetic boots made by the RnD department of the NTPD.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Shoes/Boots/magboots-NTPD.rsi
+    sprite: _Arc/Clothing/Shoes/Boots/magboots-NTPD.rsi
     state: icon
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Shoes/Boots/magboots-NTPD.rsi
-  - type: Magboots
-    toggleAction: ActionToggleMagbootsAdvanced
+    sprite: _Arc/Clothing/Shoes/Boots/magboots-NTPD.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
-    enabled: false
   - type: NoSlip
   - type: Tag
     tags:

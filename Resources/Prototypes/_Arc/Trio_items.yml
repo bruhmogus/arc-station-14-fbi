@@ -73,9 +73,9 @@
       - EncryptionKeyNTPD
       - EncryptionKeyStationMaster
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Ears/Headsets/toweg.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/toweg.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Ears/Headsets/toweg.rsi
+    sprite: _Arc/Clothing/Ears/Headsets/toweg.rsi
 
 - type: startingGear
   id: TowegGear

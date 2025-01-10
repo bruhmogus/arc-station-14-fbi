@@ -7,7 +7,7 @@
   description: A spacious backpack with pockets, worn by the NTPD.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Back/Backpacks/NTPD.rsi
+    sprite: _Arc/Clothing/Back/Backpacks/NTPD.rsi
   - type: Storage
     grid:
     - 0,0,8,3

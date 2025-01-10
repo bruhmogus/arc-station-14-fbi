@@ -7,9 +7,9 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Mask/ntpd.rsi
+    sprite: _Arc/Clothing/Mask/ntpd.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Mask/ntpd.rsi
+    sprite: _Arc/Clothing/Mask/ntpd.rsi
   - type: Armor
     modifiers:
       coefficients:

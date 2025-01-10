@@ -824,7 +824,7 @@
   description: so strong it kills your enemies twice!
   components:
     - type: Sprite
-      sprite: Arcadis_station/Admin/Deadagaingun.rsi
+      sprite: _Arc/Admin/Deadagaingun.rsi
       layers:
         - state: icon
           map: ["enum.GunVisualLayers.Base"]
@@ -858,7 +858,7 @@
     proto: BulletCannonBallseth
     deleteOnSpawn: true
   - type: Sprite
-    sprite: Arcadis_station/Admin/deadagainammo.rsi
+    sprite: _Arc/Admin/deadagainammo.rsi
     state: ball
 
 - type: entity
@@ -900,9 +900,9 @@
   description: Coder socks used to remake a fork 4 times.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Admin/Gulo.rsi
+    sprite: _Arc/Admin/Gulo.rsi
   - type: Clothing
-    sprite: Arcadis_station/Admin/Gulo.rsi
+    sprite: _Arc/Admin/Gulo.rsi
 
 #Moose #o7
 
@@ -914,7 +914,7 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Arcadis_station/Admin/Moose.rsi
+    sprite: _Arc/Admin/Moose.rsi
     state: Moose
     drawdepth: Mobs
     offset: "0.0,0.5"
@@ -931,12 +931,12 @@
   name: egg doctor
   components:
   - type: Sprite
-    sprite: Arcadis_station/Admin/Egg.rsi
+    sprite: _Arc/Admin/Egg.rsi
     layers:
       - state: icon
         map: [ "enum.DamageStateVisualLayers.Base" ]
   - type: Item
-    sprite: Arcadis_station/Admin/Egg.rsi
+    sprite: _Arc/Admin/Egg.rsi
     size: Tiny
   - type: Construction
     graph: Egg

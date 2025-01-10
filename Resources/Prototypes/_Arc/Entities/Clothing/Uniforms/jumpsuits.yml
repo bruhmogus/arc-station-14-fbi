@@ -5,9 +5,9 @@
   description: A uniform worn by NTPD officials.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Uniforms/Jumpsuit/ntpd.rsi
+    sprite: _Arc/Clothing/Uniforms/Jumpsuit/ntpd.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Uniforms/Jumpsuit/ntpd.rsi
+    sprite: _Arc/Clothing/Uniforms/Jumpsuit/ntpd.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -16,6 +16,6 @@
   description: A uniform worn by NTPD officials.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Clothing/Uniforms/Jumpskirt/ntpd.rsi
+    sprite: _Arc/Clothing/Uniforms/Jumpskirt/ntpd.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/Uniforms/Jumpskirt/ntpd.rsi
+    sprite: _Arc/Clothing/Uniforms/Jumpskirt/ntpd.rsi

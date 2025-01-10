@@ -6,7 +6,7 @@
   suffix: NTPD
   components:
     - type: Sprite
-      sprite: Arcadis_station/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+      sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
       state: icon
     - type: RandomMetadata
       nameSegments:
@@ -58,7 +58,7 @@
   suffix: NTPD, Agent
   components:
     - type: Sprite
-      sprite: Arcadis_station/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+      sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
       state: icon
     - type: RandomHumanoidSpawner
       settings: NTPDagent

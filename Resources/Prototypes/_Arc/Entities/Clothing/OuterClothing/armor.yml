@@ -2,12 +2,12 @@
   parent: ClothingOuterArmorBasic
   id: ClothingArmorFleshCult
   name: Flesh cultist armor
-  description: A boon from the one true god, or so the cultists believe.
+  description: A boon from the one true god... or so the cultists believe.
   components:
   - type: Sprite
-    sprite: Arcadis_station/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
   - type: Clothing
-    sprite: Arcadis_station/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.05
   - type: Armor
