@@ -1,0 +1,86 @@
+- type: entity
+  name: all-consuming beast
+  parent:
+  - BaseSimpleMob
+  - MobCombat
+  - MobBloodstream
+  id: MobCreatureFeature
+  description: An alien beast that stabs and slashes those unprepared before going into a blood-thirsty craze, eating the body in mere seconds.
+  components:
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: GhostTakeoverAvailable
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostile
+  - type: Body
+    prototype: Animal
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: HellSpawn
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 5.5
+  - type: Sprite
+    sprite: Arcadis_station/NPC/creaturefeature.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5
+  - type: MobPrice
+    price: 1000 # Living critters are valuable in space.
+  - type: Perishable
+  - type: Reflect
+    reflectProb: 0.5
+    innate: true
+    reflects:
+      - Energy
+      - NonEnergy
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.9
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      800: Dead
+  - type: MeleeWeapon
+    attackRate: 0.6
+    hidden: true
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    damage:
+      types:
+        Slash: 70
+        Structural: 70
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepThud
