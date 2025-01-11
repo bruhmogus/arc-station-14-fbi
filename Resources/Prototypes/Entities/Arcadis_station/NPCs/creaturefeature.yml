@@ -83,4 +83,4 @@
         Structural: 70
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: MetalSolid
+      collection: FootstepThud
