@@ -546,7 +546,7 @@
 # Tastes like stale crust, rancid cheese, mushroom.
 
 - type: entity
-  name: Bo Bo pizza
+  name: BoBo's pizza
   parent: FoodPizzaBase
   id: FoodPizzaBoBo
   description: PIZZA WITH OVER 137 CHEMICALS IN IT! OVER 1000 TOTAL CHEMICAL VOLUME!
