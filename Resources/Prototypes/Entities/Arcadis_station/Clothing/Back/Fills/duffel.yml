@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndiegirl
+  name: syndiegirl kit
+  description: "A suspicious bag with even more suspicious contents. They're solely for emotional support, of course."
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingUniformJumpskirtOperative
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingOuterArmorBasic
+      - id: ClothingHeadHatSyndie
+      - id: ClothingMaskNeckGaiter
+      - id: ClothingEyesGlassesSunglasses
+      - id: BookUnathiJanitor
