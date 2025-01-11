@@ -26,7 +26,7 @@
     baseWalkSpeed: 3
     baseSprintSpeed: 5.5
   - type: Sprite
-    sprite: Arcadis_station\NPC\creaturefeature.rsi
+    sprite: Arcadis_station/NPC/creaturefeature.rsi
     layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
