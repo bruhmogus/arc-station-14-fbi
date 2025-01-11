@@ -7,7 +7,7 @@
   description: Why use one cleanade when you can use three at once!
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/clusterbomb.rsi
+    sprite: _Arc/Objects/Weapons/Throwable/grenade/clusterclean.rsi
     layers:
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
@@ -36,7 +36,7 @@
   description: if you see this, you either an admeme or about to be vaporize. #i dont bother spellchecking this cause nobody except the maintainer that check this shit. -cr
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/clusterbomb.rsi
+    sprite: _Arc/Objects/Weapons/Throwable/grenade/clusternuke.rsi
     layers:
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
