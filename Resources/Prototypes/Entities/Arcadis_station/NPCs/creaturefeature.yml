@@ -23,8 +23,8 @@
     damageContainer: Biological
     damageModifierSet: HellSpawn
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3
-    baseSprintSpeed: 5.5
+    baseWalkSpeed: 5
+    baseSprintSpeed: 8
   - type: Sprite
     sprite: Arcadis_station/NPC/creaturefeature.rsi
     layers:
@@ -40,8 +40,8 @@
     group: GenericNumber
   - type: SlowOnDamage
     speedModifierThresholds:
-      60: 0.7
-      80: 0.5
+      700: 0.7
+      780: 0.5
   - type: MobPrice
     price: 1000 # Living critters are valuable in space.
   - type: Perishable
@@ -80,7 +80,7 @@
     damage:
       types:
         Slash: 70
-        Structural: 70
+        Structural: 150
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepThud
