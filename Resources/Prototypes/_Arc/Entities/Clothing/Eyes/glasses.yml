@@ -125,3 +125,5 @@
   - type: ShowThirstIcons
   - type: ShowHungerIcons
   - type: ShowEthereal
+  - type: NightVision
+  - type: ThermalVision
