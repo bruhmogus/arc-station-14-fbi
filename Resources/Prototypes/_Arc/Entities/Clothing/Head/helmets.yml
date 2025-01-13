@@ -6,10 +6,10 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helment.rsi
+    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helmet.rsi
     state: icon
   - type: Clothing
-    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helment.rsi
+    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helmet.rsi
 #    equipSound: /Audio/Mecha/mechmove03.ogg
 #    unequipSound: /Audio/Mecha/mechmove03.ogg
     quickEquip: false
