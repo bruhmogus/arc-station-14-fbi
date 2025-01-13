@@ -1,8 +1,8 @@
 - type: entity
 
   id: ClothingHeadHelmetFlesh
-  name: Flesh cult helmet
-  description: A boon from the one true deity, the flesh god. It's a helmet made of flesh.
+  name: flesh cult helmet
+  description: A boon from the one true deity, Carnemori. It's a helmet made of flesh.
   components:
   - type: BreathMask
   - type: Sprite
