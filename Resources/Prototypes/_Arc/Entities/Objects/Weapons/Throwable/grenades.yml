@@ -5,7 +5,7 @@
   description: Special grenade for clown, releasing large cloud of lube foam.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Grenades/janitor.rsi
+    sprite: Objects/Weapons/Grenades/pyrogrenade.rsi
   - type: SmokeOnTrigger
     duration: 15
     spreadAmount: 50
