@@ -8,7 +8,7 @@ using Content.Shared._Arc.Admemery;
 using Robust.Shared.Prototypes;
 using Robust.Client.Graphics;
 
-namespace Content.Client.Arc.Visualizers
+namespace Content.Client._Arc.Visualizers
 {
     public sealed class ObjectGildedVisualizerSystem : VisualizerSystem<ObjectGildedComponent>
     {
