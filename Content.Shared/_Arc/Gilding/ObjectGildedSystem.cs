@@ -14,7 +14,6 @@ using Content.Shared.Coordinates;
 using Content.Shared.Stacks;
 using Robust.Shared.Network;
 using Content.Shared.Mind;
-using Robust.Shared.Audio;
 
 namespace Content.Shared._Arc.Admemery
 {
@@ -35,6 +34,8 @@ namespace Content.Shared._Arc.Admemery
         [Dependency] private readonly SharedStackSystem _stackSystem = default!;
 
         [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+
+        [Dependency] private readonly SharedMindSystem _mind = default!;
 
         private ISawmill _sawmill = default!;
 
@@ -121,7 +122,7 @@ namespace Content.Shared._Arc.Admemery
 
                 }
 
-                if (TryComp<MindComponent>(uid, out var mindComponent))
+                if (_mind.TryGetMind(uid, out var mindId, out var mind))
                 {
                     SoundSpecifier noMoreSound = new SoundPathSpecifier("/Audio/_Arc/no_more.ogg");
 
