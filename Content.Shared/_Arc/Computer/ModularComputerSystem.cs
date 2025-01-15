@@ -8,6 +8,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Examine;
 using Content.Shared.Interaction;
 
 namespace Content.Shared._Arc.Computer;
@@ -29,6 +30,7 @@ public sealed class ModularComputerSystem : EntitySystem
 
         SubscribeLocalEvent<ModularComputerComponent, EntInsertedIntoContainerMessage>(InsertDisk);
         SubscribeLocalEvent<ModularComputerComponent, ActivateInWorldEvent>(OnActivate);
+        SubscribeLocalEvent<ModularComputerComponent, ExaminedEvent>(OnExamined);
     }
 
     public override void Update(float frameTime)
@@ -36,6 +38,28 @@ public sealed class ModularComputerSystem : EntitySystem
         base.Update(frameTime);
     }
 
+    private void OnExamined(EntityUid uid, ModularComputerComponent component, ExaminedEvent args)
+    {
+        if (!TryComp(uid, out ItemSlotsComponent? slots))
+            return;
+
+        if (!_itemSlots.TryGetSlot(uid, component.DiskSlot, out var diskSlot, slots))
+            return;
+
+        if (diskSlot.Item == null || !TryComp(diskSlot.Item, out ComputerDiskComponent? diskComp))
+        {
+            args.PushMarkup($"This computer doesn't have a program loaded.");
+            return;
+        }
+
+        if (diskComp.ProgramPrototypeEntity == null)
+        {
+            args.PushMarkup($"This computer doesn't have a program loaded. An error on the display reports that the loaded disk has no program.");
+            return;
+        }
+
+        args.PushMarkup($"This computer has the {EntityManager.GetComponent<MetaDataComponent>(diskComp.ProgramPrototypeEntity.Value).EntityName} program loaded.");
+    }
     private void OnActivate(EntityUid uid, ModularComputerComponent component, ActivateInWorldEvent args)
     {
         // go figure it out yourself
@@ -94,7 +118,6 @@ public sealed class ModularComputerSystem : EntitySystem
     {
         if (!TryComp(computer.Owner, out ItemSlotsComponent? slots))
             return;
-
 
         if (!_itemSlots.TryGetSlot(computer.Owner, computer.Comp.DiskSlot, out var diskSlot, slots))
             return;

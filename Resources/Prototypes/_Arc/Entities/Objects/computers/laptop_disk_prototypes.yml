@@ -5,7 +5,7 @@
 
 - type: entity
   id: CrewMonitorDiskPrototype
-  name: crew monitor disk computer
+  name: Crew Monitor
   categories: [HideSpawnMenu]
   components:
     - type: ActivatableUI
@@ -23,7 +23,7 @@
 
 - type: entity
   id: CommunicationsConsoleDiskPrototype
-  name: communications console disk computer
+  name: Communications Console
   categories: [HideSpawnMenu]
   components:
     - type: AccessReader

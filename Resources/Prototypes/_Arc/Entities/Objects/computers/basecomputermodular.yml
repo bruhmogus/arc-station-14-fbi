@@ -1,9 +1,11 @@
 - type: entity
   parent: BaseComputer
-  id: BaseLaptop
-  name: laptop
+  id: BaseComputerModular
+  name: modular computer
+  description: Part of a recent initiative to make computers less static. Comes with a disk slot for various "program disks".
   components:
     - type: ModularComputer
+    # I plan to make modular itemslots a thing in the future for stuff like the fax machine. Coming Soon:tm:
     - type: ItemSlots
       slots:
         MCC_diskSlot:
@@ -14,4 +16,4 @@
             path: /Audio/Machines/terminal_insert_disc.ogg
 
 
-# Note: ModularComputer expects an item slot diskSlot
+
