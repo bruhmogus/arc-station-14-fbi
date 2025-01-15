@@ -2,7 +2,7 @@
   parent: SmokeGrenade
   id: LubeGrenades
   name: lubenade
-  description: Special grenade for clown, releasing large cloud of lube foam.
+  description: A special grenade for elite clowns. Releases a large cloud of lube foam.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Grenades/pyrogrenade.rsi
