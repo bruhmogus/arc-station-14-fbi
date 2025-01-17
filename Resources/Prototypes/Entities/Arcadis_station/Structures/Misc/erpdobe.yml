@@ -1,6 +1,6 @@
 - type: vendingMachineInventory
   id: ERPDrobeInventory
-startingInventory:
+  startingInventory:
     ClothingShoesBootsLaceup: 2
     FoodPoppy: 2
     ClothingUndergulo: 2
