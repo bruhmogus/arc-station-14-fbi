@@ -4,7 +4,7 @@
   parent: BasePDA
   id: NTPDPDA
   name: NTPD PDA
-  description: an NTPD PDA, now say that five times fast.
+  description: An NTPD PDA, now say that five times fast.
   components:
   - type: Pda
     id: NTPDIDCard
@@ -78,7 +78,7 @@
   parent: BasePDA
   id: MERCPDA
   name: merc PDA
-  description: a merc PDA. Urban Solutions standerd.
+  description: An Urban Solutions standard issue PDA.
   components:
   - type: Pda
     id: MERCIDCard

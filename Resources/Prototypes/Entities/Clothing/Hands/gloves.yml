@@ -524,3 +524,13 @@
   - type: Fiber
     fiberMaterial: fibers-insulative
     fiberColor: fibers-purple
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsGlovesEvening
+  name: evening gloves
+  description: Gloves that reach past the elbow. Serving elegance and serving looks!
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/evening_gloves.rsi
+  - type: Clothing

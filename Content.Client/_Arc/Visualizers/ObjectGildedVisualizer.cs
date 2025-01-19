@@ -8,7 +8,7 @@ using Content.Shared._Arc.Admemery;
 using Robust.Shared.Prototypes;
 using Robust.Client.Graphics;
 
-namespace Content.Client.Arc.Visualizers
+namespace Content.Client._Arc.Visualizers
 {
     public sealed class ObjectGildedVisualizerSystem : VisualizerSystem<ObjectGildedComponent>
     {
@@ -37,12 +37,12 @@ namespace Content.Client.Arc.Visualizers
             if (args.Sprite == null)
                 return;
 
-            _sawmill.Info("Updating appearence");
+            // _sawmill.Info("Updating appearence");
 
             if (!_appearanceSystem.TryGetData(uid, GildedVisuals.Gilded, out bool isGilded) || !isGilded)
             {
                 for (var i = 0; i < args.Sprite.AllLayers.Count(); ++i)
-                    if (args.Sprite.TryGetLayer(i, out var layer) && layer.ShaderPrototype == ShaderName)
+                    if (args.Sprite.TryGetLayer(i, out var layer) && layer.Shader == _shader)
                     {
                         args.Sprite.LayerSetShader(i, null, null);
                     }
@@ -99,12 +99,12 @@ namespace Content.Client.Arc.Visualizers
                 // Get entity sprite and clear shader.
                 if (TryComp<SpriteComponent>(uid, out var sprite))
                 {
-                    _sawmill.Info("Removing shader");
+                    // _sawmill.Info("Removing shader");
                     for (var i = 0; i < sprite.AllLayers.Count(); ++i)
                     {
                         if (sprite.TryGetLayer(i, out var layer) && layer.Shader == _shader)
                         {
-                            _sawmill.Info("Nuking shader on layer");
+                            // _sawmill.Info("Nuking shader on layer");
                             sprite.LayerSetShader(i, null, null);
                         }
                     }

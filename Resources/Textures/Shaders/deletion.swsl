@@ -1,0 +1,30 @@
+light_mode unshaded;
+
+uniform sampler2D TEXTURE;
+uniform highp float dissolve_progress; // 0.0 = fully visible, 1.0 = fully dissolved
+
+void fragment() {
+    highp vec4 sprite = zTexture(UV);
+
+    // If the pixel is transparent, discard it
+    if (sprite.a == 0.0) {
+        discard;
+    }
+
+    // Create a simple noise pattern based on UV coordinates
+    highp float noise = fract(sin(dot(UV, vec2(12.9898, 78.233))) * 43758.5453);
+
+    // Compare noise with dissolve progress to create the effect
+    if (noise < dissolve_progress) {
+        discard; // Discard pixels based on noise comparison
+    }
+
+    // Add a glowing edge effect near the dissolution boundary
+    highp float edge_width = 0.1;
+    if (noise < dissolve_progress + edge_width) {
+        // Add orange/red glow at the edges
+        sprite.rgb = mix(sprite.rgb, vec3(1.0, 0.5, 0.0), 0.8);
+    }
+
+    COLOR = sprite;
+}
