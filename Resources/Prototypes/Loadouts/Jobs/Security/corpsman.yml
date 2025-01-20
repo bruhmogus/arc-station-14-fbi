@@ -70,7 +70,7 @@
       jobs:
         - Brigmedic
   items:
-    - ClothingEyesGlassesMedSec
+    - ClothingEyesGlassesMedSecArc
 
 - type: loadout
   id: LoadoutClothingEyesHUDMedSec
