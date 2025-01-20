@@ -21,6 +21,8 @@
       - NewsReaderCartridge
       - CrimeAssistCartridge
       - SecWatchCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge
 
 - type: entity
   parent: IDCardStandard
@@ -91,6 +93,8 @@
   - type: CartridgeLoader
     preinstalled:
       - NotekeeperCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge
 
 - type: entity
   parent: IDCardStandard
