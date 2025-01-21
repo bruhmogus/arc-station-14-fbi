@@ -152,3 +152,41 @@
     damage:
       types:
         Heat : 5
+
+- type: entity 
+  name: green laser blast
+  id: BulletEnergyBlasterGREENCR
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: _Arcadis/Objects/Weapons/Guns/Projectiles/cr-projectile.rsi
+    layers:
+    - state: greenlaser
+      shader: unshaded
+  - type: Ammo
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+  - type: Projectile
+    impactEffect: BulletImpactEffectGreen
+    damage:
+      types:
+        Heat: 20
+    soundHit:
+      collection: MeatLaserImpact

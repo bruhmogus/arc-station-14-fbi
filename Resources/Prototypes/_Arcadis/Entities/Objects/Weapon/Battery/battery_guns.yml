@@ -231,3 +231,80 @@
     wideAnimationRotation: 135
   - type: DamageOtherOnHit
     staminaCost: 5
+
+- type: entity
+  name: CRT-20 Laser Assault Rifle
+  parent: [BaseWeaponPowerCell, BaseGunWieldable]
+  id: WeaponLaserAssaultLaserRifleCR #LCP : Laser connection port
+  description: A laser assault rifle powered by a special battery, featuring a small LCP connection port for seamless integration, delivering precise, high-powered energy firepower in combat.
+  components:
+  - type: ItemSlots
+    slots: 
+      gun_magazine:
+        name: Magazine
+        startingItem: PowercellRiflemagcr
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - RifleBatteryMag
+  - type: Sprite
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    size: Large
+  - type: Clothing
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+
+- type: entity
+  name: CRT-21 Laser Railgun  
+  parent: [BaseWeaponPowerCell, BaseGunWieldable]
+  id: WeaponRailgunUziRefrenceCR #i have soft spot for rogue ai show. ngl.
+  description: A laser railgun powered by a special battery, featuring a large LCP connection port for seamless integration, delivering precise, high-powered energy firepower in combat. This railgun was improved from 1 shot to 3 shot by an ipc name Uzi from RnD. 
+  components:
+  - type: ItemSlots
+    slots: 
+      gun_magazine:
+        name: Magazine
+        startingItem: PowercellRailgunmagcr
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - RailgunBatteryMag
+  - type: GunRequiresWield
+  - type: Clothing
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Sprite
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_railgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    sprite: _Arcadis/Objects/Weapons/Guns/Battery/energy_green_railgun.rsi
+    size: Large
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
