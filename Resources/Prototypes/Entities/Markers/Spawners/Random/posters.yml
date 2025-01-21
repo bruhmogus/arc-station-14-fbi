@@ -171,4 +171,6 @@
       - PosterLegitCornzza # Nyanotrasen Poster, see Resources/Prototypes/Nyanotrasen/Entities/Structures/Wallmount/Signs/posters.yml
       - PosterLegitFuckAround # DeltaV Poster, see Resources/Prototypes/DeltaV/Entities/Structures/Wallmount/Signs/posters.yml
       - PosterLegitNTPDWanted
+      - PosterLegitOppenhopper
+      - PosterLegitSafetyMothSSD
     chance: 1

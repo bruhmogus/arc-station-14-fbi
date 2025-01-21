@@ -30,7 +30,8 @@
 
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesGlassesMedSec
+  id: ClothingEyesGlassesMedSecArc
+  suffix: Arcadis
   name: medsec glasses
   description: Upgraded sunglasses that provide flash immunity and a medsec HUD.
   components:
