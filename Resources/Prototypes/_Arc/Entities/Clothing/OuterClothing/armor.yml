@@ -67,3 +67,33 @@
     - WhitelistChameleon
     - HidesHarpyWings
     - FullBodyOuter
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingArmorMalformedCarapace
+  name: Malformed Carapace of flesh
+  description: A twisted armor made of flesh and bone, it's hard to tell where the armor ends and the wearer begins.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
+    layers:
+      state: equipped-OUTERCLOTHING
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Caustic: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - FullBodyOuter
