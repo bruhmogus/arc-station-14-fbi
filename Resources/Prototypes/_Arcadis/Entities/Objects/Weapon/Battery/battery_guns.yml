@@ -236,7 +236,7 @@
   name: CRT-20 Laser Assault Rifle
   parent: [BaseWeaponPowerCell, BaseGunWieldable]
   id: WeaponLaserAssaultLaserRifleCR #LCP : Laser connection port
-  description: A laser assault rifle powered by a special battery, featuring a small LCP connection port for seamless integration, delivering precise, high-powered energy firepower in combat.
+  description: A laser assault rifle powered by a special battery, featuring a small laser connection port for seamless integration. Designed to deliver precise, high-powered energy firepower in combat.
   components:
   - type: ItemSlots
     slots: 
