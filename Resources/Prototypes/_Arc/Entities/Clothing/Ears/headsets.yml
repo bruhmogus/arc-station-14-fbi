@@ -36,8 +36,8 @@
 - type: entity
   parent: ClothingHeadset
   id: ClothingHeadsetMERC
-  name: Mercenary headset
-  description: ATTENTION! FIVE MINUTES LEFT IN THE MISSION, FIVE MINUTES LEFT IN THE MISSION!2
+  name: mercenary headset
+  description: ATTENTION! FIVE MINUTES LEFT IN THE MISSION, FIVE MINUTES LEFT IN THE MISSION!
   components:
   - type: ContainerFill
     containers:
@@ -52,8 +52,8 @@
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyMERC
-  name: Mercenary encryption key
-  description: An encryption key used by mercenarys.
+  name: mercenary encryption key
+  description: An encryption key used by mercenaries.
   components:
   - type: EncryptionKey
     channels:
