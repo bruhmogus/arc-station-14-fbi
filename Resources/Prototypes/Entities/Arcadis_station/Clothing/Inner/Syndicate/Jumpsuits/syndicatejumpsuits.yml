@@ -24,7 +24,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitChemistSyndicate
   name: syndicate chemistry jumpsuit
-  description: MORE METH, yells the passenger as the chemists work tirelessly.
+  description: “MORE METH!” yells the passenger as the chemists work tirelessly.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/Syndicate_jobs/Jumpsuit/chemistry.rsi
