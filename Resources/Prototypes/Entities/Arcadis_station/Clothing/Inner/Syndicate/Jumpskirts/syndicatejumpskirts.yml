@@ -1,0 +1,153 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAtmosSyndicate
+  name: syndicate atmospheric technician jumpskirt
+  description: A jumpskirt perfect for letting everyone know you're pumping plasma into distro.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/atmosf.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/atmosf.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBartenderSyndicate
+  name: syndicate bartender's uniform
+  description: Wear this while serving syndicate bombs of either kind.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/bartender.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/bartender.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtChemistSyndicate
+  name: syndicate chemistry jumpskirt
+  description: MORE METH, yells the passenger as the chemists work tirelessly.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chemistry.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chemistry.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtLogisticsOfficerSyndicate
+  name: cybersun chief logistics officer jumpskirt
+  description: A commanding uniform to wear when you sate your gambling addiction.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chemistry.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chemistry.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtChiefPracticingPhysician
+  name: cybersun chief practicing physician jumpskirt
+  description: Wearing this jumpskirt, you feel an immense sense of pride knowing you are the only person within the Cybersun ranks to know how to use a head mirror.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chiefpracticingphysician.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/chiefpracticingphysician.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtEnforcerSyndicate
+  name: syndicate enforcer jumpskirt
+  description: Even on Syndicate stations, shitsec will exist.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/enforcer.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/enforcer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtEngineeringSyndicate
+  name: syndicate engineering jumpskirt
+  description: HOW THE HELL DO YOU RUN A SUPERMAT- yelled the engineer, shortly before being reduced to ash.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/engineering.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/engineering.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtGeneralSyndicate
+  name: cybersun general jumpskirt
+  description: Not as grand as you expected.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/general.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/general.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtLieutenantGeneralSyndicate
+  name: cybersun lieutenant general jumpskirt
+  description: Man, these names are starting to get really confusing...
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/lieutenantgeneral.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/lieutenantgeneral.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtLogisticsTechSyndicate
+  name: syndicate logistics technician jumpskirt
+  description: Evil pizzaman.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/logisticstech.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/logisticstech.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialistSyndicate
+  name: syndicate salvage operative jumpskirt
+  description: Oh hell yeah, this wreck is full of Syndicate contraband! Oh wait...
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/salvageop.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/salvageop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtScientistSyndicate
+  name: syndicate scientist jumpskirt
+  description: Hey, Shiela, bring the singularity artifact, we're gonna destroy a station. NO DON'T GRAB THE PRESSURE ONE-
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/scientist.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/scientist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSickbaySyndicate
+  name: syndicate sickbay jumpskirt
+  description: Injured? Good.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/sickbay.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/sickbay.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtViceAdmiral
+  name: cybersun vice admiral jumpskirt
+  description: We're terrorists, why are we so formal about job changes?
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/viceadmiral.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/viceadmiral.rsi
