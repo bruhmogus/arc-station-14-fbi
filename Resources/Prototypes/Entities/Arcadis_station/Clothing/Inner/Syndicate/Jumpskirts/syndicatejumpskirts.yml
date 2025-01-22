@@ -101,23 +101,12 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpskirtLogisticsTechSyndicate
   name: syndicate logistics technician jumpskirt
-  description: Evil pizzaman.
+  description: Evil pizzawoman.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/logisticstech.rsi
   - type: Clothing
     sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/logisticstech.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtSalvageSpecialistSyndicate
-  name: syndicate salvage operative jumpskirt
-  description: Oh hell yeah, this wreck is full of Syndicate contraband! Oh wait...
-  components:
-  - type: Sprite
-    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/salvageop.rsi
-  - type: Clothing
-    sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/salvageop.rsi
 
 - type: entity
   parent: ClothingUniformBase
