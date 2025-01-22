@@ -1,6 +1,6 @@
 - type: entity
   name: rifle power cell magazine
-  description: The power cell has a magazine-like design with separate ports for universal and small LCP connections.
+  description: The power cell has a magazine-like design with separate ports for universal and small laser connection port.
   id: PowercellRiflemagcr
   parent: BasePowerCell
   components:
@@ -34,7 +34,7 @@
 
 - type: entity
   name: railgun power cell magazine
-  description: The power cell has a magazine-like design with separate ports for universal and large LCP connections.
+  description: The power cell has a magazine-like design with separate ports for universal and large laser connection port.
   id: PowercellRailgunmagcr
   parent: BasePowerCell
   components:
