@@ -274,7 +274,7 @@
   name: CRT-21 Laser Railgun  
   parent: [BaseWeaponPowerCell, BaseGunWieldable]
   id: WeaponRailgunUziRefrenceCR #i have soft spot for rogue ai show. ngl.
-  description: A laser railgun powered by a special battery, featuring a large LCP connection port for seamless integration, delivering precise, high-powered energy firepower in combat. This railgun was improved from 1 shot to 3 shot by an ipc name Uzi from RnD. 
+  description: A laser railgun powered by a special battery, featuring a large laser connection port for seamless integration. This railgun was improved from 1 shot to 3 shot by an IPC named Uzi from R&D. 
   components:
   - type: ItemSlots
     slots: 
