@@ -68,7 +68,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpskirtEngineeringSyndicate
   name: syndicate engineering jumpskirt
-  description: HOW THE HELL DO YOU RUN A SUPERMAT- yelled the engineer, shortly before being reduced to ash.
+  description: “HOW THE HELL DO YOU RUN A SUPERMAT-“ yelled the engineer, shortly before being reduced to ash.
   components:
   - type: Sprite
     sprite: _Arc/Clothing/Syndicate_jobs/Jumpskirt/engineering.rsi
