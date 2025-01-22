@@ -64,3 +64,39 @@
     - type: Tag
       tags:
         - RailgunBatteryMag
+
+- type: entity
+  name: uzi railgun battery #before you ask yes it is fuckin impossible to obtain this without admeme
+  description: yea i made this one to be accurate to the show because i can :) -cr #i dont care i like this desc and im not changin it
+  id: PowercellCANONRailgunmagcr
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      sprite: _Arcadis/Objects/Power/energymags.rsi
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: mag-rifle
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 1500
+      startingCharge: 1500
+    - type: HitscanBatteryAmmoProvider
+      proto: OPGreenRailgunLaser #stupidly one shot anything 400 heat and 1000 structure to destroy anything.
+      fireCost: 1500
+    - type: SolutionContainerManager
+      solutions:
+        battery:
+          maxVol: 15
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Zinc
+            Quantity: 15
+    - type: Tag
+      tags:
+        - RailgunBatteryMag
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 5 # 5 minute to recharge this fuckin thing (yea i think it was 5 minute to recharge in the show)
