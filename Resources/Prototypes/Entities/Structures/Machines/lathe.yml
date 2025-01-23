@@ -1046,6 +1046,10 @@
       - WeaponMechCombatDisabler
       - WeaponMechCombatFlashbangLauncher
       - WeaponMechCombatMissileRack8
+      - PowercellRiflemagcr # Arcadis - rifle power cell magazine
+      - PowercellRailgunmagcr # Arcadis - railgun power cell magazine
+      - WeaponLaserAssaultLaserRifleCR # Arcadis - CRT-20 Laser Assault Rifle
+      - WeaponRailgunUziRefrenceCR # Arcadis - CRT-21 Laser Railgun
   - type: MaterialStorage
     whitelist:
       tags:
