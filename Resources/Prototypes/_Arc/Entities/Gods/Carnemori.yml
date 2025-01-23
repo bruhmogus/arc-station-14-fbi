@@ -141,7 +141,8 @@
     - Service
     - Supply
     - Syndicate
-    - NTPD
+    - Urbsolradio
+    - NTPDradio
     globalReceive: true
   - type: WarpPoint
     follow: true
