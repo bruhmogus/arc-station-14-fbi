@@ -6,3 +6,9 @@
 
 - type: Tag
   id: ModularComputerEntity
+
+- type: Tag
+  id: RailgunBatteryMag
+
+- type: Tag
+  id: RifleBatteryMag

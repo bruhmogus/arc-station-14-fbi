@@ -2,6 +2,7 @@
 
 # STOP. STOP ADDING NEW WEAPONS AS A SINGLE RESEARCH ENTRY. ADD NEW WEAPONS HERE, NOT ON THEIR OWN.
 # DO NOT ADD ANOTHER TECH
+
 - type: technology
   id: BasicWeapons
   name: research-technology-basic-weapons
@@ -167,6 +168,8 @@
   - WeaponXrayCannon
   - WeaponLaserCannon
   - WeaponGunLaserCarbineAutomatic
+  - WeaponLaserAssaultLaserRifleCR # Arcadis - CRT-20 Laser Assault Rifle
+  - PowercellRiflemagcr # Arcadis - ^ ammo for that laser gun
   technologyPrerequisites:
   - BasicWeapons
 
@@ -205,6 +208,8 @@
   - GrenadeEMP
   - PowerCageHigh
   - ShuttleGunDusterCircuitboard
+  - WeaponRailgunUziRefrenceCR # Arcadis - CRT-21 Laser Railgun
+  - PowercellRailgunmagcr # Arcadis - ^ ammo for railgun (also the energy sword down here is devious :])
   #- EnergySword # TODO: Add a bunch of stupidly exotic energy weapons to act as a reaaaaaally nice incentive for research to consider this.
                  # Make the energy sword for instance include bananium and bluespace in its recipe. :)
   softCapContribution: 1.5
