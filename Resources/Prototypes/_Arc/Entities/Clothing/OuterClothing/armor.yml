@@ -78,9 +78,6 @@
     sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
   - type: Clothing
     sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
-    layers:
-      - sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
-        state: equipped-OUTERCLOTHING
   - type: ExplosionResistance
     damageCoefficient: 0.95
   - type: Armor
