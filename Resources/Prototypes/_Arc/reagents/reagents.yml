@@ -20,7 +20,7 @@
   desc: reagent-desc-notrademark
   group: Medicine
   physicalDesc: reagent-physical-desc-enigmatic
-  flavor: sickly
+  flavor: chalky
   color: "#ffffff"
   metabolisms:
     Medicine:
