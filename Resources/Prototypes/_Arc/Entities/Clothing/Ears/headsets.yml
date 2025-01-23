@@ -57,8 +57,8 @@
   components:
   - type: EncryptionKey
     channels:
-    - MERCradio
-    defaultChannel: MERCradio
+    -  Urbslradio
+    defaultChannel: Urbslradio
   - type: Sprite
     layers:
     - state: crypt_rusted

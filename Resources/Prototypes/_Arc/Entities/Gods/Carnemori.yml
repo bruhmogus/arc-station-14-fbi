@@ -54,6 +54,7 @@
     - type: Sprite
       sprite: _Arc/Gods/Carnemori
       layers:
+        - sprite: _Arc/Gods/Carnemori
           state: alive
       scale: 1.2, 1.2
     - type: DamageStateVisuals
