@@ -16,6 +16,7 @@
   - WeaponProtoKineticAccelerator
   - ShuttleGunKineticCircuitboard
   - WeaponLaserCarbine
+  - WeaponMechCombatFiredartLaser # Goobstation
   - WeaponEnergyGun
   - WeaponEnergyGunMini
   - WeaponLaserSvalinn
@@ -23,6 +24,8 @@
   - WeaponDisablerSMG
   - Truncheon
   #- WeaponPistolMk58 #todo: Add a bunch of basic ballistic guns to the list and make lathe recipes for them.
+  - MechEquipmentKineticAccelerator # Goobstation
+  # These are roundstart but not replenishable for salvage
 
 - type: technology
   id: DraconicMunitions
@@ -85,6 +88,7 @@
   - MagazineBoxPistolRubber # Frontier
   - MagazineBoxRifleRubber # Frontier
   - SpeedLoaderRifleHeavyRubber
+  - WeaponMechCombatDisabler # Goobstation
 
 - type: technology
   id: UraniumMunitions
@@ -170,6 +174,8 @@
   - WeaponGunLaserCarbineAutomatic
   - WeaponLaserAssaultLaserRifleCR # Arcadis - CRT-20 Laser Assault Rifle
   - PowercellRiflemagcr # Arcadis - ^ ammo for that laser gun
+  - WeaponLaserCannon
+  - WeaponMechCombatSolarisLaser # Goobstation
   technologyPrerequisites:
   - BasicWeapons
 
@@ -210,6 +216,7 @@
   - ShuttleGunDusterCircuitboard
   - WeaponRailgunUziRefrenceCR # Arcadis - CRT-21 Laser Railgun
   - PowercellRailgunmagcr # Arcadis - ^ ammo for railgun (also the energy sword down here is devious :])
+  - WeaponMechCombatImmolationGun # Goobstation
   #- EnergySword # TODO: Add a bunch of stupidly exotic energy weapons to act as a reaaaaaally nice incentive for research to consider this.
                  # Make the energy sword for instance include bananium and bluespace in its recipe. :)
   softCapContribution: 1.5
