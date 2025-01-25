@@ -1202,6 +1202,7 @@
     - ChemicalPayload # Nyano
     - SyringeCryostasis
     - ClothingEyesNightVisionMedicalGoggles
+    - EnvirosuitExtinguisherRefill
     # Shitmed Change
     - EnergyScalpel
     - EnergyCautery
