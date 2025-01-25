@@ -106,8 +106,8 @@
   longRange: true
 
 - type: radioChannel
-  id: MERCradio
-  name: chat-radio-merc
+  id: Urbsolradio
+  name: chat-radio-Urbsol
   keycode: 'o'
   frequency: 8008
   color: "#2a6900"

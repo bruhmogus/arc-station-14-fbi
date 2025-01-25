@@ -64,9 +64,6 @@
     shoes: ClothingShoesBootsMagNTPD
     id: NTPDPDA
     belt: ClothingBeltMilitaryWebbingMedFilled
-  inhand:
-    - BaseBallBat
-
 
 #Merc
 
@@ -100,5 +97,3 @@
     shoes: ClothingShoesBootsMerc
     id: MERCPDA
     ears: ClothingHeadsetMERC
-  inhand:
-    - CombatKnife
