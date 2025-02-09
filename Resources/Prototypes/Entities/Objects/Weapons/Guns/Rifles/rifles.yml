@@ -235,8 +235,6 @@
           tags:
             - CartridgeRifle
 
-<<<<<<< HEAD
-=======
 - type: entity
   name: Foam Force Astro Ace
   parent: [BaseWeaponShotgun, BaseGunWieldable]
@@ -278,4 +276,3 @@
         Blunt: 0
   - type: DamageOtherOnHit
     staminaCost: 3.5
->>>>>>> dd0bc24a682325f9d2c5d969d87d04073073785c
