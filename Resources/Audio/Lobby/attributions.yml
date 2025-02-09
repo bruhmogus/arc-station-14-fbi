@@ -22,3 +22,17 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "Wee Free Music on Youtube."
   source: "https://www.youtube.com/watch?v=i65dRdZOhKU"
+- files: ["Patricia_Taxxon_-_Chipshop.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Chipshop by Patricia Taxxon off the album 'Bicycle'"
+  source: "https://patriciataxxon.bandcamp.com/track/chipshop"
+
+- files: ["Patricia_Taxxon_-_Minute.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Minute by Patricia Taxxon off the album 'Aeroplane'"
+  source: "https://patriciataxxon.bandcamp.com/track/minute"
+
+- files: ["Black_Heat.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Black Heat by Ross Bugden, converted from WAV to OGG"
+  source: "https://soundcloud.com/rossbugden/intense-and-upbeat-electronic-trailer-music-black-heat-copyright-and-royalty-free"
