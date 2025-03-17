@@ -1,0 +1,102 @@
+- type: entity
+  name: cherry bomb
+  parent: FoodProduceBase
+  id: FoodCherryBomb
+  description: Why did I plant a cherry that could blow up at any second? Because I'm CRAZY!
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: Explosion
+      - !type:ExplodeBehavior
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 3
+  - type: Explosive
+    explosionType: Default
+    # Why did I give it the intensity of a grenade? Because I'm CRAZY!
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 120
+  - type: FlavorProfile
+    flavors:
+      - cherry
+      - gunpowder
+  - type: Food
+    trash:
+    - TrashCherryPit
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 6
+        - ReagentId: Ash
+          Quantity: 8
+  - type: Sprite
+    sprite: _Arc/Objects/Botany/cherrybomb.rsi
+  - type: Produce
+    seedId: cherrybomb
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceCherry
+        Quantity: 5
+  - type: Tag
+    tags:
+    - Fruit
+
+# Seed prototypes since i'm lazy
+- type: entity
+  parent: SeedBase
+  name: packet of cherry bomb seeds
+  id: CherryBombSeeds
+  components:
+    - type: Seed
+      seedId: cherrybomb
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cherrybomb.rsi
+
+# stats
+- type: seed
+  id: cherrybomb
+  name: seeds-cherry-bomb-name
+  noun: seeds-noun-seeds
+  displayName: seeds-cherry-bomb-display-name
+  plantRsi: Objects/Specific/Hydroponics/cherrybomb.rsi
+  packetPrototype: CherryBombSeeds
+  productPrototypes:
+    - FoodCherryBomb
+  harvestRepeat: Repeat
+  lifespan: 55
+  maturation: 6
+  production: 6
+  yield: 5
+  potency: 10
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 6
+      PotencyDivisor: 30
+    Vitamin:
+      Min: 1
+      Max: 6
+      PotencyDivisor: 40
+    Ash:
+      Min: 1
+      Max: 8
+      PotencyDivisor: 40
