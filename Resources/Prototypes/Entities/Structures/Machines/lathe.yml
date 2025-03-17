@@ -376,6 +376,7 @@
     - SyringeBluespace
     - WeaponForceGun
     - WeaponLaserSvalinn
+    - WeaponCivilianDisabler
     - WeaponProtoKineticAccelerator
     - WeaponTetherGun
     - WeaponGrapplingGun
@@ -405,6 +406,7 @@
     - ClothingEyesThermalVisionGoggles
     - RCDAmmo #DeltaV
     - RCD #EE
+    - RPD
     # Shitmed Change
     - EnergyScalpel
     - EnergyCautery
@@ -503,6 +505,7 @@
     - ChemMasterMachineCircuitboard
     - CondenserMachineCircuitBoard
     - HotplateMachineCircuitboard
+    - PrinterDocMachineCircuitboard  # Corvax-Printer
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
@@ -723,6 +726,7 @@
     - BorgModuleAdvancedTool
     - BorgModuleGPS
     - BorgModuleRCD
+    - BorgModuleRPD
     - BorgModuleJetpack
     - BorgModulePka
     - BorgModuleArtifact
@@ -1010,6 +1014,7 @@
       - SpeedLoaderRifleHeavyRubber
     dynamicRecipes:
       - Truncheon
+      - Terminus
       - BoxShotgunIncendiary
       - BoxShotgunUranium
       - EncryptionKeySyndie
