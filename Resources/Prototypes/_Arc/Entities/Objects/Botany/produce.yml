@@ -68,7 +68,7 @@
     - type: Seed
       seedId: cherrybomb
     - type: Sprite
-      sprite: Objects/Specific/Hydroponics/cherrybomb.rsi
+      sprite: _Arc/Objects/Botany/cherrybomb.rsi
 
 # stats
 - type: seed
@@ -76,7 +76,7 @@
   name: seeds-cherry-bomb-name
   noun: seeds-noun-seeds
   displayName: seeds-cherry-bomb-display-name
-  plantRsi: Objects/Specific/Hydroponics/cherrybomb.rsi
+  plantRsi: _Arc/Objects/Botany/cherrybomb.rsi
   packetPrototype: CherryBombSeeds
   productPrototypes:
     - FoodCherryBomb
