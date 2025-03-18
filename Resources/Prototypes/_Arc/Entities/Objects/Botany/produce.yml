@@ -266,6 +266,12 @@
   - type: Currency
     price:
       Sun: 1
+  - type: PointLight
+    enabled: false
+    radius: 3
+    energy: 2.5
+    color: "#FFC458"
+    netsync: false
 
 - type: entity
   parent: Sun
