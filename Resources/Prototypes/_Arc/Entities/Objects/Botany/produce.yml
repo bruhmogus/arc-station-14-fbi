@@ -139,7 +139,7 @@
     - type: Seed
       seedId: sunflower
     - type: Sprite
-      sprite: Objects/Specific/Hydroponics/sunflower.rsi
+      sprite: _Arc/Objects/Botany/sunflower.rsi
 
 # stats
 - type: seed
