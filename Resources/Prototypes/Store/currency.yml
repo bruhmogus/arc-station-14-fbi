@@ -6,6 +6,13 @@
   canWithdraw: true
 
 - type: currency
+  id: Sun
+  displayName: store-currency-display-sun
+  cash:
+    1: Sun1
+  canWithdraw: true
+
+- type: currency
   id: StolenEssence
   displayName: store-currency-display-stolen-essence
   canWithdraw: false
