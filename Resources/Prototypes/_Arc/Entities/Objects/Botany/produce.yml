@@ -173,7 +173,7 @@
       PotencyDivisor: 40
 
 - type: seed
-  id: DoomShroom
+  id: doomshroom
   name: seeds-doom-shroom-name
   noun: seeds-noun-spores
   displayName: seeds-doom-shroom-display-name
@@ -302,6 +302,6 @@
 - type: stack
   id: Sun
   name: sun
-  spawn: SunStack1
+  spawn: Sun1
   maxCount: 2140000
   itemSize: 1
