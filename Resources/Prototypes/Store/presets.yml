@@ -44,6 +44,22 @@
       Telecrystal: 0
 
 - type: entity
+  id: StorePresetUplinkPlants
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-seeds
+    categories:
+    - UplinkSupportPVZ
+    - UplinkAttackerPVZ
+    - UplinkDefensePVZ
+    - UplinkInstaPVZ
+    currencyWhitelist:
+    - Sun
+    balance:
+      Sun: 0
+
+- type: entity
   id: StorePresetSpellbook
   abstract: true
   components:

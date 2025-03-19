@@ -24,3 +24,8 @@ store-caregory-spellbook-utility = Utility Spells
 store-caregory-spellbook-equipment = Wizard Equipment
 store-caregory-spellbook-events = Event Spells
 
+# PVZ
+store-category-pvz-support = Support
+store-category-pvz-attacker = Attacker
+store-category-pvz-defense = Defense
+store-category-pvz-instakill = Instant Use

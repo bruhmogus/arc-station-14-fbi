@@ -176,3 +176,24 @@
   id: DiscountedItems
   name: store-discounted-items
   priority: 200
+
+# PVZ categories
+- type: storeCategory
+  id: UplinkSupportPVZ
+  name: store-category-pvz-support
+  priority: 0
+
+- type: storeCategory
+  id: UplinkAttackerPVZ
+  name: store-category-pvz-attacker
+  priority: 1
+
+- type: storeCategory
+  id: UplinkDefensePVZ
+  name: store-category-pvz-defense
+  priority: 2
+
+- type: storeCategory
+  id: UplinkInstaPVZ
+  name: store-category-pvz-instakill
+  priority: 3

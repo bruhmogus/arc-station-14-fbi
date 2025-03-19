@@ -136,3 +136,7 @@ seeds-cherry-name = cherry
 seeds-cherry-display-name = cherry tree
 seeds-cherry-bomb-name = cherry bomb
 seeds-cherry-bomb-display-name = cherry bomb tree
+seeds-doom-shroom-name = doom-shroom
+seeds-doom-shroom-display-name = doom-shroom
+seeds-sunflower-name = sunflower
+seeds-sunflower-display-name = sunflower
