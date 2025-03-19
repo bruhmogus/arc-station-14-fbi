@@ -212,7 +212,7 @@
   lifespan: 25
   maturation: 10
   production: 3
-  yield: 3
+  yield: 1
   potency: 10
   growthStages: 3
   waterConsumption: 0.60
