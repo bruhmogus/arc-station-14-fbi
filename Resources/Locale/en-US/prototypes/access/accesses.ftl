@@ -53,6 +53,8 @@ id-card-access-level-unused = You shouldn't see this
 
 id-card-access-level-central-command = Central Command
 
+# Arcchange start
+# TODO: Move this to /Arc
 id-card-access-level-NTPD = NTPD
 
 id-card-access-level-ICA = ICA
@@ -60,3 +62,8 @@ id-card-access-level-ICA = ICA
 id-card-access-level-MERC = MERC
 
 id-card-access-level-META = META
+# Arcchange end
+
+id-card-access-level-station-ai = Artifical Intelligence
+id-card-access-level-borg = Cyborg
+id-card-access-level-basic-silicon = Robot

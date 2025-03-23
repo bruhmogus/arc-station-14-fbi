@@ -17,6 +17,7 @@
     - Prison
     - Service
     - Supply
+    - Justice
   - type: ActiveRadio
     channels:
     - Binary
@@ -29,6 +30,7 @@
     - Prison
     - Service
     - Supply
+    - Justice
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -461,6 +463,7 @@
   - type: SiliconLawProvider
     laws: AntimovLawset
     lawUploadSound: /Audio/Ambience/Antag/silicon_lawboard_antimov.ogg
+    unRemovable: true
 
 - type: entity
   id: NutimovCircuitBoard
@@ -512,6 +515,7 @@
   - AiHolder
   suffix: Empty
   components:
+  - type: IonStormTarget
   - type: WarpPoint
   - type: ContainerComp
     proto: AiHeld
@@ -629,6 +633,7 @@
   - type: Access
     groups:
     - AllAccess
+    - Silicon
   - type: Eye
     drawFov: false
   - type: Examiner
@@ -658,6 +663,9 @@
     - Elyran
     - RobotTalk
     - Sign # It's intentional that they don't "Speak" sign language.
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
 
 # Hologram projection that the AI's eye tracks.
 - type: entity
@@ -687,6 +695,7 @@
     speaks:
     - TauCetiBasic
     - SolCommon
+    - NovuNederic
     - Tradeband
     - Freespeak
     - Elyran
@@ -694,6 +703,7 @@
     understands:
     - TauCetiBasic
     - SolCommon
+    - NovuNederic
     - Tradeband
     - Freespeak
     - Elyran
@@ -758,6 +768,9 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellMedium
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
 
 - type: entity
   id: PlayerBorgSyndicateAssaultBattery
