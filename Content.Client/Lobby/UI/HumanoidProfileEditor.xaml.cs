@@ -2,7 +2,6 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using Content.Client.Administration.UI;
-using Content.Client.Guidebook;
 using Content.Client.Humanoid;
 using Content.Client.Message;
 using Content.Client.Players.PlayTimeTracking;
@@ -257,27 +256,37 @@ namespace Content.Client.Lobby.UI
 
             #region Contractors
 
-            RefreshNationalities();
-            RefreshEmployers();
-            RefreshLifepaths();
-
-            NationalityButton.OnItemSelected += args =>
+            if(_cfgManager.GetCVar(CCVars.ContractorsEnabled))
             {
-                NationalityButton.SelectId(args.Id);
-                SetNationality(_nationalies[args.Id].ID);
-            };
+                Background.Orphan();
+                CTabContainer.AddTab(Background, Loc.GetString("humanoid-profile-editor-background-tab"));
 
-            EmployerButton.OnItemSelected += args =>
-            {
-                EmployerButton.SelectId(args.Id);
-                SetEmployer(_employers[args.Id].ID);
-            };
+                RefreshNationalities();
+                RefreshEmployers();
+                RefreshLifepaths();
 
-            LifepathButton.OnItemSelected += args =>
+                NationalityButton.OnItemSelected += args =>
+                {
+                    NationalityButton.SelectId(args.Id);
+                    SetNationality(_nationalies[args.Id].ID);
+                };
+
+                EmployerButton.OnItemSelected += args =>
+                {
+                    EmployerButton.SelectId(args.Id);
+                    SetEmployer(_employers[args.Id].ID);
+                };
+
+                LifepathButton.OnItemSelected += args =>
+                {
+                    LifepathButton.SelectId(args.Id);
+                    SetLifepath(_lifepaths[args.Id].ID);
+                };
+            }
+            else
             {
-                LifepathButton.SelectId(args.Id);
-                SetLifepath(_lifepaths[args.Id].ID);
-            };
+                Background.Visible = false;
+            }
 
             #endregion Contractors
 
@@ -667,6 +676,9 @@ namespace Content.Client.Lobby.UI
             // If our nationality isn't available, reset it to default
             if (Profile != null && !nationalityIds.Contains(Profile.Nationality))
                 SetNationality(SharedHumanoidAppearanceSystem.DefaultNationality);
+
+            if(Profile != null)
+                UpdateNationalityDescription(Profile.Nationality);
         }
 
         public void RefreshEmployers()
@@ -698,6 +710,9 @@ namespace Content.Client.Lobby.UI
             // If our employer isn't available, reset it to default
             if (Profile != null && !employerIds.Contains(Profile.Employer))
                 SetEmployer(SharedHumanoidAppearanceSystem.DefaultEmployer);
+
+            if(Profile != null)
+                UpdateEmployerDescription(Profile.Employer);
         }
 
         public void RefreshLifepaths()
@@ -729,6 +744,27 @@ namespace Content.Client.Lobby.UI
             // If our lifepath isn't available, reset it to default
             if (Profile != null && !lifepathIds.Contains(Profile.Lifepath))
                 SetLifepath(SharedHumanoidAppearanceSystem.DefaultLifepath);
+
+            if(Profile != null)
+                UpdateLifepathDescription(Profile.Lifepath);
+        }
+
+        private void UpdateNationalityDescription(string nationality)
+        {
+            var prototype = _prototypeManager.Index<NationalityPrototype>(nationality);
+            NationalityDescriptionLabel.SetMessage(Loc.GetString(prototype.DescriptionKey));
+        }
+
+        private void UpdateLifepathDescription(string lifepath)
+        {
+            var prototype = _prototypeManager.Index<LifepathPrototype>(lifepath);
+            LifepathDescriptionLabel.SetMessage(Loc.GetString(prototype.DescriptionKey));
+        }
+
+        private void UpdateEmployerDescription(string employer)
+        {
+            var prototype = _prototypeManager.Index<EmployerPrototype>(employer);
+            EmployerDescriptionLabel.SetMessage(Loc.GetString(prototype.DescriptionKey));
         }
 
         public void RefreshAntags()
@@ -1441,6 +1477,7 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
             ReloadProfilePreview();
             ReloadClothes(); // Nationalities may have specific gear, reload the clothes
+            UpdateNationalityDescription(newNationality);
         }
 
         private void SetEmployer(string newEmployer)
@@ -1450,6 +1487,7 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
             ReloadProfilePreview();
             ReloadClothes(); // Employers may have specific gear, reload the clothes
+            UpdateEmployerDescription(newEmployer);
         }
 
         private void SetLifepath(string newLifepath)
@@ -1459,6 +1497,7 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
             ReloadProfilePreview();
             ReloadClothes(); // Lifepaths may have specific gear, reload the clothes
+            UpdateLifepathDescription(newLifepath);
         }
 
         private void SetName(string newName)
@@ -2007,6 +2046,10 @@ namespace Content.Client.Lobby.UI
         private void UpdateTraitPreferences()
         {
             var points = _cfgManager.GetCVar(CCVars.GameTraitsDefaultPoints);
+            var maxTraits = _cfgManager.GetCVar(CCVars.GameTraitsMax);
+            if (Profile is not null && _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+                points += speciesPrototype.BonusTraitPoints;
+
             _traitCount = 0;
 
             foreach (var preferenceSelector in _traitPreferences)
@@ -2020,13 +2063,13 @@ namespace Content.Client.Lobby.UI
                     continue;
 
                 points += preferenceSelector.Trait.Points;
-                _traitCount += 1;
+                _traitCount += preferenceSelector.Trait.Slots;
             }
 
             TraitPointsBar.Value = points;
             TraitPointsLabel.Text = Loc.GetString("humanoid-profile-editor-traits-header",
                 ("points", points), ("traits", _traitCount),
-                ("maxTraits", _cfgManager.GetCVar(CCVars.GameTraitsMax)));
+                ("maxTraits", maxTraits));
 
             // Set the remove unusable button's label to have the correct amount of unusable traits
             TraitsRemoveUnusableButton.Text = Loc.GetString("humanoid-profile-editor-traits-remove-unusable-button",
@@ -2242,8 +2285,9 @@ namespace Content.Client.Lobby.UI
                 {
                     // Make sure they have enough trait points
                     preference = CheckPoints(preference ? selector.Trait.Points : -selector.Trait.Points, preference);
+
                     // Make sure they have enough trait slots
-                    preference = preference ? _traitCount < _cfgManager.GetCVar(CCVars.GameTraitsMax) : preference;
+                    preference = CheckSlots(preference ? selector.Trait.Slots : -selector.Trait.Slots, preference);
 
                     // Update Preferences
                     Profile = Profile?.WithTraitPreference(selector.Trait.ID, preference);
@@ -2257,6 +2301,13 @@ namespace Content.Client.Lobby.UI
             {
                 var temp = TraitPointsBar.Value + points;
                 return preference ? !(temp < 0) : temp < 0;
+            }
+
+            bool CheckSlots(int slots, bool preference)
+            {
+                var temp = _traitCount + slots;
+                var max = _cfgManager.GetCVar(CCVars.GameTraitsMax);
+                return preference ? !(temp > max) : temp > max;
             }
         }
 
@@ -2602,9 +2653,10 @@ namespace Content.Client.Lobby.UI
                 selector.PreferenceChanged += preference =>
                 {
                     // Make sure they have enough loadout points
-                    var selected = preference.Selected
-                        ? CheckPoints(-selector.Loadout.Cost, preference.Selected)
-                        : CheckPoints(selector.Loadout.Cost, preference.Selected);
+                    var wasSelected = Profile?.LoadoutPreferences
+                        .FirstOrDefault(it => it.LoadoutName == selector.Loadout.ID)
+                        ?.Selected ?? false;
+                    var selected = preference.Selected && (wasSelected || CheckPoints(-selector.Loadout.Cost, true));
 
                     // Update Preferences
                     Profile = Profile?.WithLoadoutPreference(
@@ -2623,7 +2675,7 @@ namespace Content.Client.Lobby.UI
             bool CheckPoints(int points, bool preference)
             {
                 var temp = LoadoutPointsBar.Value + points;
-                return preference ? !(temp < 0) : temp < 0;
+                return preference ? temp >= 0 : temp < 0;
             }
         }
 
