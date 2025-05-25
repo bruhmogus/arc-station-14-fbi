@@ -2,6 +2,7 @@
 language: "en" # English
 early_access: false
 reviews:
+  profile: assertive
   high_level_summary: false
   poem: false
   review_status: false
