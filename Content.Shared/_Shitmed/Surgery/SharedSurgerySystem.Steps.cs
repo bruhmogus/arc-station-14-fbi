@@ -173,9 +173,14 @@ public abstract partial class SharedSurgerySystem
         {
             if (!HasComp<SanitizedComponent>(args.User))
             {
-                var sepsis = new DamageSpecifier(_prototypes.Index<DamageTypePrototype>("Poison"), 5);
-                var ev = new SurgeryStepDamageEvent(args.User, args.Body, args.Part, args.Surgery, sepsis, 0.5f);
-                RaiseLocalEvent(args.Body, ref ev);
+                // Zeta - Xelthia Glove Jacket Check
+                _inventory.TryGetSlotEntity(args.User, "outerClothing", out var glovejacket);
+                if (!HasComp<GloveJacketComponent>(glovejacket) || !_inventory.TryGetSlotEntity(args.User, "mask", out var _))
+                {
+                    var sepsis = new DamageSpecifier(_prototypes.Index<DamageTypePrototype>("Poison"), 5);
+                    var ev = new SurgeryStepDamageEvent(args.User, args.Body, args.Part, args.Surgery, sepsis, 0.5f);
+                    RaiseLocalEvent(args.Body, ref ev);
+                }
             }
         }
     }
@@ -278,6 +283,9 @@ public abstract partial class SharedSurgerySystem
 
         if (_inventory.TryGetContainerSlotEnumerator(args.Body, out var containerSlotEnumerator, args.TargetSlots))
         {
+            if (HasComp<SurgeryIgnoreClothingComponent>(args.User))
+                return;
+
             while (containerSlotEnumerator.MoveNext(out var containerSlot))
             {
                 if (!containerSlot.ContainedEntity.HasValue)
@@ -525,6 +533,7 @@ public abstract partial class SharedSurgerySystem
                 {
                     var ev = new SurgeryStepDamageChangeEvent(args.User, args.Body, args.Part, ent);
                     RaiseLocalEvent(ent, ref ev);
+                    args.Complete = true;
                 }
                 break;
             }

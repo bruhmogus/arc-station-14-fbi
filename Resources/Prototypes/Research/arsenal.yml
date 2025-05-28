@@ -58,6 +58,7 @@
   - MagazineBoxCaselessRifleIncendiary
   - CartridgeSpecialIncendiary
   - MagazineBoxSpecialIncendiary
+  - MagazineUniversalMagnumIncendiary
 
 - type: technology
   id: UraniumMunitions
@@ -85,6 +86,7 @@
   - BoxShotgunUranium
   - CartridgeSpecialUranium
   - MagazineBoxSpecialUranium
+  - MagazineUniversalMagnumUranium
 
 # Tier 2
 
@@ -142,6 +144,7 @@
   - MagazineBoxLightRifleShrapnel
   - MagazineBoxRifleShrapnel
   - MagazineBoxCaselessRifleShrapnel
+  - MagazineUniversalMagnumShrapnel
 
 - type: technology
   id: AdvancedWeapons
@@ -173,6 +176,7 @@
   - WeaponPistolViper
   - WeaponPistolCobra
   - Terminus
+  - WeaponPistolUniversal
   technologyPrerequisites:
   - BasicWeapons
 

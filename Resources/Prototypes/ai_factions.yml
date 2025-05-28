@@ -19,6 +19,7 @@
     - GladiabotYellow
     - SAN
     - Changeling
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: NanoTrasen
@@ -34,6 +35,7 @@
     - Mercenary
     - Hatesall
 # Arcchange end
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Mouse
@@ -50,7 +52,8 @@
     - SimpleHostile
     - Zombie
     - Xeno
-    - Hatesall
+    - Hatesall # Arcadis
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: SimpleHostile
@@ -76,6 +79,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: SimpleNeutral
@@ -93,6 +97,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Xeno
@@ -115,6 +120,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Zombie
@@ -138,6 +144,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Revolutionary
@@ -305,8 +312,8 @@
   - Zombie
   - Revolutionary
   - Changeling # goob edit - changelings
+  - Blob # Goobstation - Blob
 # Commented out until we add theses factions into EE
 #  - Heretic # goob edit - heretics
-#  - Blob # Goobstation - Blob
 # - Wizard # goob edit - wizard
 #  - PirateFaction # goob - pirates
