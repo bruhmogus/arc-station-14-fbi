@@ -7,3 +7,8 @@
 #  id: Deletion
 #  kind: source
 #  path: "/Textures/Shaders/deletion.swsl"
+
+- type: shader
+  id: Caramelldansen
+  kind: source
+  path: "/Textures/Shaders/caramelldansen.swsl"
