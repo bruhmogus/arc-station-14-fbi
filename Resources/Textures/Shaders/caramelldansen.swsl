@@ -1,8 +1,7 @@
 uniform sampler2D SCREEN_TEXTURE;
 uniform highp float effectScale;
-
-const highp float TimeScale = 0.5; // How long each color cycle takes
-const highp float RainbowStrength = 0.4; // How strong the rainbow overlay is
+uniform highp float TimeScale;
+uniform highp float RainbowStrength;
 
 // Simple HSV to RGB conversion
 highp vec3 hsv2rgb(highp vec3 c) {
@@ -14,10 +13,8 @@ void fragment() {
     highp vec2 uv = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
     highp float time = TIME * TimeScale;
     highp vec4 base = zTextureSpec(SCREEN_TEXTURE, uv);
-    // Offset the hue by the original pixel's luminance for a more integrated overlay
-    highp float lum = dot(base.rgb, vec3(0.299, 0.587, 0.114));
-    highp float hue = mod(time + lum, 1.0);
+    highp float hue = mod(time, 1.0);
     highp vec3 rainbow = hsv2rgb(vec3(hue, 1.0, 1.0));
-    // Add the rainbow color as an overlay, preserving shapes and offset by the original color
-    COLOR = vec4(clamp(base.rgb + rainbow * RainbowStrength * effectScale, 0.0, 1.0), base.a);
+    // Use RainbowStrength as a blend factor between base and rainbow
+    COLOR = vec4(mix(base.rgb, base.rgb + rainbow * effectScale, RainbowStrength), base.a);
 }
