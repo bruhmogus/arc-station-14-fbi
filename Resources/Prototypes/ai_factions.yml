@@ -19,6 +19,7 @@
     - GladiabotYellow
     - SAN
     - Changeling
+    - Shadowling
     - Blob # Goobstation - Blob
 
 - type: npcFaction
@@ -79,6 +80,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Shadowling
     - Blob # Goobstation - Blob
 
 - type: npcFaction
@@ -97,6 +99,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Shadowling
     - Blob # Goobstation - Blob
 
 - type: npcFaction
@@ -144,6 +147,7 @@
     - Hatesall
 # Arcchange end
     - Changeling
+    - Shadowling
     - Blob # Goobstation - Blob
 
 - type: npcFaction
@@ -296,6 +300,7 @@
     - Revolutionary
     - Dragon
     - Changeling
+    - Shadowling
 
 - type: npcFaction
   id: AllHostile
@@ -312,7 +317,9 @@
   - Zombie
   - Revolutionary
   - Changeling # goob edit - changelings
+  - Shadowling
   - Blob # Goobstation - Blob
+
 # Commented out until we add theses factions into EE
 #  - Heretic # goob edit - heretics
 # - Wizard # goob edit - wizard

@@ -279,6 +279,7 @@
     - CartridgePuncturase # Goobstation
     - SecHypo # Goobstation
     - ParamedHypo # Goobstation - ParamedHypo
+    - CartridgePain # Morphine Tweaks
 
 - type: entity
   id: AutolatheHyperConvection
@@ -331,6 +332,7 @@
     - ClothingEyesGlassesChemical
     - N14MaterialCircuitry
     dynamicRecipes:
+    - AntiMindControlDevice
     - PowerDrill
     - MiningDrill
     - MiningDrillDiamond
@@ -1022,6 +1024,7 @@
       - CartridgeAtropine # Goobstation
       - CartridgeSaline # Goobstation
       - SecHypo # Goobstation
+      - CartridgePain # Morphine Tweaks
       - BoxBeanbag
       - CartridgePistolRubber
       - CartridgeMagnumRubber
@@ -1338,6 +1341,10 @@
     - BoneGel # Shitmed Change
     - AACTablet # DeltaV
     - VehicleWheelchairFolded # Goobstation - Vehicles
+    - MedicalPatchBasic  #Goobstation - MedicalPatch
+    - MedicalPatchRapid #Goobstation - MedicalPatch
+    - MedicalPatchLarge #Goobstation - MedicalPatch
+    - MedicalPatchTherapeutic #Goobstation - MedicalPatch
     - SyringeCase # Morphine
     - CartridgeAtropine # Goobstation - ParamedHypo
     - CartridgeEpinephrine # Goobstation - ParamedHypo
@@ -1345,6 +1352,7 @@
     - CartridgeDermaline # Goobstation - ParamedHypo
     - CartridgeSaline # Goobstation - ParamedHypo
     - ParamedHypo # Goobstation - ParamedHypo
+    - CartridgePain # Morphine Tweaks
     dynamicRecipes:
     - ChemicalPayload
     - CryostasisBeaker
