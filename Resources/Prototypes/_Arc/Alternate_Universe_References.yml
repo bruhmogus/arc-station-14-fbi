@@ -154,7 +154,7 @@
   parent: BaseItem
   id: KnifePristine
   name: Pristine Blade
-  description: A pristine blade. You know what must be done: eliminate a monarch. Do otherwise and they will destroy the world.
+  description: A pristine blade. You know what must be done. You must eliminate a monarch. Do otherwise and they will destroy the world.
   components:
   - type: Sprite
     sprite: _Arc/Alternate_Universe_references/Pristine_blade.rsi
