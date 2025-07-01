@@ -804,24 +804,24 @@
 #   - type: RgbLightController
 #     layers: [ 0 ]
 
-#FBI
+# FBI
 
 - type: entity
   parent: BasePlushie
   id: PlushieadminFBI
   name: FBI plushie
-  description: A stuffed toy that resembles an ancient earth government facility known as the "FBI".
+  description: A stuffed toy that resembles the insignia of an ancient earth government facility known as the "FBI".
   components:
   - type: Sprite
     state: FBI
 
-#seths gun
+# handcannon
 
 - type: entity
-  name: Dead Again Hand Cannon
+  name: handcannon
   parent: BaseWeaponLauncher
   id: WeaponLaunchersethCannon
-  description: so strong it kills your enemies twice!
+  description: A powerful handgun, if you can even call it that anymore.
   components:
     - type: Sprite
       sprite: _Arc/Admin/Deadagaingun.rsi
@@ -851,7 +851,7 @@
 
 - type: entity
   id: cannonballseth
-  name: Dead Again Round
+  name: handcannon round
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
@@ -891,12 +891,12 @@
         Piercing: 10
         Blunt: 30
 
-#Gulo
+# Gulo
 
 - type: entity
   parent: ClothingShoesBase
   id: ClothingUndergulo
-  name: Stupid coder socks
+  name: stupid coder socks
   description: Coder socks used to remake a fork 4 times.
   components:
   - type: Sprite
@@ -904,13 +904,13 @@
   - type: Clothing
     sprite: _Arc/Admin/Gulo.rsi
 
-#Moose #o7
+# Moose #o7
 
 - type: entity
   id: Statuemoose
   parent: BaseStructure
   name: statue of the missing administrator
-  description: An ancient wood statue. The subject is depicted with a floor-length braid and is wielding a pfp of an ancient administrator that worked for Nanotrasen, before they left the team. o7
+  description: An ancient wood statue. The subject is depicted with a floor-length braid and is wielding the profile picture of an ancient administrator that worked for Nanotrasen, before they left the team. o7
   components:
   - type: Sprite
     noRot: true
@@ -919,11 +919,11 @@
     drawdepth: Mobs
     offset: "0.0,0.5"
 
-#Eris
+# Eris
 
 
 
-#Egg
+# Egg
 
 - type: entity
   parent: FoodEggBase
@@ -942,12 +942,12 @@
     graph: Egg
     node: start
 
-#CreatorBot
+# CreatorBot
 
 - type: entity
   parent: BasePlushie
   id: PlushieadminCreatorBot
-  name: Hacker plushie
+  name: hacker plushie
   description: An epic hecker.
   components:
   - type: Sprite

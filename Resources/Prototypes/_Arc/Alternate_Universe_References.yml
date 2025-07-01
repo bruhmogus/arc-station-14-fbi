@@ -31,8 +31,8 @@
 
 - type: entity
   id: skeletonSkullBlue
-  name: Strange Skull
-  description: An odd blue skull, does not belong to any species you know.
+  name: strange skull
+  description: An odd blue skull that doesn't belong to any species you know.
   parent: BaseItem
   components:
     - type: Sprite
@@ -48,8 +48,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetCatastrophe
-  name: Scary helmet
-  description: An extremely scary helmet, makes you feel an impending doom when looking at it.
+  name: scary helmet
+  description: An extremely scary helmet that fills you with impending doom whenever you look at it.
   components:
   - type: Sprite
     sprite: _Arc/Alternate_Universe_references/legend.rsi
@@ -154,7 +154,7 @@
   parent: BaseItem
   id: KnifePristine
   name: Pristine Blade
-  description: A Pristine Blade... You know what must be done, eliminate a monarch. do other wise and they will destroy the world.
+  description: A pristine blade. You know what must be done. You must eliminate a monarch. Do otherwise and they will destroy the world.
   components:
   - type: Sprite
     sprite: _Arc/Alternate_Universe_references/Pristine_blade.rsi
