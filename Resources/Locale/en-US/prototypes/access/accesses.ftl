@@ -63,6 +63,7 @@ id-card-access-level-MERC = MERC
 
 id-card-access-level-META = META
 # Arcchange end
+id-card-access-level-wizard = Wizard
 
 id-card-access-level-station-ai = Artifical Intelligence
 id-card-access-level-borg = Cyborg
